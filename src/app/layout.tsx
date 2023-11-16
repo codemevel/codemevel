@@ -1,11 +1,11 @@
 /* eslint-disable sonarjs/no-duplicate-string */
-import './globals.css'
+import '@/styles/globals.css'
 
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Viewport } from 'next'
 import { Raleway } from 'next/font/google'
 import React from 'react'
-import { Analytics } from '@vercel/analytics/react';
 
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
@@ -18,7 +18,7 @@ const railway = Raleway({
 const title: string =
   'CodeMevel - Building Trust through Exceptional Web Development'
 const description: string =
-  'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites. '
+  'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
 
 export const viewport: Viewport = {
   themeColor: 'black',
@@ -30,16 +30,16 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://codemevel.com'),
   title,
   description,
+  keywords: ['codemevel', 'CodeMevel'],
+  applicationName: 'Codemevel',
+
   openGraph: {
-    images: [
-      {
-        url: '/og.png',
-      },
-    ],
-    type: 'website',
-    url: '/',
     title,
     description,
+    emails: 'codemevel@gmail.com',
+    siteName: 'CodeMevel',
+    type: 'website',
+    url: '/',
   },
   twitter: {
     creator: 'codemevel',
