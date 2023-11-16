@@ -8,12 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "lintFix": "pnpm eslint --fix",
-    "format": "prettier --write"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "next": "14.0.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tailwindcss-gradients": "^3.0.0"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
@@ -33,6 +34,9 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sonarjs": "^0.23.0",
     "postcss": "^8",
     "prettier": "^3.0.3",
     "tailwindcss": "^3.3.0",
