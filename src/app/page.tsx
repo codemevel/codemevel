@@ -1,8 +1,18 @@
 import React from 'react'
 
-const Page = () => {
+import About from '@/components/about/About'
+import Hero from '@/components/home/Hero'
+import Services from '@/components/home/Services'
+import WhyChooseUs from '@/components/home/WhyChooseUs'
+
+const Page = async () => {
   return (
-    <div className='text-9xl font-semibold'>Page</div>
+    <>
+      <Hero />
+      <About />
+      <Services />
+      <WhyChooseUs />
+    </>
   )
 }
 
