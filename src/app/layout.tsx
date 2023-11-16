@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import { Viewport } from 'next'
 import { Raleway } from 'next/font/google'
 import React from 'react'
+import { Analytics } from '@vercel/analytics/react';
 
 import Footer from '@/components/layout/Footer'
 import Header from '@/components/layout/Header'
@@ -62,6 +63,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
