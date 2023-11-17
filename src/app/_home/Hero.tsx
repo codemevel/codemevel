@@ -11,7 +11,7 @@ const Hero = async () => {
           <div className="">
             <div className="h-20" />
             <h1 className="text-9xl font-bold max-w-6xl">Codemevel </h1>
-            <h2 className="text-6xl  font-semibold max-w-6xl">
+            <h2 className="text-6xl  font-semibold max-w-6xl py-5">
               Building Trust through Exceptional Web Development.
             </h2>
             <p className="text-3xl text-white/50 max-w-6xl">
