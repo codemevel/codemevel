@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import Button from '../_ui/Button'
+import { ThemeSwitcher } from '../_ui/ThemeSwitcher'
 import Logo from './Logo'
 
 const Header = async () => {
@@ -32,7 +32,7 @@ const Header = async () => {
           </nav>
         </div>
         <div className="">
-          <Button title="Contact Us" />
+          <ThemeSwitcher />
         </div>
       </div>
     </header>

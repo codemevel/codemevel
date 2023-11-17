@@ -10,8 +10,10 @@ import React from 'react'
 import Footer from '@/app/_layout/Footer'
 import Header from '@/app/_layout/Header'
 
+import { ThemeProvider } from './_layout/ThemeProvider'
 import Scroll from './_ui/Scroll'
 
+export const switchThemeDuration: string = 'duration-200'
 const railway = Raleway({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
@@ -22,12 +24,12 @@ const title: string =
 const description: string =
   'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
 
-export const viewport: Viewport = {
-  themeColor: 'black',
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 1,
-}
+// export const viewport: Viewport = {
+//   themeColor: 'black',
+//   width: 'device-width',
+//   initialScale: 1,
+//   maximumScale: 1,
+// }
 export const metadata: Metadata = {
   metadataBase: new URL('https://codemevel.com'),
   title,
@@ -59,11 +61,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${railway.className} bg-black text-white`}>
-        <Header />
-        {children}
-        <Footer />
-        <Scroll />
+      <body
+        className={`${railway.className} bg-black text-white ${switchThemeDuration}`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          {children}
+          <Footer />
+          <Scroll />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
