@@ -1,21 +1,21 @@
 import type { Metadata } from 'next'
+import React from 'react'
 
-import About from '@/app/about/About'
+import Terms from './Terms'
 
-const title: string =
-  ' About CodeMevel - Building Trust through Exceptional Web Development'
+const title: string = ' Terms and Conditions | CodeMevel '
 const description: string =
   'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
 export const metadata: Metadata = {
-  metadataBase: new URL('https://codemevel.com/about'),
+  metadataBase: new URL('https://codemevel.com/terms'),
   title,
   description,
-  keywords: ['codemevel', 'About'],
+  keywords: ['codemevel', 'Terms and Conditions'],
   applicationName: 'Codemevel',
 }
 
 function Page() {
-  return <About />
+  return <Terms />
 }
 
 export default Page

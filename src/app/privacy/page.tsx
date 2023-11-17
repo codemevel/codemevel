@@ -1,21 +1,20 @@
 import type { Metadata } from 'next'
+import React from 'react'
 
-import About from '@/app/about/About'
+import Privacy from './Privacy'
 
 const title: string =
-  ' About CodeMevel - Building Trust through Exceptional Web Development'
+  ' Privacy Policy | CodeMevel - Building Trust through Exceptional Web Development'
 const description: string =
   'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
 export const metadata: Metadata = {
-  metadataBase: new URL('https://codemevel.com/about'),
+  metadataBase: new URL('https://codemevel.com/privacy'),
   title,
   description,
-  keywords: ['codemevel', 'About'],
+  keywords: ['codemevel', 'Privacy Policy'],
   applicationName: 'Codemevel',
 }
 
-function Page() {
-  return <About />
-}
+const Page = async () => <Privacy />
 
 export default Page

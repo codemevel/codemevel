@@ -1,11 +1,9 @@
-import React from 'react'
-
-import SubTitle from '../ui/SubTitle'
-import Title from '../ui/Title'
+import SubTitle from '../_ui/SubTitle'
+import Title from '../_ui/Title'
 
 const WhyChooseUs = async () => {
   return (
-    <section className="h-full max-w-7xl py-10 border-x-[0.5px] border-white/10 w-full text-white">
+    <section className="h-full max-w-9xl py-10 border-x-[0.5px] border-white/10 w-full text-white">
       <div className="">
         <div className="px-5">
           <Title title="Why Choose CodeMevel?" />

@@ -1,6 +1,4 @@
-import React from 'react'
-
-import Logo from '@/components/layout/Logo'
+import Logo from '@/app/_layout/Logo'
 
 function Loading() {
   return (

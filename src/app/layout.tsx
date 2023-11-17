@@ -7,8 +7,8 @@ import { Viewport } from 'next'
 import { Raleway } from 'next/font/google'
 import React from 'react'
 
-import Footer from '@/components/layout/Footer'
-import Header from '@/components/layout/Header'
+import Footer from '@/app/_layout/Footer'
+import Header from '@/app/_layout/Header'
 
 const railway = Raleway({
   subsets: ['latin'],
@@ -57,9 +57,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${railway.className} dark:bg-black bg-white dark:text-white text-white`}
-      >
+      <body className={`${railway.className} bg-black text-white`}>
         <Header />
         {children}
         <Footer />

@@ -1,9 +1,7 @@
-import React from 'react'
-
-import About from '@/components/about/About'
-import Hero from '@/components/home/Hero'
-import Services from '@/components/home/Services'
-import WhyChooseUs from '@/components/home/WhyChooseUs'
+import Hero from '@/app/_home/Hero'
+import Services from '@/app/_home/Services'
+import WhyChooseUs from '@/app/_home/WhyChooseUs'
+import About from '@/app/about/About'
 
 const Page = async () => {
   return (

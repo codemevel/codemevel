@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import React from 'react'
 
 import Logo from './Logo'
 
 const Footer = async () => {
   return (
-    <footer className="bg-gradient-to-b  py-5 from-black via-black border-t-[0.5px] border-white/10 to-transparent  backdrop-blur-sm max-w-7xl mx-auto w-full flex flex-col px-5 items-center justify-between">
+    <footer className="bg-gradient-to-b  py-5 from-black via-black border-t-[0.5px] border-white/10 to-transparent  backdrop-blur-sm max-w-9xl mx-auto w-full flex flex-col px-5 items-center justify-between">
       <div className="flex flex-row justify-between w-full items-start">
         <div className=" flex flex-col">
           <div className="flex flex-row h-10 items-end mb-1">

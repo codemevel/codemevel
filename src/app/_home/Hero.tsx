@@ -1,11 +1,10 @@
 import Link from 'next/link'
-import React from 'react'
 
-import Button from '../ui/Button'
+import Button from '../_ui/Button'
 
 const Hero = async () => {
   return (
-    <section className="h-full  hero-background max-w-7xl border-x-[0.5px] border-white/10 w-full text-white">
+    <section className="h-full  hero-background max-w-9xl border-x-[0.5px] border-white/10 w-full text-white">
       <div className="flex flex-col min-h-screen justify-center bg-gradient-to-t px-5 from-black to-transparent h-full w-full">
         <h1 className="text-9xl font-bold max-w-5xl"> Codemevel </h1>
         <h2 className="text-5xl  font-semibold max-w-3xl">
