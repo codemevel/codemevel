@@ -10,6 +10,8 @@ import React from 'react'
 import Footer from '@/app/_layout/Footer'
 import Header from '@/app/_layout/Header'
 
+import Scroll from './_ui/Scroll'
+
 const railway = Raleway({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
@@ -61,6 +63,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Scroll />
         <Analytics />
       </body>
     </html>
