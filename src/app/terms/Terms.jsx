@@ -2,7 +2,7 @@ import React from 'react'
 
 const Terms = async () => {
   return (
-    <section className="h-full  max-w-9xl py-10 border-x-[0.5px] border-white/10 w-full text-white">
+    <section className="h-full  max-w-6xl mx-auto py-10 border-y-[0.5px] border-white/10 w-full text-white">
       <div className="h-10" />
       <div className="px-5">
         <h2 className="text-5xl  font-bold mb-4">Terms and Conditions</h2>

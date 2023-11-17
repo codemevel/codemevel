@@ -1,17 +1,23 @@
 import SubTitle from '../_ui/SubTitle'
 import Title from '../_ui/Title'
+import MiniHeroSvg from './MiniHeroSvg'
 
 const Services = async () => {
   return (
-    <section className="h-full max-w-9xl py-10 border-x-[0.5px] border-white/10 w-full text-white">
-      <div className="">
-        <div className="px-5">
-          <Title title="What Services We Provides." />
-          <SubTitle
-            subTitle="At CodeMevel, we are dedicated to providing a comprehensive suite of
-    services tailored to meet your digital needs. Our expertise lies in
-    the following areas."
-          />
+    <section className="h-full max-w-6xl mx-auto py-10 border-y-[0.5px] border-white/10 w-full text-white">
+      <div className="w-full">
+        <div className="flex flex-row py-10 w-full justify-between items-center">
+          <div className="px-5 w-full">
+            <Title title="What Services We Provides." />
+            <SubTitle
+              subTitle="At CodeMevel, we are dedicated to providing a comprehensive suite of
+              services tailored to meet your digital needs. Our expertise lies in
+              the following areas."
+            />
+          </div>
+          <div className=" backdrop-blur-sm w-full">
+            <MiniHeroSvg />
+          </div>
         </div>
         <ul className="gap-5 grid grid-cols-12 px-5">
           <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
