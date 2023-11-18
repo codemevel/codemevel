@@ -41,7 +41,7 @@ const About = async () => {
         <h3 className="text-3xl  font-bold mb-4 dark:text-white text-black">
           Our Values
         </h3>
-        <ul className="grid grid-cols-8 gap-5">
+        <ul className="grid md:grid-cols-8 grid-col-8 gap-5">
           <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border:black/90 rounded-sm dark:text-white/50  text-black   hover:bg-white/10">
             <strong className="text-2xl font-semibold dark:text-white text-black">
               Innovation <br />

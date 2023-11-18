@@ -16,7 +16,7 @@ const Privacy = async () => {
         </p>
         <div className="py-10">
           <h3 className="text-3xl  font-bold mb-4">Information We Collect</h3>
-          <ul className="grid grid-cols-8 gap-5">
+          <ul className="grid md:grid-cols-8 grid-cols-4 gap-5">
             <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
               <strong className="text-2xl font-semibold text-white">
                 Personal Information <br />
@@ -47,7 +47,7 @@ const Privacy = async () => {
           <p className="text-xl dark:text-white/50  text-black/50  mb-6 max-w-4xl">
             We may use your information for the following purposes:
           </p>
-          <ul className="grid grid-cols-4 gap-5 list-disc px-5">
+          <ul className="grid md:grid-cols-8 grid-cols-4  gap-5 list-disc px-5">
             <li className="mb-1 col-span-4 rounded-sm dark:text-white/50  text-black/50  text-lg hover:bg-white/10">
               <p className="max-w-4xl">To provide and maintain our services.</p>
             </li>
@@ -76,7 +76,7 @@ const Privacy = async () => {
           </ul>
         </div>
 
-        <ul className="grid grid-cols-8 gap-5">
+        <ul className="grid md:grid-cols-8 grid-cols-4 gap-5">
           <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Disclosure of Your Information

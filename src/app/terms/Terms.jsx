@@ -12,7 +12,7 @@ const Terms = async () => {
           access our services
         </p>
 
-        <ul className="grid grid-cols-8 gap-5">
+        <ul className="grid md:grid-cols-8 grid-cols-4 gap-5">
           <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Use of Services <br />
