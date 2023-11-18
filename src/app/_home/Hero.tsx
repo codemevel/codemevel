@@ -6,12 +6,12 @@ import HeroSvg from './HeroSvg'
 const Hero = async () => {
   return (
     <section className="h-full  hero-background max-w-9xl border-x-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
-      <div className="flex flex-col min-h-screen justify-center bg-gradient-to-t px-5 from-black via-black to-transparent h-full w-full">
+      <div className="flex flex-col  justify-center bg-gradient-to-t px-5 from-white   dark:from-black   to-transparent h-full w-full">
         <div className="flex justify-between items-center flex-col ">
           <div className="">
-            <div className="h-20" />
-            <h1 className="text-9xl font-bold dark:text-white text-black  max-w-6xl">
-              Codemevel{' '}
+            <div className="h-28" />
+            <h1 className="text-9xl font-extrabold dark:text-white text-black  max-w-6xl">
+              Codemevel
             </h1>
             <h2 className="text-6xl dark:text-white text-black  font-semibold max-w-6xl py-5">
               Building Trust through Exceptional Web Development.
@@ -29,8 +29,7 @@ const Hero = async () => {
               </Link>
             </div>
           </div>
-          <div className=" backdrop-blur-sm max-w-6xl mx-auto w-full">
-            {/* <MiniHeroSvg /> */}
+          <div className="backdrop-blur-sm max-w-6xl mx-auto w-full">
             <HeroSvg />
           </div>
         </div>

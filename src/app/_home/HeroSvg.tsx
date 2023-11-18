@@ -3,7 +3,7 @@ function HeroSvg() {
     <svg
       viewBox="0 0 992 715"
       fill="none"
-      className="rounded-md border-[0.5px] opacity-70 dark:border-white/10 border-black/10 "
+      className="rounded-md border-[0.5px] opacity-70 invert dark:invert-0 dark:border-white/10 border-black/10 "
     >
       <g clipPath="url(#clip0_2876_5077)">
         <rect width="992" height="715" fill="#404040" />

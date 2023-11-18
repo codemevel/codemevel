@@ -14,7 +14,7 @@ function Header() {
   const [open, setOpen] = useState(false)
 
   const nonactive: string =
-    'hover:underline hover:text-black hover:dark:text-white underline-offset-2'
+    'hover:underline hover:text-black active:scale-[.99]  hover:dark:text-white underline-offset-2'
 
   const active: string =
     'active:scale-[.99] dark:text-white text-black underline'
