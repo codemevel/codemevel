@@ -3,7 +3,6 @@ import '@/styles/globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Viewport } from 'next'
 import { Raleway } from 'next/font/google'
 import React from 'react'
 
