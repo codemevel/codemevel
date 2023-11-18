@@ -19,7 +19,7 @@ export function ThemeSwitcher() {
   return (
     <button
       type="button"
-      className="border-[0.5px] border-white/10 font-semibold text-2xl active:scale-[.99] p-2 rounded-full backdrop-blur-sm hover:bg-white/10"
+      className="border-[0.5px] dark:border-white/10 border-black/10  font-semibold text-2xl active:scale-[.99] p-2 rounded-full backdrop-blur-sm hover:bg-white/10"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'light' ? (

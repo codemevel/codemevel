@@ -1,12 +1,10 @@
-import React from 'react'
-
 const Terms = async () => {
   return (
-    <section className="h-full  max-w-6xl mx-auto py-10 border-y-[0.5px] border-white/10 w-full text-white">
+    <section className="h-full  max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
       <div className="h-10" />
       <div className="px-5">
         <h2 className="text-5xl  font-bold mb-4">Terms and Conditions</h2>
-        <p className="text-2xl text-white/50 mb-6 max-w-4xl">
+        <p className="text-2xl dark:text-white/50  text-black/50  mb-6 max-w-4xl">
           These Terms and Conditions (hereinafter referred to as
           &quot;Terms&quot;) govern your use of CodeMevel&apos;s services and
           website. By accessing or using our services, you agree to be bound by
@@ -15,7 +13,7 @@ const Terms = async () => {
         </p>
 
         <ul className="grid grid-cols-8 gap-5">
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Use of Services <br />
             </strong>
@@ -25,7 +23,7 @@ const Terms = async () => {
               you are at least 18 years old.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Intellectual Property <br />
             </strong>
@@ -36,7 +34,7 @@ const Terms = async () => {
               intellectual property laws.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               User Conduct <br />
             </strong>
@@ -46,7 +44,7 @@ const Terms = async () => {
               inhibit the use and enjoyment of our services by any third party
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Limitation of Liability <br />
             </strong>
@@ -57,7 +55,7 @@ const Terms = async () => {
               of or in connection with the use of our services.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Indemnification <br />
             </strong>{' '}
@@ -69,7 +67,7 @@ const Terms = async () => {
               the rights of a third party.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Governing Law <br />
             </strong>{' '}
@@ -79,7 +77,7 @@ const Terms = async () => {
               provisions.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Changes to Terms <br />
             </strong>{' '}
@@ -90,7 +88,7 @@ const Terms = async () => {
               periodically for any changes
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Contact Us <br />
             </strong>{' '}

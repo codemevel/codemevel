@@ -3,7 +3,7 @@ import Title from '../_ui/Title'
 
 const WhyChooseUs = async () => {
   return (
-    <section className="h-full max-w-6xl mx-auto py-10 border-y-[0.5px] border-white/10 w-full text-white">
+    <section className="h-full max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
       <div className="">
         <div className="px-5">
           <Title title="Why Choose CodeMevel?" />
@@ -15,7 +15,7 @@ const WhyChooseUs = async () => {
         </div>
 
         <ul className="gap-5 grid grid-cols-12 px-5">
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Tailored Solutions
               <br />
@@ -24,7 +24,7 @@ const WhyChooseUs = async () => {
             offer customized solutions that are specifically tailored to meet
             your individual requirements and goals.
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Creative Expertise
               <br />
@@ -33,7 +33,7 @@ const WhyChooseUs = async () => {
             to life. We combine innovative ideas with the latest technology to
             create visually stunning and functional digital experiences.
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Customer-Centric Approach
               <br />
@@ -43,7 +43,7 @@ const WhyChooseUs = async () => {
             customer service and support at every stage of the development
             process.
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Proven Track Record
               <br />
@@ -52,7 +52,7 @@ const WhyChooseUs = async () => {
             delivered numerous projects across various sectors. Our track record
             speaks for our commitment to excellence and quality.
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Transparent Communication
               <br />
@@ -61,7 +61,7 @@ const WhyChooseUs = async () => {
             You can expect regular updates, clear timelines, and honest feedback
             throughout our collaboration.
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Reliability and Security
               <br />

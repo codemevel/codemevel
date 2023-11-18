@@ -61,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${railway.className} bg-black text-white ${switchThemeDuration}`}
+        className={`${railway.className} dark:bg-black bg-white dark:dark:text-white  text-black text-black ${switchThemeDuration}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />

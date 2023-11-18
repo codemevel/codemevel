@@ -4,7 +4,7 @@ import Logo from './Logo'
 
 const Footer = async () => {
   return (
-    <footer className="bg-gradient-to-b  py-5 from-black via-black border-t-[0.5px] border-white/10 to-transparent  backdrop-blur-sm max-w-6xl mx-auto w-full flex flex-col px-5 items-center justify-between">
+    <footer className="bg-gradient-to-b  py-5 from-black via-black border-t-[0.5px] dark:border-white/10 border-black/10  to-transparent  backdrop-blur-sm max-w-6xl mx-auto w-full flex flex-col px-5 items-center justify-between">
       <div className="flex flex-row justify-between w-full items-start">
         <div className=" flex flex-col">
           <div className="flex flex-row h-10 items-end mb-1">
@@ -36,7 +36,7 @@ const Footer = async () => {
               <h2 className=" mb-2 font-semibold text-gray-900 uppercase dark:text-white">
                 Sitemap
               </h2>
-              <ul className=" text-white/50 font-medium">
+              <ul className=" dark:text-white/50  text-black/50  font-medium">
                 <li className="hover:underline underline-offset-2 active:scale-[.99] ">
                   <Link href="/about">About us</Link>
                 </li>
@@ -52,7 +52,7 @@ const Footer = async () => {
               <h2 className=" mb-2 font-semibold text-gray-900 uppercase dark:text-white">
                 Legal
               </h2>
-              <ul className="col-span-4 text-white/50 font-medium">
+              <ul className="col-span-4 dark:text-white/50  text-black/50  font-medium">
                 <li className="hover:underline underline-offset-2 active:scale-[.99] ">
                   <Link href="/terms">Terms of Service</Link>
                 </li>

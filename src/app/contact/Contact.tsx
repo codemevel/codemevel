@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react'
 
 import Button from '../_ui/Button'
 import Title from '../_ui/Title'
@@ -13,7 +12,7 @@ function Contact() {
     // revalidate cache
   }
   return (
-    <section className="h-full mx-auto max-w-6xl py-10 border-b-[0.5px] border-white/10 w-full text-white">
+    <section className="h-full mx-auto max-w-6xl py-10 border-b-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
       <div className="h-20 w-full " />
       <div className="">
         <Title title="Contact" />

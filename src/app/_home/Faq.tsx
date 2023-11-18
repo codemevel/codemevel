@@ -1,15 +1,13 @@
-import React from 'react'
-
 import Title from '../_ui/Title'
 
 function Faq() {
   return (
-    <section className="h-full max-w-6xl mx-auto py-10 border-y-[0.5px] border-white/10 w-full text-white">
+    <section className="h-full max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
       <div>
         <Title title="Frequently Asked Questions" />
       </div>
       <ul className="grid grid-cols-4 ">
-        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
           <strong className="text-2xl font-semibold text-white">
             1. What services does CodeMevel offer? <br />
           </strong>
@@ -19,7 +17,7 @@ function Faq() {
             and technical support and maintenance.
           </p>
         </li>
-        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
           <strong className="text-2xl font-semibold text-white">
             2. How long does it take to complete a typical web development
             project? <br />
@@ -30,7 +28,7 @@ function Faq() {
             realistic timelines and ensure timely project delivery.
           </p>
         </li>
-        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
           <strong className="text-2xl font-semibold text-white">
             3. What sets CodeMevel apart from other web development companies?{' '}
             <br />
@@ -42,7 +40,7 @@ function Faq() {
             innovative designs, and reliable technical suppor
           </p>
         </li>
-        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
           <strong className="text-2xl font-semibold text-white">
             4. Can you provide examples of your previous work?
             <br />
@@ -52,7 +50,7 @@ function Faq() {
             previous projects and success stories.
           </p>
         </li>
-        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
           <strong className="text-2xl font-semibold text-white">
             5. How do I get in touch with your team? <br />
           </strong>{' '}
@@ -63,7 +61,7 @@ function Faq() {
             address] or give us a call at [insert phone number].
           </p>
         </li>
-        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
           <strong className="text-2xl font-semibold text-white">
             6. Do you offer ongoing maintenance services for websites? <br />
           </strong>{' '}
@@ -74,7 +72,7 @@ function Faq() {
             advancements.
           </p>
         </li>
-        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+        <li className=" p-5 col-span-4 border-y-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
           <strong className="text-2xl font-semibold text-white">
             7. What is your approach to ensuring the security of websites?
             <br />

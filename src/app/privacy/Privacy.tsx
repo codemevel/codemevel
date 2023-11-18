@@ -1,25 +1,23 @@
-import React from 'react'
-
 const Privacy = async () => {
   return (
-    <section className="h-full  max-w-6xl mx-auto py-10 border-y-[0.5px] border-white/10 w-full text-white">
+    <section className="h-full  max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
       <div className="h-10" />
       <div className="px-5">
         <h2 className="text-5xl  font-bold mb-4">Privacy Policy</h2>
-        <p className="text-2xl text-white/50 mb-6 max-w-4xl">
+        <p className="text-2xl dark:text-white/50  text-black/50  mb-6 max-w-4xl">
           CodeMevel is committed to protecting the privacy of our users. This
           Privacy Policy outlines our practices regarding the collection, use,
           and disclosure of personal information when you use our services and
           website.
         </p>
-        <p className="text-2xl text-white/50 mb-6 max-w-4xl">
+        <p className="text-2xl dark:text-white/50  text-black/50  mb-6 max-w-4xl">
           By using our services or accessing our website, you consent to the
           practices described in this Privacy Policy.
         </p>
         <div className="py-10">
           <h3 className="text-3xl  font-bold mb-4">Information We Collect</h3>
           <ul className="grid grid-cols-8 gap-5">
-            <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+            <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
               <strong className="text-2xl font-semibold text-white">
                 Personal Information <br />
               </strong>
@@ -29,7 +27,7 @@ const Privacy = async () => {
                 voluntarily provide it.
               </p>
             </li>
-            <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+            <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
               <strong className="text-2xl font-semibold text-white">
                 Non-Personal Information
                 <br />
@@ -46,30 +44,30 @@ const Privacy = async () => {
           <h3 className="text-3xl  font-bold mb-4">
             How We Use Your Information
           </h3>
-          <p className="text-xl text-white/50 mb-6 max-w-4xl">
+          <p className="text-xl dark:text-white/50  text-black/50  mb-6 max-w-4xl">
             We may use your information for the following purposes:
           </p>
           <ul className="grid grid-cols-4 gap-5 list-disc px-5">
-            <li className="mb-1 col-span-4 rounded-sm text-white/50 text-lg hover:bg-white/10">
+            <li className="mb-1 col-span-4 rounded-sm dark:text-white/50  text-black/50  text-lg hover:bg-white/10">
               <p className="max-w-4xl">To provide and maintain our services.</p>
             </li>
-            <li className="mb-1 col-span-4 rounded-sm text-white/50 text-lg hover:bg-white/10">
+            <li className="mb-1 col-span-4 rounded-sm dark:text-white/50  text-black/50  text-lg hover:bg-white/10">
               <p className="max-w-4xl">
                 To notify you about changes to our services.
               </p>
             </li>
-            <li className="mb-1 col-span-4 rounded-sm text-white/50 text-lg hover:bg-white/10">
+            <li className="mb-1 col-span-4 rounded-sm dark:text-white/50  text-black/50  text-lg hover:bg-white/10">
               <p className="max-w-4xl">
                 To respond to your requests, comments, or questions.
               </p>
             </li>
-            <li className="mb-1 col-span-4 rounded-sm text-white/50 text-lg hover:bg-white/10">
+            <li className="mb-1 col-span-4 rounded-sm dark:text-white/50  text-black/50  text-lg hover:bg-white/10">
               <p className="max-w-4xl">
                 To send you promotional or informational content based on your
                 preferences
               </p>
             </li>
-            <li className="mb-1 col-span-4 rounded-sm text-white/50 text-lg hover:bg-white/10">
+            <li className="mb-1 col-span-4 rounded-sm dark:text-white/50  text-black/50  text-lg hover:bg-white/10">
               <p className="max-w-4xl">
                 To monitor and analyze usage patterns and trends to improve our
                 website and services.
@@ -79,7 +77,7 @@ const Privacy = async () => {
         </div>
 
         <ul className="grid grid-cols-8 gap-5">
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Disclosure of Your Information
               <br />
@@ -91,7 +89,7 @@ const Privacy = async () => {
               our website and providing our services.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Security <br />
             </strong>
@@ -102,7 +100,7 @@ const Privacy = async () => {
               data. However, no data transmission
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Your Choices <br />
             </strong>
@@ -112,7 +110,7 @@ const Privacy = async () => {
               or access certain features of our website.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Changes to this Privacy Policy <br />
             </strong>
@@ -123,7 +121,7 @@ const Privacy = async () => {
               to stay informed about how we are protecting your information.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm text-white/50 hover:bg-white/10">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Contact Us <br />
             </strong>{' '}

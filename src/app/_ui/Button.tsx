@@ -13,7 +13,7 @@ function Button({
     <button
       onClick={() => onClick}
       type={!submit ? 'button' : 'submit'}
-      className="border-[0.5px] border-white/30 font-semibold text-2xl active:scale-[.99] px-5 py-2 rounded-sm backdrop-blur-sm hover:bg-white/10"
+      className="border-[0.5px] dark:border-white/30 border-black/30 dark:text-white text-black font-semibold text-2xl active:scale-[.99] px-5 py-2 rounded-sm backdrop-blur-sm hover:bg-white/10"
     >
       {title}
     </button>

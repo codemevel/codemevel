@@ -3,16 +3,16 @@ import React from 'react'
 
 function Logo() {
   return (
-    <div className="h-10 w-10 active:scale-[.99] cursor-pointer">
+    <div className="h-10 w-10 active:scale-[.99] cursor-pointer ">
       <Link href="/" id="logo">
         <svg
           version="1.0"
           viewBox="0 0 2000.000000 2000.000000"
           preserveAspectRatio="xMidYMid meet"
+          className="dark:fill-white fill-black"
         >
           <g
             transform="translate(0.000000,2000.000000) scale(0.100000,-0.100000)"
-            fill="#fff"
             stroke="none"
           >
             <path
