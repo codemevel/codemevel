@@ -12,11 +12,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-black dark:bg-white/30 rounded-lg; /* Set the color and border radius of the scrollbar thumb */
+  @apply  bg-white/50 rounded-lg; /* Set the color and border radius of the scrollbar thumb */
 }
 
 ::-webkit-scrollbar-track {
-  @apply dark:bg-black bg-white ; /* Set the color of the scrollbar track */
+  @apply  bg-black ; /* Set the color of the scrollbar track */
 }
 
 .hero-background {

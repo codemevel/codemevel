@@ -3,8 +3,6 @@ import React from 'react'
 function MiniHeroSvg() {
   return (
     <svg
-      width="492"
-      height="363"
       viewBox="0 0 492 363"
       fill="none"
       className="opacity-50"

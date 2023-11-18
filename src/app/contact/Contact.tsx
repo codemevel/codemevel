@@ -12,7 +12,7 @@ function Contact() {
     // revalidate cache
   }
   return (
-    <section className="h-full mx-auto max-w-6xl py-10 border-b-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
+    <section className="h-full p-5 mx-auto max-w-6xl py-10 border-b-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
       <div className="h-20 w-full " />
       <div className="">
         <Title title="Contact" />

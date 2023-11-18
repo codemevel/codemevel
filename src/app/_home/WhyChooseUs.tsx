@@ -14,7 +14,7 @@ const WhyChooseUs = async () => {
           />
         </div>
 
-        <ul className="gap-5 grid grid-cols-12 px-5">
+        <ul className="gap-5 grid grid-cols-4 md:grid-cols-12 px-5">
           <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
             <strong className="text-2xl font-semibold text-white">
               Tailored Solutions

@@ -28,33 +28,40 @@ function Header() {
             <p className="text-2xl font-semibold">Codemevel</p>
           </Link>
         </div>
-
         <div
           className={`${
             open ? ' ' : 'hidden'
-          } absolute md:relative md:h-full  md:block md:w-full z-50 md:top-0 top-16 left-0 h-screen w-screen bg-white md:bg-transparent dark:bg-black`}
+          } absolute md:relative md:h-full  md:block md:w-full z-50 md:top-0 top-12 left-0 h-screen w-screen bg-white md:bg-transparent dark:bg-black`}
         >
           <nav>
             <ul className="text-black/50 dark:text-white/50 text-black font-medium justify-center w-full flex md:flex-row flex-col gap-5 md:items-center items-start md:h-10 h-full p-10 md:p-0 text-xl">
               <li className={`${nonactive} ${router === '/' ? active : ''}`}>
-                <Link href="/">Home</Link>
+                <Link onClick={() => setOpen(!open)} href="/">
+                  Home
+                </Link>
               </li>
               <li
                 className={`${nonactive} ${router === '/about' ? active : ''}`}
               >
-                <Link href="/about">About</Link>
+                <Link onClick={() => setOpen(!open)} href="/about">
+                  About
+                </Link>
               </li>
               <li
                 className={`${nonactive} ${
                   router === '/contact' ? active : ''
                 }`}
               >
-                <Link href="/contact">Contact</Link>
+                <Link onClick={() => setOpen(!open)} href="/contact">
+                  Contact
+                </Link>
               </li>
               <li
                 className={`${nonactive} ${router === '/work' ? active : ''}`}
               >
-                <Link href="/work">Our Work</Link>
+                <Link onClick={() => setOpen(!open)} href="/work">
+                  Our Work
+                </Link>
               </li>
               <li className="w-full md:hidden block">
                 <div className="w-full flex flex-row justify-between items-center h-10  md:hidden">

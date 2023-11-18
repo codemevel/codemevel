@@ -1,18 +1,19 @@
+import SubTitle from '../_ui/SubTitle'
+import Title from '../_ui/Title'
+
 const About = async () => {
   return (
     <section className="h-full mx-auto max-w-6xl py-10 border-b-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
       <div className="h-10" />
       <div className="px-5">
-        <h2 className="text-5xl  font-bold mb-4 dark:text-white text-black">
-          About us
-        </h2>
-        <p className="text-2xl dark:text-white/50  text-black/50  mb-6 max-w-4xl">
-          CodeMevel is a dynamic and innovative web development startup
+        <Title title="About us" />
+        <SubTitle
+          subTitle=" CodeMevel is a dynamic and innovative web development startup
           dedicated to providing cutting-edge digital solutions for businesses
           of all sizes. With a team of creative minds and technical experts, we
           strive to transform your digital ideas into engaging and functional
-          realities.
-        </p>
+          realities."
+        />
         <div className="">
           <h3 className="text-3xl  font-bold mb-4 dark:text-white text-black">
             Our Mission
