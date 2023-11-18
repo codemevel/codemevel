@@ -12,7 +12,7 @@ import Header from '@/app/_layout/Header'
 import { ThemeProvider } from './_layout/ThemeProvider'
 import Scroll from './_ui/Scroll'
 
-export const switchThemeDuration: string = 'duration-200'
+export const switchThemeDuration: string = 'duration-0'
 const railway = Raleway({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
@@ -61,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${railway.className} dark:bg-black bg-white dark:dark:text-white  text-black text-black ${switchThemeDuration}`}
+        className={`${railway.className} dark:bg-black bg-white dark:dark:text-white text-black ${switchThemeDuration}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />

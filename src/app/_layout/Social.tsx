@@ -2,11 +2,10 @@
 import { SocialIcon } from 'react-social-icons'
 
 const socialLinks: string[] = [
-  'http://codemevel.com/',
   'https://github.com/codemevel',
   'https://www.instagram.com/codemevel/',
   'https://www.facebook.com/profile.php?id=61553456875424',
-  'https://www.npmjs.com/~codemevel',
+
   'https://twitter.com/codemevel',
   'https://www.linkedin.com/company/codemevel',
 ]
@@ -17,8 +16,8 @@ function Social() {
         return (
           <SocialIcon
             bgColor="transparent"
-            fgColor="gray"
-            className="h-8 w-8  fill-black bg-transparent "
+            fgColor="white"
+            className="h-8 w-8  fill-black bg-transparent invert dark:invert-0 "
             url={url}
             target="_blank"
             key={url}
