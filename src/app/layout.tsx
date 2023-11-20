@@ -28,6 +28,10 @@ const description: string =
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
+  viewportFit: 'cover',
+  minimumScale: 1,
+  initialScale: 1,
+  width: 'device-width',
 }
 export const metadata: Metadata = {
   metadataBase: new URL('https://codemevel.com'),
@@ -35,8 +39,11 @@ export const metadata: Metadata = {
   description,
   keywords: ['codemevel', 'CodeMevel'],
   applicationName: 'Codemevel',
-  viewport: 'width=device-width, initial-scale=1.0',
   manifest: '/manifest.webmanifest.json',
+  icons: [
+    { rel: 'apple-touch-icon', url: '/logo.svg' },
+    { rel: 'shortcut icon', url: '/favicon.ico' },
+  ],
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
