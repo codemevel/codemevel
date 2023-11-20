@@ -27,7 +27,7 @@ const description: string =
   'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
 
 export const viewport: Viewport = {
-  themeColor: '#ffffff',
+  themeColor: '#000000',
   viewportFit: 'cover',
   minimumScale: 1,
   initialScale: 1,
@@ -51,10 +51,7 @@ export const metadata: Metadata = {
     startupImage: ['/logo.svg'],
   },
   openGraph: {
-    title: {
-      default: title,
-      template: '%s - Codemevel',
-    },
+    title,
     description,
     emails: 'codemevel@gmail.com',
     siteName: 'CodeMevel',
@@ -69,10 +66,7 @@ export const metadata: Metadata = {
     creatorId: '@codemevel',
     site: '/',
     card: 'summary_large_image',
-    title: {
-      default: title,
-      template: '%s - Codemevel',
-    },
+    title,
     description,
   },
 }
