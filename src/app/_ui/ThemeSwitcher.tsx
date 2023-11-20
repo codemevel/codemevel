@@ -20,14 +20,16 @@ export function ThemeSwitcher() {
   return (
     <button
       type="button"
-      className="border-[0.5px]  flex flex-row dark:border-white/30 border-black/30  font-semibold text-xl active:scale-[.99] px-2 py-2 rounded-full backdrop-blur-sm hover:bg-white/10"
+      className="border-[0.5px]  flex flex-row dark:border-white/30 border-black/30  font-semibold text-xl active:scale-[.99] px-2 py-2 rounded-full  bg-white/50 dark:bg-black/50 hover:bg-white/10"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      aria-pressed={theme === 'dark'}
     >
       {theme === 'light' ? (
         <MoonIcon className="h-6 w-6 fill-black dark:fill-white" />
       ) : (
         <SunIcon className="h-6 w-6 fill-black dark:fill-white" />
-      )}{' '}
+      )}
     </button>
   )
 }

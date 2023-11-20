@@ -22,10 +22,10 @@ const Hero = async () => {
             </p>
             <div className="flex py-10 gap-5">
               <Link href="/contact">
-                <Button title="Get Started" />
+                <Button title="Get Started" ariaLabel="Get Started" />
               </Link>
               <Link href="/contact">
-                <Button title="Contact Us" />
+                <Button title="Contact Us" ariaLabel="Contact Us" />
               </Link>
             </div>
           </div>

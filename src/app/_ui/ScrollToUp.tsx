@@ -37,6 +37,7 @@ function ScrollToTopButton() {
     <div className="fixed bottom-4 right-4  text-white font-bold py-2 px-4 rounded-full">
       {isVisible && (
         <Button
+          ariaLabel="scroll up"
           title={
             <ChevronDoubleUpIcon className="h-6  fill-black dark:fill-white" />
           }

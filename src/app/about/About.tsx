@@ -85,7 +85,7 @@ const About = async () => {
                 {section.items.map((service, i) => (
                   <li
                     key={service.heading}
-                    className="mb-2 p-5 relative hover:scale-[.99]  col-span-4 backdrop-blur-sm border-[0.5px] border-white/30 rounded-sm dark:text-white/50 text-black/50 hover:bg-white/10"
+                    className="mb-2 p-5 relative hover:scale-[.99]  col-span-4  bg-white/50 dark:bg-black/50 border-[0.5px] border-white/30 rounded-sm dark:text-white/50 text-black/50 hover:bg-white/10"
                   >
                     <div className="h-10 w-10 border-t-[0.5px] absolute top-1 left-1 border-l-[0.5px] opacity-30" />
                     <div className="h-10 w-10 border-b-[0.5px] absolute bottom-1 right-1 border-r-[0.5px] opacity-30" />
@@ -98,7 +98,7 @@ const About = async () => {
                       <br />
                     </h3>
                     <p className="mb-5"> {service.content}</p>
-                    <Button title="Read more ->" />
+                    <Button title="Read more ->" ariaLabel="read more" />
                   </li>
                 ))}
               </ul>

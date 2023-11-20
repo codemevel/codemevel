@@ -22,13 +22,11 @@ function Header() {
     'active:scale-[.99] dark:text-white text-black underline  underline-offset-2'
 
   return (
-    <header className="bg-gradient-to-b  py-1 z-50 from-white to-transparent dark:from-black dark:to-transparent border-b-[0.5px] border-black/10 dark:border-white/10 fixed backdrop-blur-sm w-full">
+    <header className="bg-gradient-to-b  py-1 z-50 from-white to-transparent dark:from-black dark:to-transparent border-b-[0.5px] border-black/10 dark:border-white/10 fixed  bg-white/50 dark:bg-black/50 w-full">
       <div className="max-w-6xl mx-auto w-full flex flex-row py-2 px-5 md:px-0 justify-between">
         <div className="flex flex-row h-10 active:scale-[.99] cursor-pointer items-end justify-center">
           <Logo />
-          <Link href="/">
-            <p className="text-2xl font-semibold">Codemevel</p>
-          </Link>
+          <p className="text-2xl font-semibold">Codemevel</p>
         </div>
         <div
           className={`${
@@ -45,9 +43,9 @@ function Header() {
                 <Link onClick={() => setOpen(!open)} href="/">
                   <>
                     <div className="md:hidden w-full flex justify-center items-stretch">
-                      <Button title="Go home ->" />
+                      <Button title="Go home ->" ariaLabel="Go Home" />
                     </div>
-                    <span className="md:block hidden">Home</span>
+                    <p className="md:block hidden">Home</p>
                   </>
                 </Link>
               </li>
@@ -60,9 +58,12 @@ function Header() {
                 <Link onClick={() => setOpen(!open)} href="/services">
                   <>
                     <div className="md:hidden block">
-                      <Button title="Our Services ->" />
+                      <Button
+                        title="Our Services ->"
+                        ariaLabel="Our Services"
+                      />
                     </div>
-                    <span className="md:block hidden">Services</span>
+                    <p className="md:block hidden">Services</p>
                   </>
                 </Link>
               </li>
@@ -72,9 +73,9 @@ function Header() {
                 <Link onClick={() => setOpen(!open)} href="/about">
                   <>
                     <div className="md:hidden block">
-                      <Button title="About us ->" />
+                      <Button title="About us ->" ariaLabel="About Us" />
                     </div>
-                    <span className="md:block hidden">About</span>
+                    <p className="md:block hidden">About</p>
                   </>
                 </Link>
               </li>
@@ -86,9 +87,9 @@ function Header() {
                 <Link onClick={() => setOpen(!open)} href="/contact">
                   <>
                     <div className="md:hidden block">
-                      <Button title="Contact Us ->" />
+                      <Button title="Contact Us ->" ariaLabel="About us" />
                     </div>
-                    <span className="md:block hidden">Contact us</span>
+                    <p className="md:block hidden">Contact us</p>
                   </>
                 </Link>
               </li>

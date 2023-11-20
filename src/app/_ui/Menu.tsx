@@ -17,8 +17,10 @@ export function MenuSwitcher({
   return (
     <button
       type="button"
-      className="border-[0.5px]  dark:border-white/30 border-black/10  font-semibold text-2xl active:scale-[.99] p-2 rounded-full backdrop-blur-sm hover:bg-white/30"
+      className="border-[0.5px] dark:border-white/30 border-black/10 font-semibold text-2xl active:scale-[.99] p-2 rounded-full bg-white/50 dark:bg-black/50 hover:bg-white/30"
       onClick={() => setOpen(!open)}
+      aria-label={open ? 'Close menu' : 'Open menu'}
+      aria-expanded={open}
     >
       {open ? (
         <Bars3BottomRightIcon className="h-7 w-7 fill-black dark:fill-white" />
