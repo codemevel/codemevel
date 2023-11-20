@@ -1,11 +1,13 @@
 'use client'
 
+import React from 'react'
+
 function Button({
   title,
   submit,
   onClick,
 }: {
-  title: string
+  title: string | React.ReactNode
   submit?: boolean
   onClick?: () => void
 }) {

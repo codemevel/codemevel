@@ -4,8 +4,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
+import Button from '../_ui/Button'
 import { MenuSwitcher } from '../_ui/Menu'
 import { ThemeSwitcher } from '../_ui/ThemeSwitcher'
+import Title from '../_ui/Title'
 import Logo from './Logo'
 
 function Header() {
@@ -31,21 +33,49 @@ function Header() {
         <div
           className={`${
             open ? ' ' : 'hidden'
-          } absolute md:relative md:h-full  md:block md:w-full z-50 md:top-0 top-16 left-0 h-screen  w-screen bg-white md:bg-transparent dark:md:bg-transparent dark:bg-black `}
+          } absolute md:static md:h-full overflow-hidden md:block md:w-full z-50 md:top-0 top-16 left-0 h-screen  w-screen bg-white md:bg-transparent dark:md:bg-transparent dark:bg-black `}
         >
-          {' '}
-          <nav className="">
-            <ul className=" text-black/50 dark:text-white/70 text-black font-medium justify-center w-full flex md:flex-row flex-col gap-5 md:items-center items-start md:h-10 h-full p-10 md:p-0 text-xl">
+          <nav className=" relative  ">
+            <div className="absolute dot-matrix md:hidden" />
+            <ul className=" text-black/50  dark:text-white/70 text-black font-medium justify-center w-full flex md:flex-row flex-col gap-5 md:items-center items-start md:h-10 h-full p-5 md:p-0 text-xl">
+              <li className="py-2 md:hidden block">
+                <Title title="Menu" />
+              </li>
               <li className={`${nonactive} ${router === '/' ? active : ''}`}>
                 <Link onClick={() => setOpen(!open)} href="/">
-                  Home
+                  <>
+                    <div className="md:hidden w-full flex justify-center items-stretch">
+                      <Button title="Go home ->" />
+                    </div>
+                    <span className="md:block hidden">Home</span>
+                  </>
+                </Link>
+              </li>
+
+              <li
+                className={`${nonactive} ${
+                  router === '/services' ? active : ''
+                }`}
+              >
+                <Link onClick={() => setOpen(!open)} href="/services">
+                  <>
+                    <div className="md:hidden block">
+                      <Button title="Our Services ->" />
+                    </div>
+                    <span className="md:block hidden">Services</span>
+                  </>
                 </Link>
               </li>
               <li
                 className={`${nonactive} ${router === '/about' ? active : ''}`}
               >
                 <Link onClick={() => setOpen(!open)} href="/about">
-                  About
+                  <>
+                    <div className="md:hidden block">
+                      <Button title="About us ->" />
+                    </div>
+                    <span className="md:block hidden">About</span>
+                  </>
                 </Link>
               </li>
               <li
@@ -54,19 +84,17 @@ function Header() {
                 }`}
               >
                 <Link onClick={() => setOpen(!open)} href="/contact">
-                  Contact
-                </Link>
-              </li>
-              <li
-                className={`${nonactive} ${router === '/work' ? active : ''}`}
-              >
-                <Link onClick={() => setOpen(!open)} href="/work">
-                  Our Work
+                  <>
+                    <div className="md:hidden block">
+                      <Button title="Contact Us ->" />
+                    </div>
+                    <span className="md:block hidden">Contact us</span>
+                  </>
                 </Link>
               </li>
               <li className="w-full md:hidden block">
                 <div className="w-full flex flex-row justify-between items-center   md:hidden">
-                  <p>Change Theme</p>
+                  <p className="px-2 text-2xl py-5">Change Theme</p>
                   <ThemeSwitcher />
                 </div>
               </li>

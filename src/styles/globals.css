@@ -18,6 +18,12 @@
 ::-webkit-scrollbar-track {
   @apply bg-black; /* Set the color of the scrollbar track */
 }
+.dot-matrix {
+  width: 100%;
+  height: 100%;
+  background-image: url(/dot.png);
+  background-repeat: repeat;
+}
 
 .hero-background {
   @apply dark:bg-black bg-white fill-black;

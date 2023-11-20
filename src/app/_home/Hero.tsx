@@ -29,7 +29,7 @@ const Hero = async () => {
               </Link>
             </div>
           </div>
-          <div className="backdrop-blur-sm max-w-6xl mx-auto w-full">
+          <div className="  md:h-[50%] max-w-6xl mx-auto w-full">
             <HeroSvg />
           </div>
         </div>

@@ -12,6 +12,7 @@ import Header from '@/app/_layout/Header'
 
 import { ThemeProvider } from './_layout/ThemeProvider'
 import Scroll from './_ui/Scroll'
+import ScrollToTopButton from './_ui/ScrollToUp'
 
 export const switchThemeDuration: string = 'duration-0'
 const font = Inter_Tight({
@@ -70,6 +71,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Scroll />
+          <ScrollToTopButton />
         </ThemeProvider>
         <Analytics />
       </body>
