@@ -14,7 +14,7 @@ const Hero = async () => {
               Codemevel
             </h1> */}
             <h1 className="text-4xl md:text-7xl dark:text-white text-black  font-semibold max-w-6xl py-5">
-              Building Trust through Exceptional Web Development.
+              Building Trust with Exceptional Web Services.
             </h1>
             <p className="text-xl md:text-3xl dark:text-white/70  text-black/50  max-w-6xl">
               Explore the experiences of our satisfied clients and their journey

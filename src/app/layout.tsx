@@ -2,7 +2,7 @@
 import '@/styles/globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 // eslint-disable-next-line camelcase
 import { Inter_Tight } from 'next/font/google'
 import React from 'react'
@@ -19,40 +19,53 @@ const font = Inter_Tight({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
   style: ['normal'],
+  display: 'swap',
 })
 
-const title: string =
-  'CodeMevel - Building Trust through Exceptional Web Development'
+const title: string = 'CodeMevel - Building Trust with Exceptional Web Services'
 const description: string =
   'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
 
-// export const viewport: Viewport = {
-//   themeColor: 'black',
-//   width: 'device-width',
-//   initialScale: 1,
-//   maximumScale: 1,
-// }
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
+}
 export const metadata: Metadata = {
   metadataBase: new URL('https://codemevel.com'),
   title,
   description,
   keywords: ['codemevel', 'CodeMevel'],
   applicationName: 'Codemevel',
-
-  openGraph: {
+  viewport: 'width=device-width, initial-scale=1.0',
+  manifest: '/manifest.webmanifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
     title,
+    startupImage: ['/logo.svg'],
+  },
+  openGraph: {
+    title: {
+      default: title,
+      template: '%s - Codemevel',
+    },
     description,
     emails: 'codemevel@gmail.com',
     siteName: 'CodeMevel',
     type: 'website',
     url: '/',
   },
+  formatDetection: {
+    telephone: true,
+  },
   twitter: {
     creator: 'codemevel',
     creatorId: '@codemevel',
     site: '/',
     card: 'summary_large_image',
-    title,
+    title: {
+      default: title,
+      template: '%s - Codemevel',
+    },
     description,
   },
 }

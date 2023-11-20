@@ -66,7 +66,7 @@ const Footer: React.FC = async () => {
               <p className="text-2xl font-semibold ">Codemevel</p>
             </div>
             <p className=" w-80 mb-1">
-              Building Trust through Exceptional Web Development.
+              Building Trust with Exceptional Web Services.
             </p>
             <div className="w-full max-w-xl py-10 md:py-5 flex flex-row justify-between items-center h-10  md:hidden">
               <p>Change Theme</p>
