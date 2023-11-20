@@ -50,7 +50,7 @@ function Faq() {
   return (
     <section className="h-full p-5 max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10 w-full text-white">
       <Title title="Frequently Asked Questions" />
-      <ul className="grid grid-cols-8  gap-5 list-inside">
+      <ul className="grid grid-cols-4 md:grid-cols-4 gap-5 list-inside">
         {faqData.map((item, index) => (
           <li
             key={item.question}
