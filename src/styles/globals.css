@@ -8,15 +8,15 @@
 
 /* For Webkit Browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-  @apply w-2.5; /* Set the width of the scrollbar */
+  @apply w-1.5; /* Set the width of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply  bg-white/50 rounded-lg; /* Set the color and border radius of the scrollbar thumb */
+  @apply bg-white dark:bg-black; /* Set the color and border radius of the scrollbar thumb */
 }
 
 ::-webkit-scrollbar-track {
-  @apply  bg-black ; /* Set the color of the scrollbar track */
+  @apply bg-black; /* Set the color of the scrollbar track */
 }
 
 .hero-background {

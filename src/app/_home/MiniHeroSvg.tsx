@@ -5,7 +5,7 @@ function MiniHeroSvg() {
     <svg
       viewBox="0 0 492 363"
       fill="none"
-      className="opacity-50"
+      className="opacity-90  invert dark:invert-0"
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clipPath="url(#clip0_12913_75635)">

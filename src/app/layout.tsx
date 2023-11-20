@@ -3,7 +3,8 @@ import '@/styles/globals.css'
 
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Raleway } from 'next/font/google'
+// eslint-disable-next-line camelcase
+import { Inter_Tight } from 'next/font/google'
 import React from 'react'
 
 import Footer from '@/app/_layout/Footer'
@@ -13,9 +14,10 @@ import { ThemeProvider } from './_layout/ThemeProvider'
 import Scroll from './_ui/Scroll'
 
 export const switchThemeDuration: string = 'duration-0'
-const railway = Raleway({
+const font = Inter_Tight({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  style: ['normal'],
 })
 
 const title: string =
@@ -61,9 +63,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${railway.className} dark:bg-black bg-white dark:dark:text-white text-black ${switchThemeDuration}`}
+        className={`${font.className} dark:bg-black bg-white dark:dark:text-white text-black ${switchThemeDuration}`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           {children}
           <Footer />
