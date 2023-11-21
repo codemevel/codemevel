@@ -12,7 +12,7 @@ function Contact() {
     // revalidate cache
   }
   return (
-    <section className="h-full p-5 mx-auto max-w-6xl py-10 border-b-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
+    <section className="h-full p-5 mx-auto max-w-6xl py-10 border-b-[0.5px] dark:border-white/10 border-black/10  w-full dark:text-white text-black">
       <div className="h-20 w-full " />
       <div className="">
         <Title title="Contact" />
@@ -28,7 +28,7 @@ function Contact() {
               <input
                 type="email"
                 id="email"
-                className="p-5 border-[0.5px] border-white/30 w-full bg-white/10"
+                className="p-5 border-[0.5px] dark:border-white/30 border-black/30 w-full dark:bg-white/10 bg-black/10"
                 placeholder="name@flowbite.com"
                 required
               />
@@ -43,7 +43,7 @@ function Contact() {
               <input
                 type="text"
                 id="subject"
-                className="p-5 border-[0.5px] border-white/30 w-full bg-white/10"
+                className="p-5 border-[0.5px] dark:border-white/30 border-black/30 w-full dark:bg-white/10 bg-black/10"
                 placeholder="Let us know how we can help you"
                 required
               />
@@ -58,7 +58,7 @@ function Contact() {
               <textarea
                 id="message"
                 rows={6}
-                className="p-5 border-[0.5px] border-white/30 w-full bg-white/10"
+                className="p-5 border-[0.5px] dark:border-white/30 border-black/30 w-full dark:bg-white/10 bg-black/10 "
                 placeholder="Leave a comment..."
               />
             </div>

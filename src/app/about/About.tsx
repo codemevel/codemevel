@@ -18,7 +18,7 @@ const About = async () => {
           <h3 className="text-3xl  font-bold mb-4 dark:text-white text-black">
             Our Mission
           </h3>
-          <p className="text-base dark:text-white/50  text-black/50  mb-6 max-w-4xl">
+          <p className="text-base dark:text-white/50  text-black  mb-6 max-w-4xl">
             Our mission is to empower businesses with robust and user-friendly
             digital platforms that not only enhance their online presence but
             also drive tangible results. We aim to be the driving force behind

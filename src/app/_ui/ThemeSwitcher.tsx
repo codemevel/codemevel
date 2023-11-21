@@ -2,7 +2,7 @@
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false)
@@ -11,6 +11,16 @@ export function ThemeSwitcher() {
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (event.ctrlKey && event.shiftKey && event.key === 'k') {
+      toggleTheme()
+    }
+  }
 
   if (!mounted) {
     return null
@@ -21,6 +31,9 @@ export function ThemeSwitcher() {
       type="button"
       className="border-[0.5px] dark:border-white/10 border-black/10  font-semibold text-2xl active:scale-[.99] p-2 rounded-full backdrop-blur-sm hover:bg-white/10"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onKeyDown={handleKeyDown}
+      aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      aria-pressed={theme === 'dark'}
     >
       {theme === 'light' ? (
         <svg
