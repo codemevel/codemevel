@@ -10,7 +10,7 @@ export default function NotFound() {
       <h2 className="text-3xl font-semibold">Not Found</h2>
       <p className="text-xl ">Could not find requested resource</p>
       <Link href="/">
-        <Button title="Return Home" />
+        <Button title="Return Home" ariaLabel="Return Home" />
       </Link>
     </div>
   )

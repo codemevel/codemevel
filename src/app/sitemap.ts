@@ -5,38 +5,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: 'https://codemevel.com',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'always',
       priority: 1,
     },
     {
       url: 'https://codemevel.com/about',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
+      changeFrequency: 'always',
+      priority: 0.9,
     },
     {
       url: 'https://codemevel.com/work',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'always',
       priority: 0.8,
     },
     {
       url: 'https://codemevel.com/contact',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
+      changeFrequency: 'always',
+      priority: 0.7,
     },
     {
       url: 'https://codemevel.com/terms',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'always',
       priority: 0.6,
     },
     {
       url: 'https://codemevel.com/policy',
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.6,
+      changeFrequency: 'always',
+      priority: 0.5,
     },
   ]
 }

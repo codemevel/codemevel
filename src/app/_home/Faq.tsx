@@ -1,8 +1,5 @@
 'use client'
 
-import { PlusIcon } from '@heroicons/react/24/solid' // Import MinusIcon for the collapse effect
-import React, { useState } from 'react' // Import useState for managing component state
-
 import Title from '../_ui/Title'
 
 interface FAQItem {
@@ -50,52 +47,22 @@ const faqData: FAQItem[] = [
 ]
 
 function Faq() {
-  const [openItems, setOpenItems] = useState<number[]>([])
-
-  const handleToggle = (index: number) => {
-    if (openItems.includes(index)) {
-      setOpenItems(openItems.filter((item) => item !== index))
-    } else {
-      setOpenItems([...openItems, index])
-    }
-  }
-
   return (
     <section className="h-full p-5 max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10 w-full text-white">
       <Title title="Frequently Asked Questions" />
-      <ul className="grid grid-cols-4">
+      <ul className="grid grid-cols-4 md:grid-cols-4 gap-5 list-inside">
         {faqData.map((item, index) => (
           <li
             key={item.question}
-            className={`flex flex-row justify-between items-center p-2 col-span-4 border-y-[0.5px] ${
-              openItems.includes(index) ? 'border-white' : 'border-white/30'
-            } rounded-sm dark:text-white/50 text-black/50 hover:bg-white/10`}
+            className="flex flex-row justify-start items-start p-2 col-span-4 border-black/30 dark:border-white/30 border-[0.5px]  rounded-sm dark:text-white/50 text-black/50 hover:bg-white/10"
           >
-            <div className="">
-              <strong className="text-lg md:text-2xl font-semibold text-white">
-                {item.question}
+            <div className="p-2">
+              <h3 className="text-lg pb-2 md:text-xl text-white">
+                {`Q${index + 1}. ${item.question}`}
                 <br />
-              </strong>
-              <p
-                className={`max-w-4xl ${
-                  openItems.includes(index) ? '' : 'hidden'
-                }`}
-              >
-                {item.answer}
-              </p>
+              </h3>
+              <p className="max-w-4xl">{item.answer}</p>
             </div>
-
-            <button
-              type="button"
-              onClick={() => handleToggle(index)}
-              className=""
-            >
-              <PlusIcon
-                className={`h-10 w-10 ${
-                  openItems.includes(index) ? 'rotate-45' : ''
-                }`}
-              />
-            </button>
           </li>
         ))}
       </ul>

@@ -62,7 +62,7 @@ function Contact() {
                 placeholder="Leave a comment..."
               />
             </div>
-            <Button title="Submit" submit />
+            <Button title="Submit" submit ariaLabel="submit button" />
           </form>
         </div>
       </div>

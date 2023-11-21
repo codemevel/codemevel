@@ -25,7 +25,7 @@ export default function Error({
         Error recieved in requested resource, Message:{error.message}
       </p>
       <Link href="/">
-        <Button title="Go to Home Page" />
+        <Button title="Go to Home Page" ariaLabel="Go Home" />
       </Link>
     </div>
   )

@@ -55,7 +55,7 @@ const FooterLinksSection: React.FC<FooterLinksSectionProps> = ({
   </div>
 )
 
-const Footer: React.FC = async () => {
+const Footer = () => {
   return (
     <footer className=" hero-background ">
       <div className="bg-gradient-to-b   from-white   dark:from-black   to-transparent flex flex-col px-5 items-center justify-between">
@@ -63,12 +63,10 @@ const Footer: React.FC = async () => {
           <div className=" flex flex-col">
             <div className="flex flex-row h-10 items-end mb-1">
               <Logo />
-              <Link href="/">
-                <p className="text-2xl font-semibold ">Codemevel</p>
-              </Link>
+              <p className="text-2xl font-semibold ">Codemevel</p>
             </div>
             <p className=" w-80 mb-1">
-              Building Trust through Exceptional Web Development.
+              Building Trust with Exceptional Web Services.
             </p>
             <div className="w-full max-w-xl py-10 md:py-5 flex flex-row justify-between items-center h-10  md:hidden">
               <p>Change Theme</p>
