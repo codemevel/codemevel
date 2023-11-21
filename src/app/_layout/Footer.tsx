@@ -55,7 +55,7 @@ const FooterLinksSection: React.FC<FooterLinksSectionProps> = ({
   </div>
 )
 
-const Footer: React.FC = async () => {
+const Footer = () => {
   return (
     <footer className=" hero-background ">
       <div className="bg-gradient-to-b   from-white   dark:from-black   to-transparent flex flex-col px-5 items-center justify-between">

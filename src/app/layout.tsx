@@ -40,10 +40,7 @@ export const metadata: Metadata = {
   keywords: ['codemevel', 'CodeMevel'],
   applicationName: 'Codemevel',
   manifest: '/manifest.webmanifest.json',
-  icons: [
-    { rel: 'apple-touch-icon', url: '/logo.svg' },
-    { rel: 'shortcut icon', url: '/favicon.ico' },
-  ],
+  icons: [{ rel: 'apple-touch-icon', url: '/applogo.svg' }],
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
