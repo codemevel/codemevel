@@ -6,6 +6,7 @@ function ContactForm() {
   async function create(formData: FormData) {
     'use server'
 
+    // eslint-disable-next-line no-console
     console.log(formData)
     // mutate data
     // revalidate cache
