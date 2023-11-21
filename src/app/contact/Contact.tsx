@@ -1,7 +1,9 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
+import React from 'react'
 
-import Button from '../_ui/Button'
+import IntroLable from '../_ui/IntroLable'
+import SubTitle from '../_ui/SubTitle'
 import Title from '../_ui/Title'
+import ContactForm from './ContactForm'
 
 function Contact() {
   async function create(formData: FormData) {
@@ -13,58 +15,33 @@ function Contact() {
     // revalidate cache
   }
   return (
-    <section className="h-full p-5 mx-auto max-w-6xl py-10 border-b-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
-      <div className="h-20 w-full " />
-      <div className="">
-        <Title title="Contact" />
-        <div className="">
-          <form action={create} className="space-y-8">
-            <div>
-              <label
-                htmlFor="email"
-                className="block mb-2 text-2xl font-medium "
-              >
-                Your email
-              </label>
-              <input
-                type="email"
-                id="email"
-                className="p-5 border-[0.5px] border-white/30 w-full bg-white/10"
-                placeholder="name@flowbite.com"
-                required
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="subject"
-                className="block mb-2 text-2xl font-medium "
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="p-5 border-[0.5px] border-white/30 w-full bg-white/10"
-                placeholder="Let us know how we can help you"
-                required
-              />
-            </div>
-            <div className="sm:col-span-2">
-              <label
-                htmlFor="message"
-                className="block mb-2 text-2xl font-medium "
-              >
-                Your message
-              </label>
-              <textarea
-                id="message"
-                rows={6}
-                className="p-5 border-[0.5px] border-white/30 w-full bg-white/10"
-                placeholder="Leave a comment..."
-              />
-            </div>
-            <Button title="Submit" submit ariaLabel="submit button" />
-          </form>
+    <section className="min-h-screen py-20 mx-auto max-w-6xl ">
+      <div className="md:py-10 py-5 border-b-[0.5px]  border-black/30 dark:border-white/30 ">
+        <Title title="Contact us" />
+        <SubTitle
+          subTitle=" CodeMevel is a dynamic and innovative web development startup
+          dedicated to providing cutting-edge digital solutions for businesses
+          of all sizes. With a team of creative minds and technical experts, we
+          strive to transform your digital ideas into engaging and functional
+          realities."
+        />
+      </div>
+      <div className="grid grid-cols-8 h-full w-full pt-10 dot-matrix p-5 relative mt-20">
+        <div className="md:h-20 h-10 w-10 md:w-20 border-t-[0.5px] absolute -top-3 -left-3 md:-top-20 md:-left-20 border-l-[0.5px] opacity-30" />
+        <div className="md:h-20 h-10 w-10 md:w-20 border-b-[0.5px] absolute -bottom-5 -right-3 md:-bottom-20 md:-right-20 border-r-[0.5px] opacity-30" />
+        <div className="col-span-4 flex flex-col justify-center items-start  gap-5">
+          <IntroLable label="Deploy in minuts" />
+          <Title title="Power your enterprise with Payload." />
+          <ul className="text-2xl gap-3 ">
+            <li>Enterprise plugins like SSO</li>
+            <li>Support SLA</li>
+            <li>Shared Slack channel</li>
+            <li>Development Assistance</li>
+          </ul>
+          <IntroLable label="" />
+        </div>
+        <div className="col-span-4 dark:bg-black/50 bg-white/50 border-[0.5px] border-black/30 dark:border-white/30  p-5">
+          <ContactForm />
         </div>
       </div>
     </section>

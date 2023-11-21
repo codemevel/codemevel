@@ -3,6 +3,7 @@ import Services from '@/app/_home/Services'
 import WhyChooseUs from '@/app/_home/WhyChooseUs'
 import About from '@/app/about/About'
 
+import GetStarted from './_cta/GetStarted'
 import Faq from './_home/Faq'
 
 const Page = async () => {
@@ -13,6 +14,7 @@ const Page = async () => {
       <Services />
       <WhyChooseUs />
       <Faq />
+      <GetStarted />
     </>
   )
 }
