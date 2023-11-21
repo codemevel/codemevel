@@ -1,6 +1,7 @@
 import Link from 'next/link'
 
 import Button from '../_ui/Button'
+import IntroLable from '../_ui/IntroLable'
 import HeroSvg from './HeroSvg'
 
 const Hero = async () => {
@@ -10,13 +11,13 @@ const Hero = async () => {
         <div className="flex justify-between items-center flex-col ">
           <div className="">
             <div className="h-28" />
-            {/* <h1 className="text-6xl md:text-9xl font- dark:text-white text-black  max-w-6xl">
-              Codemevel
-            </h1> */}
-            <h1 className="text-4xl md:text-7xl dark:text-white text-black  font-semibold max-w-6xl py-5">
-              Building Trust with Exceptional Web Services.
+            <div className="px-5">
+              <IntroLable label="Codemevel " />
+            </div>
+            <h1 className="text-4xl md:text-8xl dark:text-white text-black  font-semibold max-w-6xl py-5">
+              Building Trust with Exceptional Web Services
             </h1>
-            <p className="text-xl md:text-3xl dark:text-white/70  text-black/50  max-w-6xl">
+            <p className="text-xl  md:text-4xl dark:text-white/70  text-black/50  max-w-3xl">
               Explore the experiences of our satisfied clients and their journey
               with Codemevel. Trust our expertise in crafting websites.
             </p>

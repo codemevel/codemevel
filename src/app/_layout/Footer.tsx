@@ -61,10 +61,18 @@ const Footer = () => {
       <div className="bg-gradient-to-b   from-white   dark:from-black   to-transparent flex flex-col px-5 items-center justify-between">
         <div className="flex back py-5 max-w-6xl mx-auto w-full  md:flex-row flex-col justify-between items-start">
           <div className=" flex flex-col">
-            <div className="flex flex-row h-10 items-end mb-1">
-              <Logo />
-              <p className="text-2xl font-semibold ">Codemevel</p>
-            </div>
+            <Link href="/">
+              <button
+                type="button"
+                aria-label="Header logo"
+                id="headerlogo"
+                className="flex flex-row h-10 items-end mb-1"
+              >
+                <Logo />
+                <p className="text-2xl font-semibold">Codemevel</p>
+              </button>
+            </Link>
+
             <p className=" w-80 mb-1">
               Building Trust with Exceptional Web Services.
             </p>

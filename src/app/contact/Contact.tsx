@@ -6,6 +6,14 @@ import Title from '../_ui/Title'
 import ContactForm from './ContactForm'
 
 function Contact() {
+  async function create(formData: FormData) {
+    'use server'
+
+    // eslint-disable-next-line no-console
+    console.log(formData)
+    // mutate data
+    // revalidate cache
+  }
   return (
     <section className="min-h-screen py-20 mx-auto max-w-6xl ">
       <div className="md:py-10 py-5 border-b-[0.5px]  border-black/30 dark:border-white/30 ">

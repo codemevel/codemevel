@@ -42,10 +42,12 @@ function Services() {
   return (
     <section className="h-full max-w-6xl mx-auto pb-10 border-y-[0.5px] dark:border-white/10 border-black/10 w-full text-white">
       <div className="w-full relative">
-        <div className="md:h-20 h-10 w-10 md:w-20 border-t-[0.5px] absolute -top-3 -left-0 md:-top-20 md:-left-20 border-l-[0.5px] opacity-30" />
-        <div className="md:h-20 h-10 w-10 md:w-20 border-b-[0.5px] absolute -bottom-5 -right-0 md:-bottom-20 md:-right-20 border-r-[0.5px] opacity-30" />
+        <div className="md:h-20 h-10 w-10 md:w-20 border-t-[0.5px] absolute -top-3 -right-0 md:-top-10 md:-right-10 border-r-[0.5px] opacity-30" />
+        <div className="md:h-20 h-10 w-10 md:w-20 border-t-[0.5px] absolute -top-3 -left-0 md:-top-10 md:-left-10 border-l-[0.5px] opacity-30" />
+        <div className="md:h-20 h-10 w-10 md:w-20 border-b-[0.5px] absolute -bottom-5 -right-0 md:-bottom-20 md:-right-10 border-r-[0.5px] opacity-30" />
+        <div className="md:h-20 h-10 w-10 md:w-20 border-b-[0.5px] absolute -bottom-5 -left-0 md:-bottom-20 md:-left-10 border-l-[0.5px] opacity-30" />
 
-        <div className="flex flex-col  relative md:flex-row py-10 w-full justify-between items-center">
+        <div className="flex flex-col relative md:flex-row py-10 w-full justify-between items-center">
           <div className="p-5 w-full z-10  dot-matrix ">
             <IntroLable label="Services" />
             <Title title="What Services We Provide." />

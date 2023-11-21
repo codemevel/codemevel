@@ -24,10 +24,17 @@ function Header() {
   return (
     <header className="bg-gradient-to-b  py-1 z-50 from-white to-transparent dark:from-black dark:to-transparent border-b-[0.5px] border-black/10 dark:border-white/10 fixed  bg-white/50 dark:bg-black/50 w-full">
       <div className="max-w-6xl mx-auto w-full flex flex-row py-2 px-5 md:px-0 justify-between">
-        <div className="flex flex-row h-10 active:scale-[.99] cursor-pointer items-end justify-center">
-          <Logo />
-          <p className="text-2xl font-semibold">Codemevel</p>
-        </div>
+        <Link href="/">
+          <button
+            type="button"
+            aria-label="Header logo"
+            id="headerlogo"
+            className="flex flex-row h-10 active:scale-[.99] cursor-pointer items-end justify-center"
+          >
+            <Logo />
+            <p className="text-2xl font-semibold">Codemevel</p>
+          </button>
+        </Link>
         <div
           className={`${
             open ? ' ' : 'hidden'
