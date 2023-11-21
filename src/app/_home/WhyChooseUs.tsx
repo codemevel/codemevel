@@ -7,11 +7,7 @@ const WhyChooseUs = async () => {
       <div className="">
         <div className="px-5">
           <Title title="Why Choose CodeMevel?" />
-          <SubTitle
-            subTitle=" Choose CodeMevel as your digital partner, and let's embark on a
-            journey to elevate your online presence and achieve your digital
-            goals together."
-          />
+          <SubTitle subTitle="Choose CodeMevel as your digital partner, and let's embark on a journey to elevate your online presence and achieve your digital goals together." />
         </div>
 
         <ul className="gap-5 grid grid-cols-4 md:grid-cols-12 px-5">

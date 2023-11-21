@@ -1,8 +1,12 @@
-const SubTitle = async ({ subTitle }: { subTitle: string }) => {
+'use client'
+
+import SplitTextAnimation from './SplitTextAnimation'
+
+function SubTitle({ subTitle }: { subTitle: string }) {
   return (
-    <p className="text-lg font-light md:text-2xl dark:text-white/50  text-black/50  mb-6 max-w-3xl">
-      {subTitle}
-    </p>
+    <div className="text-lg  font-medium md:text-2xl dark:text-white/70  text-black/70  mb-5 max-w-3xl">
+      <SplitTextAnimation phrase={subTitle} />
+    </div>
   )
 }
 

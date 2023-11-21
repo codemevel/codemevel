@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import Services from '../_home/Services'
 
 const title: string =
-  ' Services CodeMevel - Building Trust with Exceptional Web Services'
+  'Services CodeMevel - Building Trust with Exceptional Web Services'
 const description: string =
   'Explore the experiences of our satisfied clients and their journey with CodeMevel. Trust our expertise in crafting websites.'
 export const metadata: Metadata = {
@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   applicationName: 'Codemevel',
 }
 
-const Page = async () => <Services />
+const Page = async () => {
+  return (
+    <>
+      <div className="h-40" />
+      <Services />
+    </>
+  )
+}
 
 export default Page

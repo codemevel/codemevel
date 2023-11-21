@@ -14,6 +14,7 @@ export default function Error({
   error: Error & { digest?: string }
 }) {
   useEffect(() => {
+    // eslint-disable-next-line no-console
     console.error(error)
   }, [error])
 

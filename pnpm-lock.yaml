@@ -8,9 +8,6 @@ dependencies:
   '@heroicons/react':
     specifier: ^2.0.18
     version: registry.npmjs.org/@heroicons/react@2.0.18(react@18.2.0)
-  '@imbios/next-pwa':
-    specifier: ^1.1.1
-    version: registry.npmjs.org/@imbios/next-pwa@1.1.1(@babel/core@7.23.3)(next@14.0.2)(webpack@5.89.0)
   '@studio-freight/lenis':
     specifier: ^1.0.27
     version: registry.npmjs.org/@studio-freight/lenis@1.0.27
@@ -20,6 +17,9 @@ dependencies:
   cssnano:
     specifier: ^6.0.1
     version: registry.npmjs.org/cssnano@6.0.1(postcss@8.4.31)
+  gsap:
+    specifier: ^3.12.2
+    version: registry.npmjs.org/gsap@3.12.2
   next:
     specifier: 14.0.2
     version: registry.npmjs.org/next@14.0.2(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0)
@@ -1677,32 +1677,6 @@ packages:
     version: 2.0.1
     dev: true
 
-  registry.npmjs.org/@imbios/next-pwa@1.1.1(@babel/core@7.23.3)(next@14.0.2)(webpack@5.89.0):
-    resolution: {integrity: sha512-ljiVftxF9hc5vPWc4t2hG4WaGkecas3EsbYZZvH0SEK8s4kFrRSEpCPWxciikLm6LwqZout9iuznaFcoknVQWg==, tarball: https://registry.npmjs.org/@imbios/next-pwa/-/next-pwa-1.1.1.tgz}
-    id: registry.npmjs.org/@imbios/next-pwa/1.1.1
-    name: '@imbios/next-pwa'
-    version: 1.1.1
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    peerDependencies:
-      next: '>=9.0.0'
-    dependencies:
-      babel-loader: registry.npmjs.org/babel-loader@8.2.5(@babel/core@7.23.3)(webpack@5.89.0)
-      clean-webpack-plugin: registry.npmjs.org/clean-webpack-plugin@4.0.0(webpack@5.89.0)
-      globby: registry.npmjs.org/globby@11.0.4
-      next: registry.npmjs.org/next@14.0.2(@babel/core@7.23.3)(react-dom@18.2.0)(react@18.2.0)
-      terser-webpack-plugin: registry.npmjs.org/terser-webpack-plugin@5.3.3(webpack@5.89.0)
-      workbox-webpack-plugin: registry.npmjs.org/workbox-webpack-plugin@6.5.4(webpack@5.89.0)
-      workbox-window: registry.npmjs.org/workbox-window@6.5.4
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@swc/core'
-      - '@types/babel__core'
-      - esbuild
-      - supports-color
-      - uglify-js
-      - webpack
-    dev: false
-
   registry.npmjs.org/@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==, tarball: https://registry.npmjs.org/@jridgewell/gen-mapping/-/gen-mapping-0.3.3.tgz}
     name: '@jridgewell/gen-mapping'
@@ -2721,24 +2695,6 @@ packages:
     dependencies:
       dequal: registry.npmjs.org/dequal@2.0.3
     dev: true
-
-  registry.npmjs.org/babel-loader@8.2.5(@babel/core@7.23.3)(webpack@5.89.0):
-    resolution: {integrity: sha512-OSiFfH89LrEMiWd4pLNqGz4CwJDtbs2ZVc+iGu2HrkRfPxId9F2anQj38IxWpmRfsUY0aBZYi1EFcd3mhtRMLQ==, tarball: https://registry.npmjs.org/babel-loader/-/babel-loader-8.2.5.tgz}
-    id: registry.npmjs.org/babel-loader/8.2.5
-    name: babel-loader
-    version: 8.2.5
-    engines: {node: '>= 8.9'}
-    peerDependencies:
-      '@babel/core': ^7.0.0
-      webpack: '>=2'
-    dependencies:
-      '@babel/core': registry.npmjs.org/@babel/core@7.23.3
-      find-cache-dir: registry.npmjs.org/find-cache-dir@3.3.2
-      loader-utils: registry.npmjs.org/loader-utils@2.0.4
-      make-dir: registry.npmjs.org/make-dir@3.1.0
-      schema-utils: registry.npmjs.org/schema-utils@2.7.1
-      webpack: registry.npmjs.org/webpack@5.89.0
-    dev: false
 
   registry.npmjs.org/babel-loader@8.3.0(@babel/core@7.23.3)(webpack@5.89.0):
     resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==, tarball: https://registry.npmjs.org/babel-loader/-/babel-loader-8.3.0.tgz}
@@ -4475,20 +4431,6 @@ packages:
     dependencies:
       define-properties: registry.npmjs.org/define-properties@1.2.1
 
-  registry.npmjs.org/globby@11.0.4:
-    resolution: {integrity: sha512-9O4MVG9ioZJ08ffbcyVYyLOJLk5JQ688pJ4eMGLpdWLHq/Wr1D9BlriLQyL0E+jbkuePVZXYFj47QM/v093wHg==, tarball: https://registry.npmjs.org/globby/-/globby-11.0.4.tgz}
-    name: globby
-    version: 11.0.4
-    engines: {node: '>=10'}
-    dependencies:
-      array-union: registry.npmjs.org/array-union@2.1.0
-      dir-glob: registry.npmjs.org/dir-glob@3.0.1
-      fast-glob: registry.npmjs.org/fast-glob@3.3.2
-      ignore: registry.npmjs.org/ignore@5.3.0
-      merge2: registry.npmjs.org/merge2@1.4.1
-      slash: registry.npmjs.org/slash@3.0.0
-    dev: false
-
   registry.npmjs.org/globby@11.1.0:
     resolution: {integrity: sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==, tarball: https://registry.npmjs.org/globby/-/globby-11.1.0.tgz}
     name: globby
@@ -4532,6 +4474,12 @@ packages:
     name: graphemer
     version: 1.4.0
     dev: true
+
+  registry.npmjs.org/gsap@3.12.2:
+    resolution: {integrity: sha512-EkYnpG8qHgYBFAwsgsGEqvT1WUidX0tt/ijepx7z8EUJHElykg91RvW1XbkT59T0gZzzszOpjQv7SE41XuIXyQ==, tarball: https://registry.npmjs.org/gsap/-/gsap-3.12.2.tgz}
+    name: gsap
+    version: 3.12.2
+    dev: false
 
   registry.npmjs.org/has-bigints@1.0.2:
     resolution: {integrity: sha512-tSvCKtBr9lkF0Ex0aQiP9N+OpV4zi2r/Nee5VkRDbaqv35RLYMzbwQfFSZZH0kR+Rd6302UJZ2p/bJCEoR3VoQ==, tarball: https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.2.tgz}
@@ -7182,33 +7130,6 @@ packages:
       unique-string: registry.npmjs.org/unique-string@2.0.0
     dev: false
 
-  registry.npmjs.org/terser-webpack-plugin@5.3.3(webpack@5.89.0):
-    resolution: {integrity: sha512-Fx60G5HNYknNTNQnzQ1VePRuu89ZVYWfjRAeT5rITuCY/1b08s49e5kSQwHDirKZWuoKOBRFS98EUUoZ9kLEwQ==, tarball: https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.3.3.tgz}
-    id: registry.npmjs.org/terser-webpack-plugin/5.3.3
-    name: terser-webpack-plugin
-    version: 5.3.3
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      '@swc/core': '*'
-      esbuild: '*'
-      uglify-js: '*'
-      webpack: ^5.1.0
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      esbuild:
-        optional: true
-      uglify-js:
-        optional: true
-    dependencies:
-      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping@0.3.20
-      jest-worker: registry.npmjs.org/jest-worker@27.5.1
-      schema-utils: registry.npmjs.org/schema-utils@3.3.0
-      serialize-javascript: registry.npmjs.org/serialize-javascript@6.0.1
-      terser: registry.npmjs.org/terser@5.24.0
-      webpack: registry.npmjs.org/webpack@5.89.0
-    dev: false
-
   registry.npmjs.org/terser-webpack-plugin@5.3.9(webpack@5.89.0):
     resolution: {integrity: sha512-ZuXsqE07EcggTWQjXUj+Aot/OMcD0bMKGgF63f7UxYcu5/AJF53aIpK1YoP5xR9l6s/Hy2b+t1AM0bLNPRuhwA==, tarball: https://registry.npmjs.org/terser-webpack-plugin/-/terser-webpack-plugin-5.3.9.tgz}
     id: registry.npmjs.org/terser-webpack-plugin/5.3.9
@@ -7657,15 +7578,6 @@ packages:
       isexe: registry.npmjs.org/isexe@2.0.0
     dev: true
 
-  registry.npmjs.org/workbox-background-sync@6.5.4:
-    resolution: {integrity: sha512-0r4INQZMyPky/lj4Ou98qxcThrETucOde+7mRGJl13MPJugQNKeZQOdIJe/1AchOP23cTqHcN/YVpD6r8E6I8g==, tarball: https://registry.npmjs.org/workbox-background-sync/-/workbox-background-sync-6.5.4.tgz}
-    name: workbox-background-sync
-    version: 6.5.4
-    dependencies:
-      idb: registry.npmjs.org/idb@7.1.1
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-background-sync@6.6.0:
     resolution: {integrity: sha512-jkf4ZdgOJxC9u2vztxLuPT/UjlH7m/nWRQ/MgGL0v8BJHoZdVGJd18Kck+a0e55wGXdqyHO+4IQTk0685g4MUw==, tarball: https://registry.npmjs.org/workbox-background-sync/-/workbox-background-sync-6.6.0.tgz}
     name: workbox-background-sync
@@ -7675,68 +7587,12 @@ packages:
       workbox-core: registry.npmjs.org/workbox-core@6.6.0
     dev: false
 
-  registry.npmjs.org/workbox-broadcast-update@6.5.4:
-    resolution: {integrity: sha512-I/lBERoH1u3zyBosnpPEtcAVe5lwykx9Yg1k6f8/BGEPGaMMgZrwVrqL1uA9QZ1NGGFoyE6t9i7lBjOlDhFEEw==, tarball: https://registry.npmjs.org/workbox-broadcast-update/-/workbox-broadcast-update-6.5.4.tgz}
-    name: workbox-broadcast-update
-    version: 6.5.4
-    dependencies:
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-broadcast-update@6.6.0:
     resolution: {integrity: sha512-nm+v6QmrIFaB/yokJmQ/93qIJ7n72NICxIwQwe5xsZiV2aI93MGGyEyzOzDPVz5THEr5rC3FJSsO3346cId64Q==, tarball: https://registry.npmjs.org/workbox-broadcast-update/-/workbox-broadcast-update-6.6.0.tgz}
     name: workbox-broadcast-update
     version: 6.6.0
     dependencies:
       workbox-core: registry.npmjs.org/workbox-core@6.6.0
-    dev: false
-
-  registry.npmjs.org/workbox-build@6.5.4:
-    resolution: {integrity: sha512-kgRevLXEYvUW9WS4XoziYqZ8Q9j/2ziJYEtTrjdz5/L/cTUa2XfyMP2i7c3p34lgqJ03+mTiz13SdFef2POwbA==, tarball: https://registry.npmjs.org/workbox-build/-/workbox-build-6.5.4.tgz}
-    name: workbox-build
-    version: 6.5.4
-    engines: {node: '>=10.0.0'}
-    dependencies:
-      '@apideck/better-ajv-errors': registry.npmjs.org/@apideck/better-ajv-errors@0.3.6(ajv@8.12.0)
-      '@babel/core': registry.npmjs.org/@babel/core@7.23.3
-      '@babel/preset-env': registry.npmjs.org/@babel/preset-env@7.23.3(@babel/core@7.23.3)
-      '@babel/runtime': registry.npmjs.org/@babel/runtime@7.23.4
-      '@rollup/plugin-babel': registry.npmjs.org/@rollup/plugin-babel@5.3.1(@babel/core@7.23.3)(rollup@2.79.1)
-      '@rollup/plugin-node-resolve': registry.npmjs.org/@rollup/plugin-node-resolve@11.2.1(rollup@2.79.1)
-      '@rollup/plugin-replace': registry.npmjs.org/@rollup/plugin-replace@2.4.2(rollup@2.79.1)
-      '@surma/rollup-plugin-off-main-thread': registry.npmjs.org/@surma/rollup-plugin-off-main-thread@2.2.3
-      ajv: registry.npmjs.org/ajv@8.12.0
-      common-tags: registry.npmjs.org/common-tags@1.8.2
-      fast-json-stable-stringify: registry.npmjs.org/fast-json-stable-stringify@2.1.0
-      fs-extra: registry.npmjs.org/fs-extra@9.1.0
-      glob: registry.npmjs.org/glob@7.2.3
-      lodash: registry.npmjs.org/lodash@4.17.21
-      pretty-bytes: registry.npmjs.org/pretty-bytes@5.6.0
-      rollup: registry.npmjs.org/rollup@2.79.1
-      rollup-plugin-terser: registry.npmjs.org/rollup-plugin-terser@7.0.2(rollup@2.79.1)
-      source-map: registry.npmjs.org/source-map@0.8.0-beta.0
-      stringify-object: registry.npmjs.org/stringify-object@3.3.0
-      strip-comments: registry.npmjs.org/strip-comments@2.0.1
-      tempy: registry.npmjs.org/tempy@0.6.0
-      upath: registry.npmjs.org/upath@1.2.0
-      workbox-background-sync: registry.npmjs.org/workbox-background-sync@6.5.4
-      workbox-broadcast-update: registry.npmjs.org/workbox-broadcast-update@6.5.4
-      workbox-cacheable-response: registry.npmjs.org/workbox-cacheable-response@6.5.4
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-      workbox-expiration: registry.npmjs.org/workbox-expiration@6.5.4
-      workbox-google-analytics: registry.npmjs.org/workbox-google-analytics@6.5.4
-      workbox-navigation-preload: registry.npmjs.org/workbox-navigation-preload@6.5.4
-      workbox-precaching: registry.npmjs.org/workbox-precaching@6.5.4
-      workbox-range-requests: registry.npmjs.org/workbox-range-requests@6.5.4
-      workbox-recipes: registry.npmjs.org/workbox-recipes@6.5.4
-      workbox-routing: registry.npmjs.org/workbox-routing@6.5.4
-      workbox-strategies: registry.npmjs.org/workbox-strategies@6.5.4
-      workbox-streams: registry.npmjs.org/workbox-streams@6.5.4
-      workbox-sw: registry.npmjs.org/workbox-sw@6.5.4
-      workbox-window: registry.npmjs.org/workbox-window@6.5.4
-    transitivePeerDependencies:
-      - '@types/babel__core'
-      - supports-color
     dev: false
 
   registry.npmjs.org/workbox-build@6.6.0:
@@ -7787,14 +7643,6 @@ packages:
       - supports-color
     dev: false
 
-  registry.npmjs.org/workbox-cacheable-response@6.5.4:
-    resolution: {integrity: sha512-DCR9uD0Fqj8oB2TSWQEm1hbFs/85hXXoayVwFKLVuIuxwJaihBsLsp4y7J9bvZbqtPJ1KlCkmYVGQKrBU4KAug==, tarball: https://registry.npmjs.org/workbox-cacheable-response/-/workbox-cacheable-response-6.5.4.tgz}
-    name: workbox-cacheable-response
-    version: 6.5.4
-    dependencies:
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-cacheable-response@6.6.0:
     resolution: {integrity: sha512-JfhJUSQDwsF1Xv3EV1vWzSsCOZn4mQ38bWEBR3LdvOxSPgB65gAM6cS2CX8rkkKHRgiLrN7Wxoyu+TuH67kHrw==, tarball: https://registry.npmjs.org/workbox-cacheable-response/-/workbox-cacheable-response-6.6.0.tgz}
     name: workbox-cacheable-response
@@ -7804,25 +7652,10 @@ packages:
       workbox-core: registry.npmjs.org/workbox-core@6.6.0
     dev: false
 
-  registry.npmjs.org/workbox-core@6.5.4:
-    resolution: {integrity: sha512-OXYb+m9wZm8GrORlV2vBbE5EC1FKu71GGp0H4rjmxmF4/HLbMCoTFws87M3dFwgpmg0v00K++PImpNQ6J5NQ6Q==, tarball: https://registry.npmjs.org/workbox-core/-/workbox-core-6.5.4.tgz}
-    name: workbox-core
-    version: 6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-core@6.6.0:
     resolution: {integrity: sha512-GDtFRF7Yg3DD859PMbPAYPeJyg5gJYXuBQAC+wyrWuuXgpfoOrIQIvFRZnQ7+czTIQjIr1DhLEGFzZanAT/3bQ==, tarball: https://registry.npmjs.org/workbox-core/-/workbox-core-6.6.0.tgz}
     name: workbox-core
     version: 6.6.0
-    dev: false
-
-  registry.npmjs.org/workbox-expiration@6.5.4:
-    resolution: {integrity: sha512-jUP5qPOpH1nXtjGGh1fRBa1wJL2QlIb5mGpct3NzepjGG2uFFBn4iiEBiI9GUmfAFR2ApuRhDydjcRmYXddiEQ==, tarball: https://registry.npmjs.org/workbox-expiration/-/workbox-expiration-6.5.4.tgz}
-    name: workbox-expiration
-    version: 6.5.4
-    dependencies:
-      idb: registry.npmjs.org/idb@7.1.1
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
     dev: false
 
   registry.npmjs.org/workbox-expiration@6.6.0:
@@ -7832,17 +7665,6 @@ packages:
     dependencies:
       idb: registry.npmjs.org/idb@7.1.1
       workbox-core: registry.npmjs.org/workbox-core@6.6.0
-    dev: false
-
-  registry.npmjs.org/workbox-google-analytics@6.5.4:
-    resolution: {integrity: sha512-8AU1WuaXsD49249Wq0B2zn4a/vvFfHkpcFfqAFHNHwln3jK9QUYmzdkKXGIZl9wyKNP+RRX30vcgcyWMcZ9VAg==, tarball: https://registry.npmjs.org/workbox-google-analytics/-/workbox-google-analytics-6.5.4.tgz}
-    name: workbox-google-analytics
-    version: 6.5.4
-    dependencies:
-      workbox-background-sync: registry.npmjs.org/workbox-background-sync@6.5.4
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-      workbox-routing: registry.npmjs.org/workbox-routing@6.5.4
-      workbox-strategies: registry.npmjs.org/workbox-strategies@6.5.4
     dev: false
 
   registry.npmjs.org/workbox-google-analytics@6.6.0:
@@ -7856,30 +7678,12 @@ packages:
       workbox-strategies: registry.npmjs.org/workbox-strategies@6.6.0
     dev: false
 
-  registry.npmjs.org/workbox-navigation-preload@6.5.4:
-    resolution: {integrity: sha512-IIwf80eO3cr8h6XSQJF+Hxj26rg2RPFVUmJLUlM0+A2GzB4HFbQyKkrgD5y2d84g2IbJzP4B4j5dPBRzamHrng==, tarball: https://registry.npmjs.org/workbox-navigation-preload/-/workbox-navigation-preload-6.5.4.tgz}
-    name: workbox-navigation-preload
-    version: 6.5.4
-    dependencies:
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-navigation-preload@6.6.0:
     resolution: {integrity: sha512-utNEWG+uOfXdaZmvhshrh7KzhDu/1iMHyQOV6Aqup8Mm78D286ugu5k9MFD9SzBT5TcwgwSORVvInaXWbvKz9Q==, tarball: https://registry.npmjs.org/workbox-navigation-preload/-/workbox-navigation-preload-6.6.0.tgz}
     name: workbox-navigation-preload
     version: 6.6.0
     dependencies:
       workbox-core: registry.npmjs.org/workbox-core@6.6.0
-    dev: false
-
-  registry.npmjs.org/workbox-precaching@6.5.4:
-    resolution: {integrity: sha512-hSMezMsW6btKnxHB4bFy2Qfwey/8SYdGWvVIKFaUm8vJ4E53JAY+U2JwLTRD8wbLWoP6OVUdFlXsTdKu9yoLTg==, tarball: https://registry.npmjs.org/workbox-precaching/-/workbox-precaching-6.5.4.tgz}
-    name: workbox-precaching
-    version: 6.5.4
-    dependencies:
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-      workbox-routing: registry.npmjs.org/workbox-routing@6.5.4
-      workbox-strategies: registry.npmjs.org/workbox-strategies@6.5.4
     dev: false
 
   registry.npmjs.org/workbox-precaching@6.6.0:
@@ -7892,33 +7696,12 @@ packages:
       workbox-strategies: registry.npmjs.org/workbox-strategies@6.6.0
     dev: false
 
-  registry.npmjs.org/workbox-range-requests@6.5.4:
-    resolution: {integrity: sha512-Je2qR1NXCFC8xVJ/Lux6saH6IrQGhMpDrPXWZWWS8n/RD+WZfKa6dSZwU+/QksfEadJEr/NfY+aP/CXFFK5JFg==, tarball: https://registry.npmjs.org/workbox-range-requests/-/workbox-range-requests-6.5.4.tgz}
-    name: workbox-range-requests
-    version: 6.5.4
-    dependencies:
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-range-requests@6.6.0:
     resolution: {integrity: sha512-V3aICz5fLGq5DpSYEU8LxeXvsT//mRWzKrfBOIxzIdQnV/Wj7R+LyJVTczi4CQ4NwKhAaBVaSujI1cEjXW+hTw==, tarball: https://registry.npmjs.org/workbox-range-requests/-/workbox-range-requests-6.6.0.tgz}
     name: workbox-range-requests
     version: 6.6.0
     dependencies:
       workbox-core: registry.npmjs.org/workbox-core@6.6.0
-    dev: false
-
-  registry.npmjs.org/workbox-recipes@6.5.4:
-    resolution: {integrity: sha512-QZNO8Ez708NNwzLNEXTG4QYSKQ1ochzEtRLGaq+mr2PyoEIC1xFW7MrWxrONUxBFOByksds9Z4//lKAX8tHyUA==, tarball: https://registry.npmjs.org/workbox-recipes/-/workbox-recipes-6.5.4.tgz}
-    name: workbox-recipes
-    version: 6.5.4
-    dependencies:
-      workbox-cacheable-response: registry.npmjs.org/workbox-cacheable-response@6.5.4
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-      workbox-expiration: registry.npmjs.org/workbox-expiration@6.5.4
-      workbox-precaching: registry.npmjs.org/workbox-precaching@6.5.4
-      workbox-routing: registry.npmjs.org/workbox-routing@6.5.4
-      workbox-strategies: registry.npmjs.org/workbox-strategies@6.5.4
     dev: false
 
   registry.npmjs.org/workbox-recipes@6.6.0:
@@ -7934,14 +7717,6 @@ packages:
       workbox-strategies: registry.npmjs.org/workbox-strategies@6.6.0
     dev: false
 
-  registry.npmjs.org/workbox-routing@6.5.4:
-    resolution: {integrity: sha512-apQswLsbrrOsBUWtr9Lf80F+P1sHnQdYodRo32SjiByYi36IDyL2r7BH1lJtFX8fwNHDa1QOVY74WKLLS6o5Pg==, tarball: https://registry.npmjs.org/workbox-routing/-/workbox-routing-6.5.4.tgz}
-    name: workbox-routing
-    version: 6.5.4
-    dependencies:
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-routing@6.6.0:
     resolution: {integrity: sha512-x8gdN7VDBiLC03izAZRfU+WKUXJnbqt6PG9Uh0XuPRzJPpZGLKce/FkOX95dWHRpOHWLEq8RXzjW0O+POSkKvw==, tarball: https://registry.npmjs.org/workbox-routing/-/workbox-routing-6.6.0.tgz}
     name: workbox-routing
@@ -7950,29 +7725,12 @@ packages:
       workbox-core: registry.npmjs.org/workbox-core@6.6.0
     dev: false
 
-  registry.npmjs.org/workbox-strategies@6.5.4:
-    resolution: {integrity: sha512-DEtsxhx0LIYWkJBTQolRxG4EI0setTJkqR4m7r4YpBdxtWJH1Mbg01Cj8ZjNOO8etqfA3IZaOPHUxCs8cBsKLw==, tarball: https://registry.npmjs.org/workbox-strategies/-/workbox-strategies-6.5.4.tgz}
-    name: workbox-strategies
-    version: 6.5.4
-    dependencies:
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-strategies@6.6.0:
     resolution: {integrity: sha512-eC07XGuINAKUWDnZeIPdRdVja4JQtTuc35TZ8SwMb1ztjp7Ddq2CJ4yqLvWzFWGlYI7CG/YGqaETntTxBGdKgQ==, tarball: https://registry.npmjs.org/workbox-strategies/-/workbox-strategies-6.6.0.tgz}
     name: workbox-strategies
     version: 6.6.0
     dependencies:
       workbox-core: registry.npmjs.org/workbox-core@6.6.0
-    dev: false
-
-  registry.npmjs.org/workbox-streams@6.5.4:
-    resolution: {integrity: sha512-FXKVh87d2RFXkliAIheBojBELIPnWbQdyDvsH3t74Cwhg0fDheL1T8BqSM86hZvC0ZESLsznSYWw+Va+KVbUzg==, tarball: https://registry.npmjs.org/workbox-streams/-/workbox-streams-6.5.4.tgz}
-    name: workbox-streams
-    version: 6.5.4
-    dependencies:
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
-      workbox-routing: registry.npmjs.org/workbox-routing@6.5.4
     dev: false
 
   registry.npmjs.org/workbox-streams@6.6.0:
@@ -7984,36 +7742,10 @@ packages:
       workbox-routing: registry.npmjs.org/workbox-routing@6.6.0
     dev: false
 
-  registry.npmjs.org/workbox-sw@6.5.4:
-    resolution: {integrity: sha512-vo2RQo7DILVRoH5LjGqw3nphavEjK4Qk+FenXeUsknKn14eCNedHOXWbmnvP4ipKhlE35pvJ4yl4YYf6YsJArA==, tarball: https://registry.npmjs.org/workbox-sw/-/workbox-sw-6.5.4.tgz}
-    name: workbox-sw
-    version: 6.5.4
-    dev: false
-
   registry.npmjs.org/workbox-sw@6.6.0:
     resolution: {integrity: sha512-R2IkwDokbtHUE4Kus8pKO5+VkPHD2oqTgl+XJwh4zbF1HyjAbgNmK/FneZHVU7p03XUt9ICfuGDYISWG9qV/CQ==, tarball: https://registry.npmjs.org/workbox-sw/-/workbox-sw-6.6.0.tgz}
     name: workbox-sw
     version: 6.6.0
-    dev: false
-
-  registry.npmjs.org/workbox-webpack-plugin@6.5.4(webpack@5.89.0):
-    resolution: {integrity: sha512-LmWm/zoaahe0EGmMTrSLUi+BjyR3cdGEfU3fS6PN1zKFYbqAKuQ+Oy/27e4VSXsyIwAw8+QDfk1XHNGtZu9nQg==, tarball: https://registry.npmjs.org/workbox-webpack-plugin/-/workbox-webpack-plugin-6.5.4.tgz}
-    id: registry.npmjs.org/workbox-webpack-plugin/6.5.4
-    name: workbox-webpack-plugin
-    version: 6.5.4
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      webpack: ^4.4.0 || ^5.9.0
-    dependencies:
-      fast-json-stable-stringify: registry.npmjs.org/fast-json-stable-stringify@2.1.0
-      pretty-bytes: registry.npmjs.org/pretty-bytes@5.6.0
-      upath: registry.npmjs.org/upath@1.2.0
-      webpack: registry.npmjs.org/webpack@5.89.0
-      webpack-sources: registry.npmjs.org/webpack-sources@1.4.3
-      workbox-build: registry.npmjs.org/workbox-build@6.5.4
-    transitivePeerDependencies:
-      - '@types/babel__core'
-      - supports-color
     dev: false
 
   registry.npmjs.org/workbox-webpack-plugin@6.6.0(webpack@5.89.0):
@@ -8034,15 +7766,6 @@ packages:
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
-    dev: false
-
-  registry.npmjs.org/workbox-window@6.5.4:
-    resolution: {integrity: sha512-HnLZJDwYBE+hpG25AQBO8RUWBJRaCsI9ksQJEp3aCOFCaG5kqaToAYXFRAHxzRluM2cQbGzdQF5rjKPWPA1fug==, tarball: https://registry.npmjs.org/workbox-window/-/workbox-window-6.5.4.tgz}
-    name: workbox-window
-    version: 6.5.4
-    dependencies:
-      '@types/trusted-types': registry.npmjs.org/@types/trusted-types@2.0.7
-      workbox-core: registry.npmjs.org/workbox-core@6.5.4
     dev: false
 
   registry.npmjs.org/workbox-window@6.6.0:

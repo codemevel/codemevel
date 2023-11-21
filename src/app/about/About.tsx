@@ -60,7 +60,7 @@ const About = async () => {
         <div className="md:py-10 py-5">
           <Title title="An intro to Codemevel" />
           <SubTitle
-            subTitle=" CodeMevel is a dynamic and innovative web development startup
+            subTitle="CodeMevel is a dynamic and innovative web development startup
           dedicated to providing cutting-edge digital solutions for businesses
           of all sizes. With a team of creative minds and technical experts, we
           strive to transform your digital ideas into engaging and functional
