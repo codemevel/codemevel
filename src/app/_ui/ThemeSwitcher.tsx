@@ -13,16 +13,6 @@ export function ThemeSwitcher() {
     setMounted(true)
   }, [])
 
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
-
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
-    if (event.ctrlKey && event.shiftKey && event.key === 'k') {
-      toggleTheme()
-    }
-  }
-
   if (!mounted) {
     return null
   }
