@@ -50,11 +50,11 @@ const aboutData = [
 
 const About = async () => {
   return (
-    <section className="h-full mx-auto max-w-6xl px-5 md:px-0 py-2 md:py-10 border-b-[0.5px] dark:border-white/10 border-black/10 w-full text-white">
+    <section className="h-full mx-auto max-w-6xl px-5 md:px-0 py-2 md:py-10 border-b-[0.5px] dark:border-white/10 border-black/10 w-full dark:text-white text-black">
       <div className="md:h-40 h-28 w-full" />
 
       <div className="relative">
-        <div className="md:h-20 h-10 w-10 md:w-20 border-t-[0.5px] absolute -top-3 -left-3 md:-top-20 md:-left-20 border-l-[0.5px] opacity-30" />
+        <div className="md:h-20 h-10 w-10 md:w-20 border-t-[0.5px] absolute -top-3 -left-3 md:-top-20 md:-left-20 border-l-[0.5px] opacity-30 " />
         <div className="md:h-20 h-10 w-10 md:w-20 border-b-[0.5px] absolute -bottom-5 -right-3 md:-bottom-20 md:-right-20 border-r-[0.5px] opacity-30" />
         <IntroLable label="About us" />
         <div className="md:py-10 py-5">

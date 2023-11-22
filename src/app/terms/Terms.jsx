@@ -1,6 +1,6 @@
 const Terms = async () => {
   return (
-    <section className="h-full  max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
+    <section className="h-full  max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10  w-full dark:text-white text-black">
       <div className="h-10" />
       <div className="px-5">
         <h2 className="text-5xl  font-bold mb-4">Terms and Conditions</h2>
@@ -13,8 +13,8 @@ const Terms = async () => {
         </p>
 
         <ul className="grid md:grid-cols-8 grid-cols-4 gap-5">
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
-            <strong className="text-2xl font-semibold text-white">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50  text-black/50  dark:hover:bg-white/10 hover:bg-black/10">
+            <strong className="text-2xl font-semibold dark:text-white text-black">
               Use of Services <br />
             </strong>
             <p className="max-w-4xl">
@@ -23,8 +23,8 @@ const Terms = async () => {
               you are at least 18 years old.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
-            <strong className="text-2xl font-semibold text-white">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50  text-black/50  dark:hover:bg-white/10 hover:bg-black/10">
+            <strong className="text-2xl font-semibold dark:text-white text-black">
               Intellectual Property <br />
             </strong>
             <p className="max-w-4xl">
@@ -34,8 +34,8 @@ const Terms = async () => {
               intellectual property laws.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
-            <strong className="text-2xl font-semibold text-white">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50  text-black/50  dark:hover:bg-white/10 hover:bg-black/10">
+            <strong className="text-2xl font-semibold dark:text-white text-black">
               User Conduct <br />
             </strong>
             <p className="max-w-4xl">
@@ -44,8 +44,8 @@ const Terms = async () => {
               inhibit the use and enjoyment of our services by any third party
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
-            <strong className="text-2xl font-semibold text-white">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50  text-black/50  dark:hover:bg-white/10 hover:bg-black/10">
+            <strong className="text-2xl font-semibold dark:text-white text-black">
               Limitation of Liability <br />
             </strong>
             <p className="max-w-4xl">
@@ -55,8 +55,8 @@ const Terms = async () => {
               of or in connection with the use of our services.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
-            <strong className="text-2xl font-semibold text-white">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50  text-black/50  dark:hover:bg-white/10 hover:bg-black/10">
+            <strong className="text-2xl font-semibold dark:text-white text-black">
               Indemnification <br />
             </strong>{' '}
             <p className="max-w-4xl">
@@ -67,8 +67,8 @@ const Terms = async () => {
               the rights of a third party.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
-            <strong className="text-2xl font-semibold text-white">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50  text-black/50  dark:hover:bg-white/10 hover:bg-black/10">
+            <strong className="text-2xl font-semibold dark:text-white text-black">
               Governing Law <br />
             </strong>{' '}
             <p className="max-w-4xl">
@@ -77,8 +77,8 @@ const Terms = async () => {
               provisions.
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
-            <strong className="text-2xl font-semibold text-white">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50  text-black/50  dark:hover:bg-white/10 hover:bg-black/10">
+            <strong className="text-2xl font-semibold dark:text-white text-black">
               Changes to Terms <br />
             </strong>{' '}
             <p className="max-w-4xl">
@@ -88,8 +88,8 @@ const Terms = async () => {
               periodically for any changes
             </p>
           </li>
-          <li className="mb-2 p-5 col-span-4 border-[0.5px] border-white/30 rounded-sm dark:text-white/50  text-black/50  hover:bg-white/10">
-            <strong className="text-2xl font-semibold text-white">
+          <li className="mb-2 p-5 col-span-4 border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50  text-black/50  dark:hover:bg-white/10 hover:bg-black/10">
+            <strong className="text-2xl font-semibold dark:text-white text-black">
               Contact Us <br />
             </strong>{' '}
             <p className="max-w-4xl">

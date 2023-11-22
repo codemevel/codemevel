@@ -90,8 +90,8 @@ const Footer = () => {
             </nav>
           </div>
         </div>
-        <div className="flex max-w-6xl mx-auto w-full  md:flex-row flex-col justify-between py-5  border-t-[0.5px] border-black/30 dark:border-white/30">
-          <div className="w-full max-w-2xl ">
+        <div className="flex max-w-6xl mx-auto w-full  md:flex-row flex-col-reverse justify-between py-5  border-t-[0.5px] border-black/30 dark:border-white/30">
+          <div className="w-full max-w-2xl md:py-0 py-5 ">
             <p className="text-black font-semibold text-lg dark:text-white">
               &copy; {new Date().getFullYear()} -
               <Link
@@ -105,7 +105,7 @@ const Footer = () => {
               ™ | All rights reserved.
             </p>
           </div>
-          <div className="max-w-2xl">
+          <div className="max-w-2xl md:py-0 py-5 ">
             <Social />
           </div>
         </div>
