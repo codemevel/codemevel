@@ -3,7 +3,7 @@ import Title from '../_ui/Title'
 
 const WhyChooseUs = async () => {
   return (
-    <section className="h-full max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10  w-full text-white">
+    <section className="h-full max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10 md:mt-20 mt-10  w-full text-white">
       <div className="">
         <div className="px-5">
           <Title title="Why Choose CodeMevel?" />
