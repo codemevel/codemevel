@@ -7,7 +7,7 @@ import ContactForm from './ContactForm'
 
 function Contact() {
   return (
-    <section className="min-h-screen py-20 mx-auto max-w-6xl ">
+    <section className=" py-20 mx-auto max-w-6xl px-2.5 md:px-5 ">
       <div className="md:py-10 py-5 border-b-[0.5px]  border-black/30 dark:border-white/30 ">
         <Title title="Contact us" />
         <SubTitle
@@ -18,7 +18,7 @@ function Contact() {
           realities."
         />
       </div>
-      <div className="grid grid-cols-8 h-full w-full pt-10 dot-matrix p-5 relative mt-20">
+      <div className="grid md:grid-cols-8 grid-cols-4 h-full w-full pt-10 dot-matrix md:p-5 p-2.5 relative mt-20">
         <div className="md:h-20 h-10 w-10 md:w-20 border-t-[0.5px] absolute -top-3 -left-3 md:-top-20 md:-left-20 border-l-[0.5px] opacity-30" />
         <div className="md:h-20 h-10 w-10 md:w-20 border-b-[0.5px] absolute -bottom-5 -right-3 md:-bottom-20 md:-right-20 border-r-[0.5px] opacity-30" />
         <div className="col-span-4 flex flex-col justify-center items-start  gap-5">
@@ -30,9 +30,8 @@ function Contact() {
             <li>Shared Slack channel</li>
             <li>Development Assistance</li>
           </ul>
-          <IntroLable label="" />
         </div>
-        <div className="col-span-4 dark:bg-black/50 bg-white/50 border-[0.5px] border-black/30 dark:border-white/30  p-5">
+        <div className="col-span-4 dark:bg-black/50 bg-white/50 border-[0.5px] border-black/30 dark:border-white/30  md:p-5 p-2.5 mt-10 md:mt-0">
           <ContactForm />
         </div>
       </div>
