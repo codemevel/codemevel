@@ -5,6 +5,7 @@ import About from '@/app/about/About'
 
 import GetStarted from './_cta/GetStarted'
 import Faq from './_home/Faq'
+import Testimonials from './_home/Testimonials'
 
 const Page = async () => {
   return (
@@ -12,6 +13,7 @@ const Page = async () => {
       <Hero />
       <About />
       <Services />
+      <Testimonials />
       <WhyChooseUs />
       <Faq />
       <GetStarted />

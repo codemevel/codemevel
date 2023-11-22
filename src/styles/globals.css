@@ -8,7 +8,7 @@
 
 /* For Webkit Browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-  @apply w-1.5; /* Set the width of the scrollbar */
+  @apply w-1.5 h-1.5; /* Set the width of the scrollbar */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -17,6 +17,10 @@
 
 ::-webkit-scrollbar-track {
   @apply bg-black; /* Set the color of the scrollbar track */
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply h-2 w-2;
 }
 .dot-matrix {
   width: 100%;
