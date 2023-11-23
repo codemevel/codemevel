@@ -6,23 +6,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React, { ReactElement, useEffect, useRef, useState } from 'react'
 
-const useDeviceSize = () => {
-  const [width, setWidth] = useState(0)
-  const [height, setHeight] = useState(0)
-
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth)
-    setHeight(window.innerHeight)
-  }
-
-  useEffect(() => {
-    handleWindowResize()
-    window.addEventListener('resize', handleWindowResize)
-    return () => window.removeEventListener('resize', handleWindowResize)
-  }, [])
-
-  return [width, height]
-}
+import useDeviceSize from '@/lib/useDeviceSize'
 
 export default function SplitTextAnimation({
   phrase,

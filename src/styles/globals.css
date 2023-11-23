@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .font-outline {
+    -webkit-text-stroke: 2px black;
+  }
+  .font-outline-dark {
+    -webkit-text-stroke: 2px white;
+  }
+}
+
 ::selection {
   @apply dark:bg-white/50 text-white bg-black/50 dark:text-black rounded-md; /* Customize colors and roundness as needed */
 }
