@@ -4,7 +4,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import React, { ReactElement, useEffect, useRef, useState } from 'react'
+import React, { ReactElement, useEffect, useRef } from 'react'
 
 import useDeviceSize from '@/lib/useDeviceSize'
 
