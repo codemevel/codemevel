@@ -6,6 +6,7 @@ import About from '@/app/about/About'
 import GetStarted from './_cta/GetStarted'
 import Faq from './_home/Faq'
 import Testimonials from './_home/Testimonials'
+import Blog from './blog/Blog'
 import InfinteTextScroll from './_ui/InfinteTextScroll'
 
 const Page = async () => {

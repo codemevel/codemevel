@@ -99,6 +99,18 @@ function Header() {
                   </>
                 </Link>
               </li>
+              <li
+                className={`${nonactive} ${router === '/blog' ? active : ''}`}
+              >
+                <Link onClick={() => setOpen(!open)} href="/blog">
+                  <>
+                    <div className="md:hidden block">
+                      <Button title="Contact Us ->" ariaLabel="About us" />
+                    </div>
+                    <p className="md:block hidden">Blog</p>
+                  </>
+                </Link>
+              </li>
               <li className="w-full md:hidden block">
                 <div className="w-full flex flex-row justify-between items-center   md:hidden">
                   <p className="px-2 text-2xl py-5">Change Theme</p>
