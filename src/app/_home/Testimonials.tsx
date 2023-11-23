@@ -88,12 +88,12 @@ function Testimonials() {
         return (
           <li
             key={service.heading}
-            className="mb-2 p-5 flex flex-col justify-center relative hover:scale-[.99]  md:w-[40vw] md:h-[70vh] h-80 w-80 bg-white/90 dark:bg-black/90  border-[0.5px] border-white/30 rounded-sm dark:text-white/50 text-black/50 hover:bg-white/10"
+            className="mb-2 p-5 flex flex-col justify-center relative hover:scale-[.99]  md:w-[40vw] md:h-[70vh] h-80 w-80 bg-white/90 dark:bg-black/90  border-[0.5px] dark:border-white/30 border-black/30 rounded-sm dark:text-white/50 text-black/50 dark:hover:bg-white/10 hover:bg-black/10"
           >
             <div className="h-10 w-10 border-t-[0.5px] absolute top-1 left-1 border-l-[0.5px] opacity-30" />
             <div className="h-10 w-10 border-b-[0.5px] absolute bottom-1 right-1 border-r-[0.5px] opacity-30" />
 
-            <h3 className="text-4xl  py-5 font-semibold text-white">
+            <h3 className="text-4xl  py-5 font-semibold dark:text-white text-black ">
               {service.heading}
               <br />
             </h3>
