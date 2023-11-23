@@ -18,8 +18,7 @@ function Header() {
   const nonactive: string =
     'hover:underline hover:text-black active:scale-[.99]  hover:dark:text-white underline-offset-2'
 
-  const active: string =
-    'active:scale-[.99] dark:text-white text-black underline  underline-offset-2'
+  const active: string = 'active:scale-[.99]  text-primary'
 
   return (
     <header className="bg-gradient-to-b  py-1 z-50 from-white to-transparent dark:from-black dark:to-transparent border-b-[0.5px] border-black/10 dark:border-white/10 fixed  bg-white/50 dark:bg-black/50 w-full">

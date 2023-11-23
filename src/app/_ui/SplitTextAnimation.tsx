@@ -33,6 +33,7 @@ export default function SplitTextAnimation({
         //   indent: 10,
         // },
       },
+      y: -10,
       opacity: 1,
       ease: 'none',
       stagger: 0.3,
@@ -42,7 +43,7 @@ export default function SplitTextAnimation({
   const splitLetters = (word: string): React.JSX.Element[] =>
     word.split(' ').map((letter, i) => (
       <span
-        style={{ opacity: 0.2 }}
+        style={{ opacity: 0.7, display: 'inline-block' }}
         ref={(el: never) => el && refs.current.push(el)}
         key={`${letter}_${i}`}
       >

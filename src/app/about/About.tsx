@@ -59,13 +59,7 @@ const About = async () => {
         <IntroLable label="About us" />
         <div className="md:py-10 py-5">
           <Title title="An intro to Codemevel" />
-          <SubTitle
-            subTitle="CodeMevel is a dynamic and innovative web development startup
-          dedicated to providing cutting-edge digital solutions for businesses
-          of all sizes. With a team of creative minds and technical experts, we
-          strive to transform your digital ideas into engaging and functional
-          realities."
-          />
+          <SubTitle subTitle="CodeMevel is a dynamic and innovative web development startup dedicated to providing cutting-edge digital solutions for businesses of all sizes. With a team of creative minds and technical experts, we strive to transform your digital ideas into engaging and functional realities." />
         </div>
         {aboutData.map((section) => (
           <div
@@ -90,7 +84,7 @@ const About = async () => {
                     <div className="h-10 w-10 border-t-[0.5px] absolute top-1 left-1 border-l-[0.5px] opacity-30" />
                     <div className="h-10 w-10 border-b-[0.5px] absolute bottom-1 right-1 border-r-[0.5px] opacity-30" />
 
-                    <div className="pb-5 slashed-zero font-mono">
+                    <div className="pb-5 slashed-zero text-primary font-mono">
                       <p> 0{i + 1}</p>
                     </div>
                     <h3 className="text-2xl py-5 font-semibold text-white">

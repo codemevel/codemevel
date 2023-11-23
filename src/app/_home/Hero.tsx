@@ -27,7 +27,7 @@ const Hero = async () => {
               </Link>
             </div>
           </div>
-          <div className="  md:h-[50%] max-w-6xl mx-auto w-full">
+          <div className="overflow-hidden  md:h-[50vh] max-w-6xl mx-auto w-full">
             <HeroSvg />
           </div>
         </div>
