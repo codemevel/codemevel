@@ -64,8 +64,8 @@ const Footer = () => {
             <Link href="/">
               <button
                 type="button"
-                aria-label="Header logo"
-                id="headerlogo"
+                aria-label="footer logo"
+                id="footerlogo"
                 className="flex flex-row h-10 items-end mb-1"
               >
                 <Logo />
