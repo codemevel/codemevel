@@ -4,25 +4,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import React, { ReactElement, useEffect, useRef, useState } from 'react'
+import React, { ReactElement, useEffect, useRef } from 'react'
 
-const useDeviceSize = () => {
-  const [width, setWidth] = useState(0)
-  const [height, setHeight] = useState(0)
-
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth)
-    setHeight(window.innerHeight)
-  }
-
-  useEffect(() => {
-    handleWindowResize()
-    window.addEventListener('resize', handleWindowResize)
-    return () => window.removeEventListener('resize', handleWindowResize)
-  }, [])
-
-  return [width, height]
-}
+import useDeviceSize from '@/lib/useDeviceSize'
 
 export default function SplitTextAnimation({
   phrase,
@@ -49,6 +33,7 @@ export default function SplitTextAnimation({
         //   indent: 10,
         // },
       },
+      y: -10,
       opacity: 1,
       ease: 'none',
       stagger: 0.3,
@@ -58,7 +43,7 @@ export default function SplitTextAnimation({
   const splitLetters = (word: string): React.JSX.Element[] =>
     word.split(' ').map((letter, i) => (
       <span
-        style={{ opacity: 0.2 }}
+        style={{ opacity: 0.7, display: 'inline-block' }}
         ref={(el: never) => el && refs.current.push(el)}
         key={`${letter}_${i}`}
       >

@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import Button from '../_ui/Button'
-import IntroLable from '../_ui/IntroLable'
 import HeroSvg from './HeroSvg'
 
 const Hero = async () => {
@@ -11,10 +10,8 @@ const Hero = async () => {
         <div className="flex justify-between items-center flex-col ">
           <div className="">
             <div className="h-28" />
-            <div className="px-5">
-              <IntroLable label="Codemevel " />
-            </div>
-            <h1 className="text-4xl md:text-8xl dark:text-white text-black  font-semibold max-w-6xl py-5">
+
+            <h1 className="text-4xl  md:text-8xl dark:text-white text-black  font-semibold max-w-6xl py-5">
               Building Trust with Exceptional Web Services
             </h1>
             <p className="text-xl  md:text-4xl dark:text-white/70  text-black/50  max-w-3xl">
@@ -30,7 +27,7 @@ const Hero = async () => {
               </Link>
             </div>
           </div>
-          <div className="  md:h-[50%] max-w-6xl mx-auto w-full">
+          <div className="overflow-hidden  md:h-[50vh] max-w-6xl mx-auto w-full">
             <HeroSvg />
           </div>
         </div>

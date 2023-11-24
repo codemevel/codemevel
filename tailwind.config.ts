@@ -7,7 +7,11 @@ const config: Config = {
   ],
   darkMode: ['class'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#f77317',
+      },
+    },
   },
   // eslint-disable-next-line global-require
   plugins: [require('tailwindcss-gradients')],

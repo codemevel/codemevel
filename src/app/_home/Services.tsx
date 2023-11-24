@@ -79,7 +79,7 @@ function Services() {
                 <div className="h-10 w-10 border-t-[0.5px] absolute top-1 left-1 border-l-[0.5px] opacity-30" />
                 <div className="h-10 w-10 border-b-[0.5px] absolute bottom-1 right-1 border-r-[0.5px] opacity-30" />
 
-                <div className="pb-5 slashed-zero font-mono">
+                <div className="pb-5 slashed-zero text-primary font-mono">
                   <p> 0{index + 1}</p>
                 </div>
                 <h3 className="text-2xl  py-5 font-semibold text-white">
