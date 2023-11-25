@@ -10,6 +10,9 @@ const nextConfig = withPWA({
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  images: {
+    domains: ['cdn.sanity.io', 'images.unsplash.com'],
+  },
 })
 
 module.exports = nextConfig

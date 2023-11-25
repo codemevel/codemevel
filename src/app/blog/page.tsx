@@ -1,13 +1,9 @@
-import React from 'react'
+import { getAllPosts } from '@/hooks/api'
 
-import Blog from './Blog'
+import Posts from './Posts'
 
-function Page() {
-  return (
-    <div className="pt-20">
-      <Blog />
-    </div>
-  )
+export default async function AllBlogs() {
+  const posts = await getAllPosts()
+  if (!posts) return null
+  return <Posts posts={posts} />
 }
-
-export default Page
