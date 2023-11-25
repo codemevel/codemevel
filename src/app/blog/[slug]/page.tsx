@@ -13,3 +13,4 @@ export default async function SinglePost({
   if (!post) return null
   return <Post post={post} />
 }
+export const revalidate = 10

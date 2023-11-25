@@ -14,12 +14,30 @@ export const getPostById = async (slug: string): Promise<IPost | null> => {
       body,
       'slug':slug.current,
       publishedAt,
+      _createdAt,
       'image' :image {
         alt,
         caption,
        'url':asset->url
       },
-      'category': category->title
+      "category":category ->title,
+      _createdAt,
+      "estReadingTime": round(length(pt::text(body)) / 5 / 180 ),
+      "relatedPost":relatedPost[]-> {
+        title,
+        description,
+        'slug':slug.current,
+        publishedAt,
+        _createdAt,
+        'image' :image {
+            alt,
+            caption,
+           'url':asset->url
+        },
+        "category":category ->title,
+        _createdAt,
+        "estReadingTime": round(length(pt::text(body)) / 5 / 180 ),
+      },
     }`
 
     const post = await client.fetch<IPost>(query, postSlug)
@@ -46,7 +64,7 @@ export const getAllPosts = async () => {
         caption,
        'url':asset->url
       },
-      'category': category->title
+      'category': category->{title}
     }`
 
     const posts = await client.fetch<IPost[]>(query)

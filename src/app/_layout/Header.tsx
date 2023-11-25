@@ -6,9 +6,9 @@ import { useState } from 'react'
 
 import Button from '../_ui/Button'
 import { MenuSwitcher } from '../_ui/Menu'
-import { ThemeSwitcher } from '../_ui/ThemeSwitcher'
 import Title from '../_ui/Title'
 import Logo from './Logo'
+import { ThemeSwitcher } from './ThemeSwitcher'
 
 function Header() {
   const [open, setOpen] = useState(false)

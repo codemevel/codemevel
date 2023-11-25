@@ -47,9 +47,8 @@ function LayoutScroll({ children }: { children: ReactNode }) {
   const handleScroll = (scrollOffset: number) => {
     if (containerRef.current) {
       gsap.to(containerRef.current, {
-        duration: 0.1, // Adjust animation duration as needed
+        duration: 0.3, // Adjust animation duration as needed
         scrollLeft: containerRef.current.scrollLeft + scrollOffset,
-        ease: 'M0,0,C0.132,0,0.174,1,0.332,1,0.572,1,0.568,0,1,0', // Adjust these cubic bezier values, // Adjust ease function as needed
       })
     }
   }
@@ -61,12 +60,12 @@ function LayoutScroll({ children }: { children: ReactNode }) {
           <Button
             title="<-"
             ariaLabel="Scroll Left"
-            onClick={() => handleScroll(-400)} // Adjust the scroll distance as needed
+            onClick={() => handleScroll(-800)} // Adjust the scroll distance as needed
           />
           <Button
             title="->"
             ariaLabel="Scroll Right"
-            onClick={() => handleScroll(400)} // Adjust the scroll distance as needed
+            onClick={() => handleScroll(800)} // Adjust the scroll distance as needed
           />
         </div>
       </div>

@@ -10,6 +10,9 @@ export interface IPost {
   }
   description: string
   publishedAt: string
-  catagory: string
+  category: string
+  _createdAt: string
+  estReadingTime?: string
   body?: PortableTextProps
+  relatedPost: IPost[]
 }

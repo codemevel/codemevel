@@ -6,9 +6,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-import { ThemeSwitcher } from '../_ui/ThemeSwitcher'
 import Logo from './Logo'
 import Social from './Social'
+import { ThemeSwitcher } from './ThemeSwitcher'
 
 interface FooterLink {
   title: string

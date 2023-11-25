@@ -7,3 +7,4 @@ export default async function AllBlogs() {
   if (!posts) return null
   return <Posts posts={posts} />
 }
+export const revalidate = 10

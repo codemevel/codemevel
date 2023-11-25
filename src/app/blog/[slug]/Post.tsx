@@ -1,20 +1,32 @@
-// import { PortableText as PortableTextComponent } from '@portabletext/react'
 import React from 'react'
 
+import IntroLable from '@/app/_ui/IntroLable'
+import TableOfContents from '@/app/blog/TableOfContent'
 import { IPost } from '@/types'
 
+import List from '../List'
+import { PortableText } from '../portabletext'
 import PostDetails from './PostDetails'
 
 function Post({ post }: { post: IPost }) {
   return (
-    <section className="h-full mx-auto max-w-6xl px-5 md:px-0 py-2 md:py-10 border-b-[0.5px] dark:border-white/10 border-black/10 w-full dark:text-white text-black">
-      <div className="md:h-10 h-10 w-full" />
-      <article className="">
+    <section className="dot-matrix">
+      <div className="h-full mx-auto max-w-6xl px-5 md:px-0 py-2 md:py-10 border-b-[0.5px] dark:border-white/10 border-black/10 w-full dark:text-white text-black">
+        <div className="md:h-10 h-10 w-full" />
         <PostDetails post={post} />
-        <div className="max-w-3xl py-5 dark:text-white text-black text-justify prose">
-          {/* <PortableTextComponent value={post?.body} /> */}
-        </div>
-      </article>
+        <article className="relative grid mb-10 grid-cols-4 gap-5 md:grid-cols-12">
+          <div className="col-span-4">
+            <TableOfContents content={post.title} />
+          </div>
+          <div className=" col-span-4 md:col-span-8">
+            <PortableText value={post?.body} />
+          </div>
+        </article>
+        <IntroLable label="Related Blogs." />
+      </div>
+      <div className="h-full mx-auto max-w-6xl px-5 md:px-0 py-2 md:py-10 border-b-[0.5px] dark:border-white/10 border-black/10 w-full dark:text-white text-black">
+        <List posts={post?.relatedPost} />
+      </div>
     </section>
   )
 }
