@@ -7,11 +7,11 @@ import { useEffect } from 'react'
 function Scroll() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 0.3,
-      smoothTouch: true,
-      // smoothWheel: true,
-      // wrapper: window,
-      easing: (t) => Math.min(1, 1.001 - 3 ** (-100 * t)),
+      // duration: 0.3,
+      // smoothTouch: true,
+      // // smoothWheel: true,
+      // // wrapper: window,
+      // easing: (t) => Math.min(1, 1.001 - 3 ** (-100 * t)),
     })
 
     function raf(time: number) {
