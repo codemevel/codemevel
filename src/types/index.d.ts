@@ -1,3 +1,5 @@
+import type { PortableTextProps } from '@portabletext/react'
+
 export interface IPost {
   title: string
   slug: string
@@ -9,4 +11,5 @@ export interface IPost {
   description: string
   publishedAt: string
   catagory: string
+  body?: PortableTextProps
 }

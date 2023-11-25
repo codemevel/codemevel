@@ -10,7 +10,16 @@ export const getPostById = async (slug: string): Promise<IPost | null> => {
     const postSlug = { slug }
     const query = groq`*[_type == 'post' && $slug == slug.current][0]{
       title,
-      'slug':slug.current
+      description,
+      body,
+      'slug':slug.current,
+      publishedAt,
+      'image' :image {
+        alt,
+        caption,
+       'url':asset->url
+      },
+      'category': category->title
     }`
 
     const post = await client.fetch<IPost>(query, postSlug)
