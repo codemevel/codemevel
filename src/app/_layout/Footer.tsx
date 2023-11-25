@@ -1,5 +1,9 @@
+'use client'
+
 /* eslint-disable react/function-component-definition */
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 import { ThemeSwitcher } from '../_ui/ThemeSwitcher'
@@ -56,6 +60,8 @@ const FooterLinksSection: React.FC<FooterLinksSectionProps> = ({
 )
 
 const Footer = () => {
+  const router = usePathname()
+  if (router.includes('/studio')) return <div className="" />
   return (
     <footer className=" hero-background ">
       <div className="bg-gradient-to-b   from-white   dark:from-black   to-transparent flex flex-col px-5 items-center justify-between">

@@ -11,9 +11,9 @@ import Title from '../_ui/Title'
 import Logo from './Logo'
 
 function Header() {
-  const router = usePathname()
-
   const [open, setOpen] = useState(false)
+  const router = usePathname()
+  if (router.includes('/studio')) return <div className="" />
 
   const nonactive: string =
     'hover:underline hover:text-black active:scale-[.99]  hover:dark:text-white underline-offset-2'

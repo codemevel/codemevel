@@ -14,6 +14,11 @@ const config: Config = {
     },
   },
   // eslint-disable-next-line global-require
-  plugins: [require('tailwindcss-gradients')],
+  plugins: [
+    // eslint-disable-next-line global-require
+    require('tailwindcss-gradients'),
+    // eslint-disable-next-line global-require
+    require('@tailwindcss/typography'),
+  ],
 }
 export default config
