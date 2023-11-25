@@ -58,19 +58,19 @@ function InfinteTextScroll({ text }: { text: string }) {
     <main className="relative h-full w-full flex py-10 mt-20 dot-matrix overflow-hidden">
       <div ref={slider} className="whitespace-nowrap relative -z-0">
         <p
-          className="relative m-0 text-9xl md:text-[230px]  font-normal pr-[50px]"
+          className="relative m-0 text-9xl md:text-[230px] font-normal pr-[50px]"
           ref={firstText}
         >
           {text}
         </p>
         <p
-          className="absolute text-9xl md:text-[230px] font-normal pr-[50px]  left-full top-0"
+          className="absolute text-9xl md:text-[230px] font-normal pr-[50px] left-full top-0"
           ref={secondText}
         >
           {text}
         </p>
       </div>
-      <div className="bg-gradient-to-r z-1 top-0 absolute h-full w-full from-black/90  via-transparent to-black/90  " />
+      <div className=" z-1 top-0 absolute h-full w-full" />
     </main>
   )
 }

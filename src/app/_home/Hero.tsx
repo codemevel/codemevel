@@ -14,7 +14,7 @@ const Hero = async () => {
             <h1 className="text-4xl  md:text-8xl dark:text-white text-black  font-semibold max-w-6xl py-5">
               Building Trust with Exceptional Web Services
             </h1>
-            <p className="text-xl  md:text-4xl dark:text-white/70  text-black/50  max-w-3xl">
+            <p className="text-xl  md:text-4xl dark:text-white/70  text-black   max-w-3xl">
               Explore the experiences of our satisfied clients and their journey
               with Codemevel. Trust our expertise in crafting websites.
             </p>

@@ -9,24 +9,18 @@ function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    // Add a scroll event listener to check if the button should be visible
     const handleScroll = () => {
       const { scrollY } = window
-      const threshold = 300 // Adjust the threshold as needed
-
+      const threshold = 300
       setIsVisible(scrollY > threshold)
     }
-
     window.addEventListener('scroll', handleScroll)
-
-    // Clean up the event listener when the component is unmounted
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
   const scrollToTop = () => {
-    // Smooth scroll to the top
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -34,14 +28,14 @@ function ScrollToTopButton() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4  text-white font-bold py-2 px-4 rounded-full">
+    <div className="fixed bottom-4 right-4">
       {isVisible && (
         <Button
           ariaLabel="scroll up"
           title={
             <ChevronDoubleUpIcon className="h-6  fill-black dark:fill-white" />
           }
-          onClick={scrollToTop}
+          onClick={() => scrollToTop()}
         />
       )}
     </div>

@@ -21,7 +21,7 @@ function Header() {
   const active: string = 'active:scale-[.99]  text-primary'
 
   return (
-    <header className="bg-gradient-to-b  py-1 z-50 from-white to-transparent dark:from-black dark:to-transparent border-b-[0.5px] border-black/10 dark:border-white/10 fixed  bg-white/50 dark:bg-black/50 w-full">
+    <header className="bg-gradient-to-b  py-1 z-50 from-white/0 to-transparent dark:from-black dark:to-transparent border-b-[0.5px] border-black/10 dark:border-white/10 fixed  bg-white backdrop-blur dark:bg-black/50 w-full">
       <div className="max-w-6xl mx-auto w-full flex flex-row py-2 px-5 md:px-0 justify-between">
         <Link href="/">
           <button
@@ -45,17 +45,6 @@ function Header() {
               <li className="py-2 md:hidden block">
                 <Title title="Menu" />
               </li>
-              <li className={`${nonactive} ${router === '/' ? active : ''}`}>
-                <Link onClick={() => setOpen(!open)} href="/">
-                  <>
-                    <div className="md:hidden w-full flex justify-center items-stretch">
-                      <Button title="Go home ->" ariaLabel="Go Home" />
-                    </div>
-                    <p className="md:block hidden">Home</p>
-                  </>
-                </Link>
-              </li>
-
               <li
                 className={`${nonactive} ${
                   router === '/services' ? active : ''
@@ -69,7 +58,32 @@ function Header() {
                         ariaLabel="Our Services"
                       />
                     </div>
-                    <p className="md:block hidden">Services</p>
+                    <p className="md:block hidden font-light">Services</p>
+                  </>
+                </Link>
+              </li>
+
+              <li
+                className={`${nonactive} ${router === '/work' ? active : ''}`}
+              >
+                <Link onClick={() => setOpen(!open)} href="/work">
+                  <>
+                    <div className="md:hidden block">
+                      <Button title="Our Work  ->" ariaLabel="Work" />
+                    </div>
+                    <p className="md:block hidden font-light">Work</p>
+                  </>
+                </Link>
+              </li>
+              <li
+                className={`${nonactive} ${router === '/blog' ? active : ''}`}
+              >
+                <Link onClick={() => setOpen(!open)} href="/blog">
+                  <>
+                    <div className="md:hidden block">
+                      <Button title="Blog ->" ariaLabel="Blog us" />
+                    </div>
+                    <p className="md:block hidden font-light">Blog</p>
                   </>
                 </Link>
               </li>
@@ -81,7 +95,7 @@ function Header() {
                     <div className="md:hidden block">
                       <Button title="About us ->" ariaLabel="About Us" />
                     </div>
-                    <p className="md:block hidden">About</p>
+                    <p className="md:block hidden font-light">About</p>
                   </>
                 </Link>
               </li>
@@ -95,19 +109,7 @@ function Header() {
                     <div className="md:hidden block">
                       <Button title="Contact Us ->" ariaLabel="About us" />
                     </div>
-                    <p className="md:block hidden">Contact us</p>
-                  </>
-                </Link>
-              </li>
-              <li
-                className={`${nonactive} ${router === '/blog' ? active : ''}`}
-              >
-                <Link onClick={() => setOpen(!open)} href="/blog">
-                  <>
-                    <div className="md:hidden block">
-                      <Button title="Contact Us ->" ariaLabel="About us" />
-                    </div>
-                    <p className="md:block hidden">Blog</p>
+                    <p className="md:block hidden font-light">Contact</p>
                   </>
                 </Link>
               </li>
