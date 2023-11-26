@@ -1,9 +1,9 @@
 import { buildLegacyTheme } from 'sanity'
 
 const theme = buildLegacyTheme({
-  '--black': '#000000',
+  '--black': '#00000005',
   '--brand-primary': '#f77317',
-  '--component-bg': '#000000',
+  '--component-bg': '#00000005',
   '--component-text-color': '#ffffff',
   '--default-button-color': '#f77317',
   '--default-button-danger-color': '#ff0000',
@@ -15,7 +15,7 @@ const theme = buildLegacyTheme({
   '--font-family-monospace': 'Monospace',
   '--gray': '#808080',
   '--gray-base': '#c0c0c0',
-  '--main-navigation-color': '#000000',
+  '--main-navigation-color': '#00000005',
   '--main-navigation-color--inverted': '#ffffff',
   '--screen-default-break': '768px',
   '--screen-large-break': '1200px',

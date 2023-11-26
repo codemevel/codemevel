@@ -3,6 +3,7 @@ import { defineConfig, isDev } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 
+import ContactTool from '@/components/layout/ContactTool'
 import StudioLogo from '@/components/layout/StudioLogo'
 
 import theme from './sanity.theme'
@@ -23,6 +24,7 @@ export default defineConfig({
   projectId,
   dataset,
   schema,
+  tools: [ContactTool()],
   document: {
     unstable_comments: {
       enabled: true,
@@ -34,5 +36,5 @@ export default defineConfig({
     },
   },
   theme,
-  plugins: [...(isDev ? devOnlyPlugins : []), deskTool(), unsplashImageAsset()],
+  plugins: [deskTool(), unsplashImageAsset(), ...(isDev ? devOnlyPlugins : [])],
 })
