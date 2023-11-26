@@ -1,4 +1,4 @@
-import Logo from '@/app/_layout/Logo'
+import Logo from '@/components/layout/Logo'
 
 function Loading() {
   return (

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import Logo from '@/app/_layout/Logo'
-import Button from '@/app/_ui/Button'
+import Logo from '@/components/layout/Logo'
+import Button from '@/components/ui/Button'
 
 export default function NotFound() {
   return (

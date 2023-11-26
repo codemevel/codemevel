@@ -7,12 +7,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter_Tight } from 'next/font/google'
 import React from 'react'
 
-import Footer from '@/app/_layout/Footer'
-import Header from '@/app/_layout/Header'
-
-import { ThemeProvider } from './_layout/ThemeProvider'
-import Scroll from './_ui/Scroll'
-import ScrollToTopButton from './_ui/ScrollToUp'
+import { ThemeProvider } from '../components/layout/ThemeProvider'
 
 export const switchThemeDuration: string = 'duration-0'
 const font = Inter_Tight({
@@ -78,11 +73,7 @@ export default function RootLayout({
         className={`${font.className} dark:bg-black bg-white dark:dark:text-white text-black ${switchThemeDuration}`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Header />
           {children}
-          <Footer />
-          <Scroll />
-          <ScrollToTopButton />
         </ThemeProvider>
         <Analytics />
       </body>
