@@ -11,9 +11,9 @@ const Page = async () => {
   return (
     <>
       <Hero />
+      <InfinteTextScroll text="Codemevel Here -" />
       <About />
       <Services />
-      <InfinteTextScroll text="Codemevel Here -" />
       <Testimonials />
       <WhyChooseUs />
       <Faq />

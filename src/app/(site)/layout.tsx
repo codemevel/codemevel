@@ -11,14 +11,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
-        <Header />
-        <main className="py-20">{children}</main>
-        <Footer />
-        <Scroll />
-        <ScrollToTopButton />
-      </body>
-    </html>
+    <>
+      <Header />
+      <main className="py-16">{children}</main>
+      <Footer />
+      <Scroll />
+      <ScrollToTopButton />
+    </>
   )
 }

@@ -7,9 +7,9 @@ import type { Metadata, Viewport } from 'next'
 import { Inter_Tight } from 'next/font/google'
 import React from 'react'
 
-import { ThemeProvider } from '../components/layout/ThemeProvider'
+import { ThemeProvider } from '@/components/layout/ThemeProvider'
 
-export const switchThemeDuration: string = 'duration-0'
+export const switchThemeDuration: string = 'duration-1000'
 const font = Inter_Tight({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
@@ -70,12 +70,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} dark:bg-black bg-white dark:dark:text-white text-black ${switchThemeDuration}`}
+        className={`${font.className} ${switchThemeDuration} dark:bg-black bg-white text-black dark:text-white`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
+          <Analytics />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )
