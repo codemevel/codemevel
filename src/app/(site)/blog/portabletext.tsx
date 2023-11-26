@@ -2,11 +2,17 @@ import {
   PortableText as PortableTextComponent,
   PortableTextComponents,
 } from '@portabletext/react'
+import getVideoId from 'get-video-id'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Iframe from 'react-iframe'
+import Refractor from 'react-refractor'
+import js from 'refractor/lang/javascript'
 
 import { urlForImage } from '@/lib/image'
+
+Refractor.registerLanguage(js)
 
 interface ImageSource {
   asset?: {
@@ -33,25 +39,147 @@ const components: PortableTextComponents = {
         </div>
       )
     },
+    youtube: ({ value }) => {
+      const { url, caption, height } = value
+      if (!url) {
+        return <p>Missing Embed URL</p>
+      }
+      const { id, service } = getVideoId(url)
+      const isYoutubeVideo = id && service === 'youtube'
+      const finalURL = isYoutubeVideo
+        ? `https://www.youtube-nocookie.com/embed/${id}`
+        : url
+      return (
+        <div className="flex justify-center items-center flex-col w-full h-full">
+          <Iframe
+            url={finalURL}
+            width="100%"
+            height={height || '350'}
+            className="aspect-video h-full"
+            display="block"
+            position="relative"
+            frameBorder={0}
+            allowFullScreen
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+          />
+          <p className="italic text-start capitalize w-full">{caption}</p>
+        </div>
+      )
+    },
+    table: ({
+      value,
+    }: {
+      value: {
+        rows: {
+          cell: string
+          cells: string[]
+        }[]
+      }
+    }) => {
+      const { rows } = value
+      if (!rows) {
+        return <p>No data to display.</p>
+      }
+      const [head, ...dataRows] = rows
+      return (
+        <table className="w-full text-sm text-left dark:text-white text-black">
+          {head && head.cells.length > 0 && (
+            <thead className="">
+              <tr className="">
+                {head.cells.map((cell) => (
+                  <th className=" text-primary dark:text-primary" key={cell}>
+                    {cell}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+          )}
+          <tbody className="w-full">
+            {dataRows.map((row, index) => (
+              // eslint-disable-next-line react/no-array-index-key
+              <tr
+                className="border-b"
+                // eslint-disable-next-line react/no-array-index-key
+                key={row.cells.length + index}
+              >
+                {row.cells.map((cell) => (
+                  <td
+                    className="font-medium dark:text-white text-black"
+                    key={cell}
+                  >
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )
+    },
+    code: ({
+      value,
+    }: {
+      value: {
+        language?: string
+        code: string
+        highlightedLines?: number[]
+      }
+    }) => {
+      return (
+        <div className="prose-code">
+          <Refractor
+            language="js"
+            value={value.code}
+            markers={value.highlightedLines}
+          />
+        </div>
+      )
+    },
   },
+
   block: {
     h1: (props) => {
-      return <h1 className=" text-primary">{props.children}</h1>
+      return (
+        <h1 id="blogH1" className=" text-primary dark:text-primary ">
+          {props.children}
+        </h1>
+      )
     },
     h2: (props) => {
-      return <h2 className="dark:text-white text-black ">{props.children}</h2>
+      return (
+        <h2 id="blogH2" className="dark:text-white text-black ">
+          {props.children}
+        </h2>
+      )
     },
     h3: (props) => {
-      return <h3 className="dark:text-white text-black ">{props.children}</h3>
+      return (
+        <h3 id="blogH3" className="dark:text-white text-black ">
+          {props.children}
+        </h3>
+      )
     },
     h4: (props) => {
-      return <h4 className="dark:text-white text-black ">{props.children}</h4>
+      return (
+        <h4 id="blogH4" className="dark:text-white text-black ">
+          {props.children}
+        </h4>
+      )
     },
     h5: (props) => {
-      return <h5 className="dark:text-white text-black ">{props.children}</h5>
+      return (
+        <h5 id="blogH5" className="dark:text-white text-black ">
+          {props.children}
+        </h5>
+      )
     },
     h6: (props) => {
-      return <h6 className="dark:text-white text-black ">{props.children}</h6>
+      return (
+        <h6 id="blogH6" className="dark:text-white text-black ">
+          {props.children}
+        </h6>
+      )
     },
     normal: (props) => {
       return (
@@ -77,14 +205,23 @@ const components: PortableTextComponents = {
     ),
   },
   marks: {
+    strong: (props: { children: React.ReactNode }) => (
+      <strong className="dark:text-white text-black  font-bold">
+        {props.children}
+      </strong>
+    ),
     center: (props: { children: React.ReactNode }) => (
       <p className="dark:text-white text-black text-center">{props.children}</p>
     ),
     highlight: (props: { children: React.ReactNode }) => (
-      <span className="  text-primary font-bold  ">{props.children}</span>
+      <span className="  text-primary dark:text-primary font-bold  ">
+        {props.children}
+      </span>
     ),
     em: ({ children }) => (
-      <em className="text-primary font-semibold">{children}</em>
+      <em className="text-primary dark:text-primary font-semibold">
+        {children}
+      </em>
     ),
     link: ({ children, value }) => {
       const rel = !value.href.startsWith('/') ? 'noopener' : undefined
@@ -92,7 +229,7 @@ const components: PortableTextComponents = {
       return (
         <Link
           href={value.href}
-          className="text-primary underline underline-offset-2"
+          className="text-primary dark:text-primary  underline underline-offset-2"
           rel={rel}
           target={target}
         >
@@ -103,7 +240,7 @@ const components: PortableTextComponents = {
     internalLink: ({ children, value }) => {
       return (
         <Link
-          className="text-primary underline underline-offset-2"
+          className="text-primary dark:text-primary underline underline-offset-2"
           href={`/blog/${value?.slug?.current}`}
         >
           {children}

@@ -1,9 +1,10 @@
-import TableOfContents from '@/app/(site)/blog/TableOfContent'
+// import TableOfContents from '@/app/(site)/blog/TableOfContent'
 import IntroLable from '@/components/ui/IntroLable'
 import { IPost } from '@/types'
 
 import List from '../List'
 import { PortableText } from '../portabletext'
+import TableOfContent from '../tob'
 import PostDetails from './PostDetails'
 
 function Post({ post }: { post: IPost }) {
@@ -14,8 +15,10 @@ function Post({ post }: { post: IPost }) {
         <PostDetails post={post} />
         <article className="relative grid mb-10 grid-cols-4 gap-5 md:grid-cols-12">
           <div className="col-span-4">
-            <TableOfContents content={post.title} />
+            {/* <TableOfContents content={post.title} /> */}
+            <TableOfContent />
           </div>
+
           <div className=" col-span-4 md:col-span-8">
             <PortableText value={post?.body} />
           </div>

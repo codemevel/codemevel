@@ -66,7 +66,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => {
   }
 
   return (
-    <div
+    <nav
+      aria-label="Table of contents"
       data-lenis-prevent
       className="md:sticky static top-20 w-full md:w-80 h-auto md:max-h-[80vh] overscroll-none md:overflow-y-auto"
     >
@@ -74,7 +75,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => {
         Table of Contents
       </h2>
       {renderNestedHeadings(headings)}
-    </div>
+    </nav>
   )
 }
 

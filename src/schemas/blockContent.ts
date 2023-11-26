@@ -1,4 +1,4 @@
-import { BillIcon } from '@sanity/icons'
+import { BillIcon, PlayIcon } from '@sanity/icons'
 import { defineArrayMember, defineType } from 'sanity'
 
 export default defineType({
@@ -68,6 +68,27 @@ export default defineType({
           },
         ],
       },
+    }),
+    defineArrayMember({
+      type: 'code',
+      name: 'code',
+      title: 'Code Block',
+      options: {
+        withFilename: true,
+      },
+    }),
+    defineArrayMember({
+      icon: PlayIcon,
+      name: 'youtube',
+      title: 'Youtube',
+      type: 'youtube',
+    }),
+    defineArrayMember({
+      name: 'table',
+      title: 'Table',
+      description:
+        'The first row will be treated as the header. If you want to skip, just leave the first row empty.',
+      type: 'table',
     }),
     defineArrayMember({
       name: 'coverImage',
