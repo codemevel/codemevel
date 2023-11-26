@@ -1,5 +1,8 @@
 'use client'
 
+/* eslint-disable react/function-component-definition */
+/* eslint-disable react/no-unused-prop-types */
+
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
@@ -13,7 +16,6 @@ interface TableOfContentsProps {
   content: string
 }
 
-// eslint-disable-next-line react/function-component-definition
 const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => {
   const [headings, setHeadings] = useState<Heading[]>([])
 
@@ -35,23 +37,43 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ content }) => {
     }
   }, [content])
 
+  const renderNestedHeadings = (
+    // eslint-disable-next-line no-shadow
+    headings: Heading[],
+    level: number = 1
+  ): React.JSX.Element | null => {
+    const filteredHeadings = headings.filter(
+      (heading) => heading.level === level
+    )
+
+    if (filteredHeadings.length === 0) {
+      return null
+    }
+
+    return (
+      <ul className={`pl-${level - 1}`} key={`level-${level}`}>
+        {filteredHeadings.map((heading) => (
+          <li
+            key={heading.id}
+            className="border-l-[0.5px] border-opacity-30 mb-1 hover:border-primary slashed-zero dark:text-white/90 hover:text-primary hover:dark:text-primary text-black/90 bg-white/50 p-1 dark:bg-black/50 pl-2 font-medium text-xs md:text-base"
+          >
+            <Link href={`#${heading.id}`}>{heading.text}</Link>
+            {renderNestedHeadings(headings, level + 1)}
+          </li>
+        ))}
+      </ul>
+    )
+  }
+
   return (
-    <div className="md:sticky static top-20 w-full md:w-80 h-auto md:max-h-[80vh] overscroll-none md:overflow-y-auto">
+    <div
+      data-lenis-prevent
+      className="md:sticky static top-20 w-full md:w-80 h-auto md:max-h-[80vh] overscroll-none md:overflow-y-auto"
+    >
       <h2 className="mb-4 sticky top-0 text-3xl text-semibold dark:bg-black">
         Table of Contents
       </h2>
-      <ul className="my-2 md:my-5">
-        {headings.map((heading) => (
-          <Link href={`#${heading.id}`}>
-            <li
-              key={heading.id}
-              className="border-l-[0.5px] mb-1 hover:border-primary slashed-zero dark:text-white/90 hover:text-primary hover:dark:text-primary text-black/90 bg-white/50 p-1 dark:bg-black/50 pl-5 font-medium text-xs md:text-base"
-            >
-              {heading.text}
-            </li>
-          </Link>
-        ))}
-      </ul>
+      {renderNestedHeadings(headings)}
     </div>
   )
 }

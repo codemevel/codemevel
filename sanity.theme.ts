@@ -1,0 +1,30 @@
+import { buildLegacyTheme } from 'sanity'
+
+const theme = buildLegacyTheme({
+  '--black': '#000000',
+  '--brand-primary': '#f77317',
+  '--component-bg': '#000000',
+  '--component-text-color': '#ffffff',
+  '--default-button-color': '#f77317',
+  '--default-button-danger-color': '#ff0000',
+  '--default-button-primary-color': '#f77317',
+  '--default-button-success-color': '#00ff00',
+  '--default-button-warning-color': '#ffcc00',
+  '--focus-color': '#f77317',
+  '--font-family-base': 'Arial, sans-serif',
+  '--font-family-monospace': 'Monospace',
+  '--gray': '#808080',
+  '--gray-base': '#c0c0c0',
+  '--main-navigation-color': '#000000',
+  '--main-navigation-color--inverted': '#ffffff',
+  '--screen-default-break': '768px',
+  '--screen-large-break': '1200px',
+  '--screen-medium-break': '992px',
+  '--screen-xlarge-break': '1600px',
+  '--state-danger-color': '#ff0000',
+  '--state-info-color': '#0000ff',
+  '--state-success-color': '#00ff00',
+  '--state-warning-color': '#ffcc00',
+  '--white': '#ffffff',
+})
+export default theme
