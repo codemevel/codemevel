@@ -2,7 +2,7 @@ import { EnvelopeIcon } from '@sanity/icons'
 import type { ComponentType } from 'react'
 import { type Tool } from 'sanity'
 
-import ContactToolUi from './ContactToolUi'
+import ContactToolUi from '@/components/plugin/ContactToolUi'
 
 export interface myContactToolOptions {
   contactString?: string
