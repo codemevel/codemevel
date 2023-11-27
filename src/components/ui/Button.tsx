@@ -7,12 +7,14 @@ interface ButtonProps {
   submit?: boolean
   onClick?: () => void
   ariaLabel: string // Added accessibility label
+  disabled?: boolean
 }
 
-function Button({ title, submit, onClick, ariaLabel }: ButtonProps) {
+function Button({ title, submit, onClick, ariaLabel, disabled }: ButtonProps) {
   return (
     <button
       onClick={onClick} // Fixed the onClick handler
+      disabled={disabled}
       type={!submit ? 'button' : 'submit'}
       className="border-[0.5px] z-10 relative cursor-pointer capitalize dark:border-white/30 border-black/30 dark:text-white text-black  bg-white/50 dark:bg-black/50 font-semibold text-xl md:text-2xl active:scale-[.99] px-5 py-2 rounded-sm  hover:dark:bg-white/10 hover:bg-black/10"
       aria-label={ariaLabel} // Added aria-label for accessibility

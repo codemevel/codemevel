@@ -74,3 +74,8 @@ export const postsQuery = groq`*[_type == 'post']{
     },
     'category': category->{title}
   }`
+export const contactQuery = groq`*[_type == 'contact' ]{
+    email,
+    subject,
+    message,
+}`

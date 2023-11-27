@@ -1,18 +1,54 @@
+'use client'
+
 /* eslint-disable jsx-a11y/label-has-associated-control */
+
+import { useState } from 'react'
+
+import { createContact } from '@/hooks/api'
 
 import Button from '../../../components/ui/Button'
 
 function ContactForm() {
-  async function create(formData: FormData) {
-    'use server'
+  const initialPayload = {
+    _type: 'contact',
+    email: '',
+    subject: '',
+    message: '',
+  }
 
-    // eslint-disable-next-line no-console
-    console.log(formData)
-    // mutate data
-    // revalidate cache
+  const [payload, setPayload] = useState(initialPayload)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+
+  const resetForm = () => {
+    setPayload(initialPayload)
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    // Validate form fields
+    if (!payload.email || !payload.subject || !payload.message) {
+      setError('Please fill in all fields.')
+      return
+    }
+
+    setLoading(true)
+    try {
+      const res = await createContact(payload)
+      console.log(res)
+      resetForm()
+      // Optionally, display a success message or redirect the user
+    } catch (err) {
+      setError('There was an error submitting the form. Please try again.')
+      console.log(err)
+    } finally {
+      setLoading(false)
+    }
   }
   return (
-    <form action={create} className="space-y-8">
+    <form onSubmit={handleSubmit} className="space-y-8">
+      {error && <div className="text-red-500">{error}</div>}
       <div>
         <label htmlFor="email" className="block mb-2 text-2xl font-medium ">
           Your email
@@ -21,7 +57,14 @@ function ContactForm() {
           type="email"
           id="email"
           className="p-5 border-[0.5px] dark:border-white/30 border-black/30 w-full dark:bg-white/10 bg-black/10"
-          placeholder="name@flowbite.com"
+          placeholder="name@codemevel.com"
+          value={payload.email}
+          onChange={(e) =>
+            setPayload((prevPayload) => ({
+              ...prevPayload,
+              email: e.target.value,
+            }))
+          }
           required
         />
       </div>
@@ -34,6 +77,13 @@ function ContactForm() {
           id="subject"
           className="p-5 border-[0.5px] dark:border-white/30 border-black/30 w-full dark:bg-white/10 bg-black/10"
           placeholder="Let us know how we can help you"
+          value={payload.subject}
+          onChange={(e) =>
+            setPayload((prevPayload) => ({
+              ...prevPayload,
+              subject: e.target.value,
+            }))
+          }
           required
         />
       </div>
@@ -46,9 +96,22 @@ function ContactForm() {
           rows={6}
           className="p-5 border-[0.5px] dark:border-white/30 border-black/30 w-full dark:bg-white/10 bg-black/10 "
           placeholder="Leave a comment..."
+          value={payload.message}
+          onChange={(e) =>
+            setPayload((prevPayload) => ({
+              ...prevPayload,
+              message: e.target.value,
+            }))
+          }
+          required
         />
       </div>
-      <Button title="Submit" submit ariaLabel="submit button" />
+      <Button
+        title="Submit"
+        submit
+        ariaLabel="submit button"
+        disabled={loading}
+      />
     </form>
   )
 }

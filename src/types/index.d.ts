@@ -16,3 +16,9 @@ export interface IPost {
   body?: PortableTextProps
   relatedPost: IPost[]
 }
+export interface IContact {
+  email: string
+  subject: string
+  message: string
+  _type: string
+}

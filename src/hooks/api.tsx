@@ -1,6 +1,6 @@
-import { client } from '@/lib/client'
-import { postQuery, postsQuery } from '@/lib/query'
-import { IPost } from '@/types/index'
+import { client, writeclient } from '@/lib/client'
+import { contactQuery, postQuery, postsQuery } from '@/lib/query'
+import { IContact, IPost } from '@/types/index'
 
 export const getPostById = async (slug: string): Promise<IPost | null> => {
   try {
@@ -21,6 +21,25 @@ export const getAllPosts = async () => {
       return posts
     }
     return null
+  } catch (error) {
+    return null
+  }
+}
+export const getAllContacts = async () => {
+  try {
+    const posts = await client.fetch<IContact[]>(contactQuery)
+    if (posts) {
+      return posts
+    }
+    return null
+  } catch (error) {
+    return null
+  }
+}
+
+export const createContact = async (payload: IContact) => {
+  try {
+    return await writeclient.create<IContact>(payload)
   } catch (error) {
     return null
   }
