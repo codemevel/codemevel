@@ -1,60 +1,88 @@
 'use client'
 
+// Import necessary dependencies
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
+// Import custom hook for device size
 import useDeviceSize from '@/lib/useDeviceSize'
 
+// Define the InfiniteTextScroll component
 function InfinteTextScroll({ text }: { text: string }) {
+  // State to manage scroll direction
   const [direction, setDirection] = useState(-1)
+
+  // Custom hook to get device height
   const [height] = useDeviceSize()
+
+  // Refs for DOM elements
+  const slider = useRef(null)
   const firstText = useRef(null)
   const secondText = useRef(null)
-  const slider = useRef(null)
+
+  // Variables for animation control
   let xPercent = 0
+
+  // Animation function
   const animate = () => {
     if (xPercent < -100) {
       xPercent = 0
     } else if (xPercent > 0) {
       xPercent = -100
     }
+
+    // Set GSAP properties
     gsap.set(firstText.current, { xPercent })
     gsap.set(secondText.current, { xPercent })
+
+    // Request animation frame for continuous animation
     requestAnimationFrame(animate)
+
+    // Update xPercent value
     xPercent += 0.1 * direction
   }
-  const calculateDirection = useMemo(() => {
-    return (e: { direction: number }) => {
-      const newDirection = e.direction * -1
-      setDirection(newDirection)
-    }
-  }, [])
+
+  // useEffect for component lifecycle
   useEffect(() => {
+    // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger)
-    gsap.to(slider.current, {
+
+    // GSAP timeline configuration
+    const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: document.documentElement,
         scrub: 0.25,
         start: `bottom bottom-=${height}`,
         end: `bottom bottom-=${height + 500}`,
-        // markers: {
-        //   startColor: 'white',
-        //   endColor: 'white',
-        //   fontSize: '18px',
-        //   indent: 10,
-        // },
-        // eslint-disable-next-line no-return-assign
         onUpdate: (e) => {
-          calculateDirection(e)
+          setDirection(e.direction * -1)
         },
       },
+    })
+
+    // Animation to move slider horizontally
+    timeline.to(slider.current, {
       x: '-500px',
     })
-    requestAnimationFrame(animate)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+    // Start the infinite scroll animation
+    animate()
+    const firstTextRef = firstText.current
+    const secondTextRef = secondText.current
+
+    // Other code remains unchanged
+
+    // Cleanup function when the component is unmounted
+    return () => {
+      // Stop GSAP animations and kill the ScrollTrigger
+      gsap.killTweensOf([firstTextRef, secondTextRef])
+      timeline.kill()
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
   }, [])
 
+  // Render the component
   return (
     <main className="relative h-full w-full flex py-10 mt-20 dot-matrix overflow-hidden">
       <div ref={slider} className="whitespace-nowrap relative -z-0">
@@ -76,4 +104,5 @@ function InfinteTextScroll({ text }: { text: string }) {
   )
 }
 
+// Export the component
 export default InfinteTextScroll

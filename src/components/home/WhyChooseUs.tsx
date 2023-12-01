@@ -1,3 +1,5 @@
+import Layout from '../layout/Layout'
+import SubLayout from '../layout/SubLayout'
 import SubTitle from '../ui/SubTitle'
 import Title from '../ui/Title'
 
@@ -30,14 +32,14 @@ const sections = [
 
 function WhyChooseUs() {
   return (
-    <section className="h-full max-w-6xl mx-auto py-10 border-y-[0.5px] dark:border-white/10 border-black/10 md:mt-20 mt-10  w-full text-white">
-      <div className="">
-        <div className="px-5">
+    <Layout>
+      <>
+        <SubLayout>
           <Title title="Why Choose CodeMevel?" />
           <SubTitle subTitle="Choose CodeMevel as your digital partner, and let's embark on a journey to elevate your online presence and achieve your digital goals together." />
-        </div>
+        </SubLayout>
 
-        <ul className="gap-5 grid grid-cols-4  md:grid-cols-12 p-5 dot-matrix">
+        <ul className="gap-5 grid grid-cols-4  md:grid-cols-12 p-0 md:p-5 dot-matrix">
           {sections.map((service, index) => (
             <li
               key={service.title}
@@ -56,8 +58,8 @@ function WhyChooseUs() {
             </li>
           ))}
         </ul>
-      </div>
-    </section>
+      </>
+    </Layout>
   )
 }
 
