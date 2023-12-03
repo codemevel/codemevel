@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const Page = async () => {
   return (
     <>
-      <div className="h-40" />
+      <div className="h-20" />
       <Services />
     </>
   )

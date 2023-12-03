@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import About from '@/app/(site)/about/About'
+import About from '@/components/home/About'
 
 const title: string =
   ' About CodeMevel - Building Trust with Exceptional Web Services'

@@ -4,7 +4,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/function-component-definition */
 /* eslint-disable react/prop-types */
-import { MinusIcon, PlusIcon } from '@heroicons/react/24/solid'
+import { ChevronUpIcon } from '@heroicons/react/24/solid'
 import { gsap } from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
 
@@ -40,7 +40,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   }
 
   return (
-    <li className="flex flex-row justify-start items-start p-2 col-span-4 border-black/30 dark:border-white/30 border-[0.5px]  rounded-sm dark:text-white/50 text-black/50 hover:bg-white/10">
+    <li className="flex flex-row justify-start items-start p-2 col-span-4 border-black/30 dark:border-white/30 border-[0.5px]  rounded-sm dark:text-white/50 text-black/50 hover:bg-primary/10 hover:dark:border-primary transition-all duration-100 hover:dark:bg-primary/10">
       <div
         className="flex flex-row h-full w-full justify-center items-center cursor-pointer"
         onClick={toggleAccordion}
@@ -52,15 +52,15 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
           <div className="flex flex-row justify-between">
             <h3 className="text-base  md:text-3xl text-white">{question}</h3>
             <span className="ml-2">
-              {isOpen ? (
-                <MinusIcon className="md:h-10 md:w-10 h-8 w-8 fill-black dark:fill-white" />
-              ) : (
-                <PlusIcon className="md:h-10 md:w-10 h-8 w-8 fill-black dark:fill-white" />
-              )}
+              <ChevronUpIcon
+                className={`transition-all duration-300 md:h-10 md:w-10 fill-black dark:fill-white ${
+                  isOpen ? 'rotate-180' : 'rotate-0'
+                }`}
+              />
             </span>
           </div>
           <div ref={answerRef} className="overflow-hidden">
-            <p className="mt-2 text-sm md:text-xl max-w-4xl dark:text-white/80 ">
+            <p className="mt-2 text-sm md:text-xl max-w-2xl dark:text-white/80 ">
               {answer}
             </p>
           </div>

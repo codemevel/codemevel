@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <>
       <Header />
-      <main className="py-16">{children}</main>
+      {children}
       <Footer />
       <Scroll />
       <ScrollToTopButton />

@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 import Button from '../ui/Button'
 import { MenuSwitcher } from '../ui/Menu'
+import RSS from '../ui/RSS'
 import Title from '../ui/Title'
 import Logo from './Logo'
 import { ThemeSwitcher } from './ThemeSwitcher'
@@ -14,13 +15,13 @@ function Header() {
   const [open, setOpen] = useState(false)
   const router = usePathname()
   const nonactive: string =
-    'hover:underline hover:text-black active:scale-[.99]  hover:dark:text-white underline-offset-2'
+    'hover:underline hover:text-black active:scale-[.99] hover:dark:text-white underline-offset-2'
 
-  const active: string = 'active:scale-[.99]  text-primary'
+  const active: string = 'active:scale-[.99] text-primary'
 
   return (
-    <header className="bg-gradient-to-b  py-1 z-50 from-white/0 to-transparent dark:from-black dark:to-transparent border-b-[0.5px] border-black/10 dark:border-white/10 fixed  bg-white backdrop-blur dark:bg-black/50 w-full">
-      <div className="max-w-6xl mx-auto w-full flex flex-row py-2 px-5 md:px-0 justify-between">
+    <header className="bg-gradient-to-b py-2 z-50 from-white/0 to-transparent dark:from-black top-0 dark:to-transparent border-b-[0.5px] border-black/10 dark:border-white/30 shadow-xl fixed  bg-white backdrop-blur-sm dark:bg-black/50 w-full">
+      <div className="max-w-7xl mx-auto w-full flex flex-row py-2 px-5 md:p-0  justify-between">
         <Link href="/">
           <button
             type="button"
@@ -38,10 +39,20 @@ function Header() {
           } absolute md:static md:h-full overflow-hidden md:block md:w-full z-50 md:top-0 top-16 left-0 h-screen  w-screen bg-white md:bg-transparent dark:md:bg-transparent dark:bg-black `}
         >
           <nav className=" relative  ">
-            <div className="absolute dot-matrix md:hidden" />
-            <ul className=" text-black/50  dark:text-white/70 text-black font-medium justify-center w-full flex md:flex-row flex-col gap-5 md:items-center items-start md:h-10 h-full p-5 md:p-0 text-xl">
+            <div className="absolute md:hidden" />
+            <ul className=" text-black/50  dark:text-white/70 text-black font-medium justify-center w-full flex md:flex-row flex-col gap-x-7 md:gap-5 gap-7  md:items-center items-start md:h-10 h-full p-5 md:p-0 text-xl">
               <li className="py-2 md:hidden block">
                 <Title title="Menu" />
+              </li>
+              <li className={`${nonactive} ${router === '/' ? active : ''}`}>
+                <Link onClick={() => setOpen(!open)} href="/">
+                  <>
+                    <div className="md:hidden block">
+                      <Button title="Home ->" ariaLabel="Home" />
+                    </div>
+                    <p className="md:block hidden font-light text-2xl">Home</p>
+                  </>
+                </Link>
               </li>
               <li
                 className={`${nonactive} ${
@@ -56,23 +67,13 @@ function Header() {
                         ariaLabel="Our Services"
                       />
                     </div>
-                    <p className="md:block hidden font-light">Services</p>
+                    <p className="md:block hidden font-light text-2xl">
+                      Services
+                    </p>
                   </>
                 </Link>
               </li>
 
-              <li
-                className={`${nonactive} ${router === '/work' ? active : ''}`}
-              >
-                <Link onClick={() => setOpen(!open)} href="/work">
-                  <>
-                    <div className="md:hidden block">
-                      <Button title="Our Work  ->" ariaLabel="Work" />
-                    </div>
-                    <p className="md:block hidden font-light">Work</p>
-                  </>
-                </Link>
-              </li>
               <li
                 className={`${nonactive} ${router === '/blog' ? active : ''}`}
               >
@@ -81,7 +82,7 @@ function Header() {
                     <div className="md:hidden block">
                       <Button title="Blog ->" ariaLabel="Blog us" />
                     </div>
-                    <p className="md:block hidden font-light">Blog</p>
+                    <p className="md:block hidden font-light text-2xl">Blog</p>
                   </>
                 </Link>
               </li>
@@ -93,7 +94,7 @@ function Header() {
                     <div className="md:hidden block">
                       <Button title="About us ->" ariaLabel="About Us" />
                     </div>
-                    <p className="md:block hidden font-light">About</p>
+                    <p className="md:block hidden font-light text-2xl">About</p>
                   </>
                 </Link>
               </li>
@@ -107,7 +108,9 @@ function Header() {
                     <div className="md:hidden block">
                       <Button title="Contact Us ->" ariaLabel="About us" />
                     </div>
-                    <p className="md:block hidden font-light">Contact</p>
+                    <p className="md:block hidden font-light text-2xl">
+                      Contact
+                    </p>
                   </>
                 </Link>
               </li>
@@ -120,7 +123,10 @@ function Header() {
             </ul>
           </nav>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block mx-2">
+          <RSS link="/sitemap.xml" />
+        </div>
+        <div className="hidden md:block mx-2">
           <ThemeSwitcher />
         </div>
         <div className="block md:hidden">

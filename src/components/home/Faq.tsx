@@ -60,7 +60,7 @@ function Faq() {
           <Title title="Frequently Asked Questions" />
           <SubTitle subTitle="Choose CodeMevel as your digital partner, and let's embark on a journey to elevate your online presence and achieve your digital goals together." />
         </SubLayout>
-        <ul className="grid pb-28 grid-cols-4 py-5 dot-matrix md:grid-cols-4 gap-5 list-inside">
+        <ul className="grid pb-28 p-5 md:p-10 grid-cols-4 py-5 dot-matrix md:grid-cols-4 gap-5 list-inside">
           {faqData.map((item, index) => (
             <AccordionItem
               key={item.question}

@@ -14,6 +14,7 @@ const font = Inter_Tight({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
   style: ['normal'],
+  preload: true,
   display: 'swap',
 })
 
@@ -70,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} ${switchThemeDuration} dark:bg-black bg-white text-black dark:text-white`}
+        className={`${font.className} duration-300 transition-all decoration-2 slashed-zero antialiased ${switchThemeDuration} dark:bg-black bg-white text-black dark:text-white`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}

@@ -5,19 +5,18 @@ const socialLinks: string[] = [
   'https://github.com/codemevel',
   'https://www.instagram.com/codemevel/',
   'https://www.facebook.com/profile.php?id=61553456875424',
-
   'https://twitter.com/codemevel',
   'https://www.linkedin.com/company/codemevel',
 ]
 function Social() {
   return (
-    <div className="flex justify-center items-center  h-full w-full">
+    <div className="flex justify-center items-center    h-full w-full">
       {socialLinks.map((url) => {
         return (
           <SocialIcon
             bgColor="transparent"
             fgColor="white"
-            className="h-8 w-8  fill-black bg-transparent invert dark:invert-0 "
+            className="h-8 w-8 hover:bg-primary rounded-full hover:dark:bg-primary transition-all duration-300  fill-black bg-transparent invert dark:invert-0 "
             url={url}
             target="_blank"
             key={url}

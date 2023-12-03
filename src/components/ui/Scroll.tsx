@@ -24,5 +24,4 @@ function Scroll() {
 
   return null
 }
-
 export default Scroll
