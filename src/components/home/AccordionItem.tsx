@@ -1,9 +1,7 @@
 'use client'
 
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/function-component-definition */
-/* eslint-disable react/prop-types */
+
 import { ChevronUpIcon } from '@heroicons/react/24/solid'
 import { gsap } from 'gsap'
 import React, { useEffect, useRef, useState } from 'react'
@@ -23,20 +21,40 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   const answerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    gsap.from(answerRef.current, {
+    // Set the initial height to 0 to keep it collapsed
+    gsap.set(answerRef.current, {
+      height: 0,
+    })
+    // Animation to open the accordion on click
+    const animation = gsap.from(answerRef.current, {
       height: 0,
       duration: 0.5,
       ease: 'power3.inOut',
+      paused: true, // Start in a paused state
     })
+    // Ensure that it always collapses on render
+    animation.reverse()
+
+    return () => {
+      // Cleanup animation on component unmount
+      animation.kill()
+    }
   }, [])
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen)
-    gsap.to(answerRef.current, {
-      height: isOpen ? 0 : 'auto',
-      duration: 0.5,
-      ease: 'power3.inOut',
-    })
+
+    isOpen
+      ? gsap.to(answerRef.current, {
+          height: 0,
+          duration: 0.5,
+          ease: 'power3.inOut',
+        })
+      : gsap.to(answerRef.current, {
+          height: 'auto',
+          duration: 0.5,
+          ease: 'power3.inOut',
+        })
   }
 
   return (
