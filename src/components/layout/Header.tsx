@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
+import { IHeaderItem } from '@/types'
+
 import Button from '../ui/Button'
 import { MenuSwitcher } from '../ui/Menu'
 import RSS from '../ui/RSS'
@@ -11,7 +13,7 @@ import Title from '../ui/Title'
 import Logo from './Logo'
 import { ThemeSwitcher } from './ThemeSwitcher'
 
-function Header() {
+function Header({ menu }: { menu: IHeaderItem[] }) {
   const [open, setOpen] = useState(false)
   const router = usePathname()
   const nonactive: string =
@@ -25,8 +27,8 @@ function Header() {
         <Link href="/">
           <button
             type="button"
-            aria-label="Header logo"
-            id="headerlogo"
+            aria-label="Codemevel"
+            id="Codemevel"
             className="flex flex-row h-10 active:scale-[.99] cursor-pointer items-end justify-center"
           >
             <Logo />
@@ -44,76 +46,25 @@ function Header() {
               <li className="py-2 md:hidden block">
                 <Title title="Menu" />
               </li>
-              <li className={`${nonactive} ${router === '/' ? active : ''}`}>
-                <Link onClick={() => setOpen(!open)} href="/">
-                  <>
-                    <div className="md:hidden block">
-                      <Button title="Home ->" ariaLabel="Home" />
-                    </div>
-                    <p className="md:block hidden font-light text-2xl">Home</p>
-                  </>
-                </Link>
-              </li>
-              <li
-                className={`${nonactive} ${
-                  router === '/services' ? active : ''
-                }`}
-              >
-                <Link onClick={() => setOpen(!open)} href="/services">
-                  <>
-                    <div className="md:hidden block">
-                      <Button
-                        title="Our Services ->"
-                        ariaLabel="Our Services"
-                      />
-                    </div>
-                    <p className="md:block hidden font-light text-2xl">
-                      Services
-                    </p>
-                  </>
-                </Link>
-              </li>
+              {menu.map(({ link, title }) => {
+                return (
+                  <li
+                    className={`${nonactive} ${router === link ? active : ''}`}
+                  >
+                    <Link onClick={() => setOpen(!open)} href="/">
+                      <>
+                        <div className="md:hidden block">
+                          <Button title="Home ->" ariaLabel="Home" />
+                        </div>
+                        <p className="md:block hidden font-light text-2xl">
+                          {title}
+                        </p>
+                      </>
+                    </Link>
+                  </li>
+                )
+              })}
 
-              <li
-                className={`${nonactive} ${router === '/blog' ? active : ''}`}
-              >
-                <Link onClick={() => setOpen(!open)} href="/blog">
-                  <>
-                    <div className="md:hidden block">
-                      <Button title="Blog ->" ariaLabel="Blog us" />
-                    </div>
-                    <p className="md:block hidden font-light text-2xl">Blog</p>
-                  </>
-                </Link>
-              </li>
-              <li
-                className={`${nonactive} ${router === '/about' ? active : ''}`}
-              >
-                <Link onClick={() => setOpen(!open)} href="/about">
-                  <>
-                    <div className="md:hidden block">
-                      <Button title="About us ->" ariaLabel="About Us" />
-                    </div>
-                    <p className="md:block hidden font-light text-2xl">About</p>
-                  </>
-                </Link>
-              </li>
-              <li
-                className={`${nonactive} ${
-                  router === '/contact' ? active : ''
-                }`}
-              >
-                <Link onClick={() => setOpen(!open)} href="/contact">
-                  <>
-                    <div className="md:hidden block">
-                      <Button title="Contact Us ->" ariaLabel="About us" />
-                    </div>
-                    <p className="md:block hidden font-light text-2xl">
-                      Contact
-                    </p>
-                  </>
-                </Link>
-              </li>
               <li className="w-full md:hidden block">
                 <div className="w-full flex flex-row justify-between items-center   md:hidden">
                   <p className="px-2 text-2xl py-5">Change Theme</p>

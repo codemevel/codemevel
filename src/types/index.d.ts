@@ -22,3 +22,11 @@ export interface IContact {
   message: string
   _type: string
 }
+
+export interface IHeaderItem {
+  title: string
+  link: string
+}
+export interface IHeaderMenu {
+  menu: IHeaderItem[]
+}

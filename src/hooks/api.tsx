@@ -1,6 +1,8 @@
 import { client, writeclient } from '@/lib/client'
-import { contactQuery, postQuery, postsQuery } from '@/lib/query'
-import { IContact, IPost } from '@/types/index'
+import { contactQuery } from '@/queries/contactquery'
+import { headerQuery } from '@/queries/menuquery'
+import { postQuery, postsQuery } from '@/queries/postquery'
+import { IContact, IHeaderMenu, IPost } from '@/types/index'
 
 export const getPostById = async (slug: string): Promise<IPost | null> => {
   try {
@@ -30,6 +32,18 @@ export const getAllContacts = async () => {
     const posts = await client.fetch<IContact[]>(contactQuery)
     if (posts) {
       return posts
+    }
+    return null
+  } catch (error) {
+    return null
+  }
+}
+
+export const getHeaderMenu = async () => {
+  try {
+    const { menu } = await client.fetch<IHeaderMenu>(headerQuery)
+    if (menu) {
+      return menu
     }
     return null
   } catch (error) {

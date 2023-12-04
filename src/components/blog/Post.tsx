@@ -2,10 +2,10 @@
 import IntroLable from '@/components/ui/IntroLable'
 import { IPost } from '@/types'
 
-import List from '../List'
-import { PortableText } from '../portabletext'
-import TableOfContent from '../tob'
+import { PortableText } from './portabletext'
 import PostDetails from './PostDetails'
+import Posts from './Posts'
+import TableOfContent from './tob'
 
 function Post({ post }: { post: IPost }) {
   return (
@@ -18,7 +18,6 @@ function Post({ post }: { post: IPost }) {
             {/* <TableOfContents content={post.title} /> */}
             <TableOfContent />
           </div>
-
           <div className=" col-span-4 md:col-span-8">
             <PortableText value={post?.body} />
           </div>
@@ -26,7 +25,7 @@ function Post({ post }: { post: IPost }) {
         <IntroLable label="Related Blogs." />
       </div>
       <div className="h-full mx-auto max-w-6xl px-5 md:px-0 py-2 md:py-10 border-b-[0.5px] dark:border-white/10 border-black/10 w-full dark:text-white text-black">
-        <List posts={post?.relatedPost} />
+        <Posts posts={post?.relatedPost} />
       </div>
     </section>
   )

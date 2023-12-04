@@ -3,18 +3,17 @@ import { dashboardTool, projectUsersWidget } from '@sanity/dashboard'
 import { table } from '@sanity/table'
 import { visionTool } from '@sanity/vision'
 import { defineConfig, isDev } from 'sanity'
+import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 import { documentListWidget } from 'sanity-plugin-dashboard-widget-document-list'
 import { draftReviewPluginV3 } from 'sanity-plugin-draft-review-v3'
 import { media } from 'sanity-plugin-media'
 import { noteField } from 'sanity-plugin-note-field'
-import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
-import { deskTool } from 'sanity/desk'
 
-import { previewDocumentNode } from '@/components/PreviewPane'
 import StudioLogo from '@/components/layout/StudioLogo'
 import ContactTool from '@/components/plugin/ContactTool'
 import { pageStructure, singletonPlugin } from '@/components/plugin/settings'
+import { previewDocumentNode } from '@/components/PreviewPane'
 import {
   apiVersion,
   dataset,
@@ -82,7 +81,6 @@ export default defineConfig({
       ],
     }),
     table(),
-    vercelDeployTool(),
     media(),
     codeInput(),
     singletonPlugin([header.name]),

@@ -2,7 +2,7 @@ import { getExtension, getImageDimensions } from '@sanity/asset-utils'
 import { BookIcon } from '@sanity/icons'
 import { defineField, defineType } from 'sanity'
 
-import { CharacterCounterField } from '@/app/(site)/blog/CustomFields'
+import { CharacterCounterField } from '@/components/plugin/CustomFields'
 
 export default defineType({
   name: 'post',

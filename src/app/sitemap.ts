@@ -1,6 +1,15 @@
 import { MetadataRoute } from 'next'
 
-const routes = ['', '/blog', '/about', '/contact']
+const routes = [
+  '',
+  '/blog',
+  '/about',
+  '/contact',
+  '/privacy',
+  '/terms',
+  '/services',
+  '/work',
+]
 const baseUrl = process.env.NEXT_PUBLIC_URL
   ? `${process.env.NEXT_PUBLIC_URL}`
   : 'http://localhost:3000'

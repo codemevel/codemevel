@@ -6,7 +6,7 @@ import React, { useState } from 'react'
 
 import { createContact } from '@/hooks/api'
 
-import Button from '../../../components/ui/Button'
+import Button from '../ui/Button'
 
 function ContactForm() {
   const initialPayload = {

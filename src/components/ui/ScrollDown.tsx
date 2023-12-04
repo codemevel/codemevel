@@ -27,7 +27,12 @@ function ScrollDown({ link }: { link: string }) {
   }, [link])
 
   return (
-    <button type="button" onClick={handleClick}>
+    <button
+      type="button"
+      id="scrollDown"
+      aria-label="scroll Down"
+      onClick={handleClick}
+    >
       <ChevronDoubleDownIcon className="h-10 w-10 animate-bounce transition-all duration-300  fill-black dark:fill-white" />
     </button>
   )
