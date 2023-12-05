@@ -29,7 +29,7 @@ function Header({ menu }: { menu: IHeaderItem[] }) {
             type="button"
             aria-label="Codemevel"
             id="Codemevel"
-            className="flex flex-row h-10 active:scale-[.99] cursor-pointer items-end justify-center"
+            className="flex flex-row h-10 active:scale-[.99]   items-end justify-center"
           >
             <Logo />
             <p className="text-2xl font-semibold">Codemevel</p>
@@ -51,7 +51,7 @@ function Header({ menu }: { menu: IHeaderItem[] }) {
                   <li
                     className={`${nonactive} ${router === link ? active : ''}`}
                   >
-                    <Link onClick={() => setOpen(!open)} href="/">
+                    <Link onClick={() => setOpen(!open)} href={link}>
                       <>
                         <div className="md:hidden block">
                           <Button title="Home ->" ariaLabel="Home" />

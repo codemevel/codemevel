@@ -60,7 +60,7 @@ const AccordionItem: React.FC<AccordionItemProps> = ({
   return (
     <li className="flex flex-row justify-start items-start p-2 col-span-4 border-black/30 dark:border-white/30 border-[0.5px]  rounded-sm dark:text-white/50 text-black/50 hover:bg-primary/10 hover:dark:border-primary transition-all duration-100 hover:dark:bg-primary/10">
       <div
-        className="flex flex-row h-full w-full justify-center items-center cursor-pointer"
+        className="flex flex-row h-full w-full justify-center items-center  "
         onClick={toggleAccordion}
       >
         <div className="h-full flex justify-center items-center text-xl md:text-6xl text-primary w-10 md:w-28">

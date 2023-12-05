@@ -29,12 +29,12 @@ function BlogCard({ post }: { post: IPost }) {
         </Link>
       </div>
       <Link href={`/blog/${post?.slug}`}>
-        <h2 className="text-xl line-clamp-2 md:text-2xl group-hover:text-primary pb-2 md:pb-5 font-semibold text-black dark:text-white">
+        <h2 className="text-xl line-clamp-2 md:text-2xl group-hover:text-primary pb-2 md:pb-3 font-semibold text-black dark:text-white">
           {post?.title}
           <br />
         </h2>
       </Link>
-      <p className="line-clamp-3 pb-10"> {post?.description}</p>
+      <p className="line-clamp-3 pb-8 mb-3"> {post?.description}</p>
       <div className="pb-5 slashed-zero text-primary font-mono">
         <time
           className="text-sm"
