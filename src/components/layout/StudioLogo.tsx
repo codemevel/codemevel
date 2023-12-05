@@ -1,4 +1,3 @@
-
 import Logo from './Logo'
 
 function StudioLogo() {

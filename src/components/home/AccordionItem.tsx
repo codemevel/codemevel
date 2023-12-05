@@ -1,5 +1,11 @@
 'use client'
 
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
+/* eslint-disable sonarjs/no-duplicate-string */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+
 /* eslint-disable react/function-component-definition */
 
 import { ChevronUpIcon } from '@heroicons/react/24/solid'
