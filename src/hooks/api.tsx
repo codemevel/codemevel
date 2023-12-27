@@ -1,14 +1,7 @@
 import { client, writeclient } from '@/lib/client'
-import {
-  contactQuery,
-  footerQuery,
-  headerQuery,
-  postQuery,
-  postsQuery,
-  privacyQuery,
-  serviceQuery,
-  termsQuery,
-} from '@/lib/query'
+import { contactQuery } from '@/queries/contactquery'
+import { footerQuery, headerQuery } from '@/queries/menuquery'
+import { postQuery, postsQuery } from '@/queries/postquery'
 import {
   IContact,
   IFooter,
