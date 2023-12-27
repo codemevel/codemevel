@@ -1,6 +1,5 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
 import Layout from '../layout/Layout'
@@ -61,27 +60,21 @@ const items = [
 ]
 function About() {
   const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-  })
-  const y = useTransform(scrollYProgress, [0, 1], ['40%', '-100%'])
-  const yy = useTransform(scrollYProgress, [0, 1], ['100%', '-40%'])
 
   return (
     <div ref={ref} className="dot-matrix">
       <Layout>
         <div id="About">
-          <motion.div className="py-10 mt-10">
+          <div className="py-10 mt-10">
             <SubLayout>
               <IntroLable label="About us" />
               <Title title="About Codemevel" />
               <SubTitle subTitle="Codemevel is a dynamic and innovative web development startup dedicated to providing cutting-edge digital solutions for businesses of all sizes. With a team of creative minds and technical experts, we strive to transform your digital ideas into engaging and functional realities." />
             </SubLayout>
-          </motion.div>
+          </div>
 
           {aboutData.map((section) => (
-            <motion.div
-              style={{ y }}
+            <div
               key={section.title}
               className="  md:p-10 bg-black/10  border-b-[0.5px] border-black/30 dark:border-white/30 "
             >
@@ -93,13 +86,10 @@ function About() {
                   {section.content}
                 </p>
               )}
-            </motion.div>
+            </div>
           ))}
           {items && (
-            <motion.ul
-              style={{ y: yy }}
-              className="grid  md:grid-cols-12 grid-col-8 gap-5"
-            >
+            <ul className="grid  md:grid-cols-12 grid-col-8 gap-5">
               {items.map(({ heading, content, link }, index) => (
                 <Card
                   content={content}
@@ -109,7 +99,7 @@ function About() {
                   link={link}
                 />
               ))}
-            </motion.ul>
+            </ul>
           )}
         </div>
       </Layout>
