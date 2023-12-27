@@ -1,6 +1,5 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
 import { useRef } from 'react'
 
@@ -10,21 +9,10 @@ import ScrollDown from '../ui/ScrollDown'
 
 function Hero() {
   const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
   return (
     <section ref={ref} className="h-full relative w-full text-white">
-      <motion.div
-        style={{ y }}
-        className="z-0 hero-background absolute top-0 h-full w-full"
-      />
-      <motion.div
-        style={{ y }}
-        className="z-0 bg-gradient-to-t from-black/90 via-transparent to-transparent absolute top-0 h-full w-full"
-      />
+      <div className="z-0 hero-background absolute top-0 h-full w-full" />
+      <div className="z-0 bg-gradient-to-t from-black/90 via-transparent to-transparent absolute top-0 h-full w-full" />
       <div className="z-1 relative  ">
         <div className="max-w-7xl sm:p-5 md:p-5 min-h-screen h-full mx-auto p-5 md:px-0 md:py-10 mt-10 flex justify-center items-start flex-col">
           <h1 className="text-5xl mb-10 gap-x-5 flex flex-row flex-wrap md:text-8xl font-semibold dark:text-white text-black">
