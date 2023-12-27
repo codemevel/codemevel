@@ -54,6 +54,18 @@ export const getAllContacts = async () => {
   }
 }
 
+export const getHeaderMenu = async () => {
+  try {
+    const { menu } = await client.fetch<IHeaderMenu>(headerQuery)
+    if (menu) {
+      return menu
+    }
+    return null
+  } catch (error) {
+    return null
+  }
+}
+
 export const createContact = async (payload: IContact) => {
   try {
     return await writeclient.create<IContact>(payload)

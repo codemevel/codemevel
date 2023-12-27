@@ -22,7 +22,7 @@ export default function SplitTextAnimation({
   const createAnimation = () => {
     gsap.to(refs.current, {
       scrollTrigger: {
-        trigger: container.current,
+        trigger: container?.current,
         scrub: true,
         start: `bottom bottom-=${height + 100}`,
         end: `bottom bottom-=${height + 300}`,
@@ -33,17 +33,18 @@ export default function SplitTextAnimation({
         //   indent: 10,
         // },
       },
-      y: -10,
+      y: -5,
       opacity: 1,
       ease: 'none',
-      stagger: 0.3,
+      color: '#ffffff',
+      stagger: 0.4,
     })
   }
 
   const splitLetters = (word: string): React.JSX.Element[] =>
     word.split(' ').map((letter, i) => (
       <span
-        style={{ opacity: 0.7, display: 'inline-block' }}
+        style={{ opacity: 0.7, display: 'inline-block', color: '#f77317' }}
         ref={(el: never) => el && refs.current.push(el)}
         key={`${letter}_${i}`}
       >
@@ -60,12 +61,19 @@ export default function SplitTextAnimation({
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    createAnimation()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    if (container.current) {
+      createAnimation()
+    }
 
+    return () => {
+      // Clean up ScrollTrigger when component unmounts
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []) // No dependencies
   return (
     <div
+      id="textAnimate"
       ref={container}
       className={`flex flex-wrap justify-start items-start flex-row ${className}`}
     >

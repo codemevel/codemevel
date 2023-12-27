@@ -5,6 +5,7 @@ import { IService } from '@/types'
 import Layout from '../layout/Layout'
 import SubLayout from '../layout/SubLayout'
 import Button from '../ui/Button'
+import Card from '../ui/Card'
 import IntroLable from '../ui/IntroLable'
 import SubTitle from '../ui/SubTitle'
 import Title from '../ui/Title'
@@ -45,6 +46,45 @@ function Services({ services }: { services: IService }) {
   // ]
   const { title, description, serviceDetails } = services
   console.log(serviceDetails)
+function Services() {
+  const servicesData = [
+    {
+      link: '/blog',
+      heading: 'Tailored Solutions',
+      content:
+        "We understand that every business is unique. That's why we offer customized solutions that are specifically tailored to meet your individual requirements and goals.",
+    },
+    {
+      link: '/blog',
+      heading: 'Web Development',
+      content:
+        'From conceptualization to execution, we specialize in creating visually stunning and user-friendly websites that leave a lasting impression.',
+    },
+    {
+      link: '/blog',
+      heading: 'E-Commerce Solutions',
+      content:
+        'Empower your online business with our robust e-commerce solutions that enhance customer experience and boost sales.',
+    },
+    {
+      link: '/blog',
+      heading: '(UI/UX) Design',
+      content:
+        'We believe in the power of seamless user experiences. Our design experts ensure that every click resonates with your audience, creating an intuitive interface.',
+    },
+    {
+      link: '/blog',
+      heading: 'Hosting Solutions',
+      content:
+        'Secure and reliable hosting services that provide the foundation for your digital presence, ensuring seamless accessibility and performance for your website.',
+    },
+    {
+      link: '/blog',
+      heading: 'Maintenance Support',
+      content:
+        'Our dedicated team is committed to providing ongoing technical support and maintenance to ensure that your digital platforms operate seamlessly without any glitches.',
+    },
+  ]
   return (
     <Layout>
       <>
@@ -75,7 +115,7 @@ function Services({ services }: { services: IService }) {
             <MiniHeroSvg />
           </div>
         </div>
-        <div className=" mt-20 dot-matrix  ">
+        <div className=" mt-10 dot-matrix  ">
           <SubLayout>
             <IntroLable label="Our expertise lies in the following areas" />
             <ul className="gap-5 grid grid-cols-4 md:grid-cols-8 relative ">
@@ -103,6 +143,17 @@ function Services({ services }: { services: IService }) {
               ))}
             </ul>
           </SubLayout>
+          <ul className="grid p-5  md:p-10 md:grid-cols-4 grid-col-8 gap-5">
+            {servicesData.map(({ heading, content, link }, index) => (
+              <Card
+                content={content}
+                heading={heading}
+                key={heading}
+                index={index}
+                link={link}
+              />
+            ))}
+          </ul>
         </div>
       </>
     </Layout>

@@ -59,6 +59,9 @@ dependencies:
   date-fns:
     specifier: ^2.30.0
     version: registry.npmjs.org/date-fns@2.30.0
+  framer-motion:
+    specifier: ^10.16.14
+    version: registry.npmjs.org/framer-motion@10.16.14(react-dom@18.2.0)(react@18.2.0)
   get-video-id:
     specifier: ^3.6.5
     version: registry.npmjs.org/get-video-id@3.6.5
@@ -3593,7 +3596,7 @@ packages:
       '@sanity/preview-url-secret': registry.npmjs.org/@sanity/preview-url-secret@1.2.0(@sanity/client@6.8.6)(@sanity/icons@2.7.0)(sanity@3.20.1)
       '@sanity/ui': registry.npmjs.org/@sanity/ui@1.9.3(react-dom@18.2.0)(react-is@18.2.0)(react@18.2.0)(styled-components@5.3.11)
       '@types/lodash.isequal': registry.npmjs.org/@types/lodash.isequal@4.5.8
-      framer-motion: registry.npmjs.org/framer-motion@10.16.5(react-dom@18.2.0)(react@18.2.0)
+      framer-motion: registry.npmjs.org/framer-motion@10.16.14(react-dom@18.2.0)(react@18.2.0)
       lodash.isequal: registry.npmjs.org/lodash.isequal@4.5.0
       mendoza: registry.npmjs.org/mendoza@3.0.3
       react: registry.npmjs.org/react@18.2.0
@@ -3745,7 +3748,7 @@ packages:
       '@sanity/color': registry.npmjs.org/@sanity/color@2.2.5
       '@sanity/icons': registry.npmjs.org/@sanity/icons@2.7.0(react@18.2.0)
       csstype: registry.npmjs.org/csstype@3.1.2
-      framer-motion: registry.npmjs.org/framer-motion@10.16.5(react-dom@18.2.0)(react@18.2.0)
+      framer-motion: registry.npmjs.org/framer-motion@10.16.14(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmjs.org/react@18.2.0
       react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
       react-is: registry.npmjs.org/react-is@18.2.0
@@ -3769,7 +3772,7 @@ packages:
       '@sanity/color': registry.npmjs.org/@sanity/color@2.2.5
       '@sanity/icons': registry.npmjs.org/@sanity/icons@2.7.0(react@18.2.0)
       csstype: registry.npmjs.org/csstype@3.1.2
-      framer-motion: registry.npmjs.org/framer-motion@10.16.5(react-dom@18.2.0)(react@18.2.0)
+      framer-motion: registry.npmjs.org/framer-motion@10.16.14(react-dom@18.2.0)(react@18.2.0)
       react: registry.npmjs.org/react@18.2.0
       react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
       react-is: registry.npmjs.org/react-is@18.2.0
@@ -7349,11 +7352,11 @@ packages:
     version: 4.3.7
     dev: true
 
-  registry.npmjs.org/framer-motion@10.16.5(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-GEzVjOYP2MIpV9bT/GbhcsBNoImG3/2X3O/xVNWmktkv9MdJ7P/44zELm/7Fjb+O3v39SmKFnoDQB32giThzpg==, tarball: https://registry.npmjs.org/framer-motion/-/framer-motion-10.16.5.tgz}
-    id: registry.npmjs.org/framer-motion/10.16.5
+  registry.npmjs.org/framer-motion@10.16.14(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-poovsXtR7doXRfjqVjUai82Zl2z5yMUFKtYWHnQK+xsDVPhHVUJEU+Kr2kqEnUV4gry+LcRdrDzcMI7OdJlDMg==, tarball: https://registry.npmjs.org/framer-motion/-/framer-motion-10.16.14.tgz}
+    id: registry.npmjs.org/framer-motion/10.16.14
     name: framer-motion
-    version: 10.16.5
+    version: 10.16.14
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -11651,7 +11654,7 @@ packages:
       esbuild-register: registry.npmjs.org/esbuild-register@3.5.0(esbuild@0.19.7)
       execa: registry.npmjs.org/execa@2.1.0
       exif-component: registry.npmjs.org/exif-component@1.0.1
-      framer-motion: registry.npmjs.org/framer-motion@10.16.5(react-dom@18.2.0)(react@18.2.0)
+      framer-motion: registry.npmjs.org/framer-motion@10.16.14(react-dom@18.2.0)(react@18.2.0)
       get-it: registry.npmjs.org/get-it@8.4.4
       get-random-values-esm: registry.npmjs.org/get-random-values-esm@1.0.0
       groq-js: registry.npmjs.org/groq-js@1.3.0

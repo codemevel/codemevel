@@ -1,5 +1,10 @@
-import Link from 'next/link'
+'use client'
 
+import { motion, useScroll, useTransform } from 'framer-motion'
+import Link from 'next/link'
+import { useRef } from 'react'
+
+import Social from '../layout/Social'
 import Button from '../ui/Button'
 import HeroSvg from './HeroSvg'
 
@@ -32,9 +37,10 @@ const Hero = async () => {
                 <Button title={heroData.button2} ariaLabel="Contact Us" />
               </Link>
             </div>
-          </div>
-          <div className="overflow-hidden  md:h-[50vh] max-w-6xl mx-auto w-full">
-            <HeroSvg />
+            <ScrollDown link="#About" />
+            <div className="max-w-2xl md:block hidden md:py-0 py-5 ">
+              <Social />
+            </div>
           </div>
         </div>
       </div>

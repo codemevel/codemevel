@@ -1,6 +1,6 @@
-import IntroLable from '../../../components/ui/IntroLable'
-import SubTitle from '../../../components/ui/SubTitle'
-import Title from '../../../components/ui/Title'
+import IntroLable from '../ui/IntroLable'
+import SubTitle from '../ui/SubTitle'
+import Title from '../ui/Title'
 import ContactForm from './ContactForm'
 
 function Contact() {
@@ -14,9 +14,9 @@ function Contact() {
         <div className="md:h-20 h-10 w-10 md:w-20 border-t-[0.5px] absolute -top-3 -left-3 md:-top-20 md:-left-20 border-l-[0.5px] opacity-30" />
         <div className="md:h-20 h-10 w-10 md:w-20 border-b-[0.5px] absolute -bottom-5 -right-3 md:-bottom-20 md:-right-20 border-r-[0.5px] opacity-30" />
         <div className="col-span-4 flex flex-col justify-center items-start  gap-5">
-          <IntroLable label="Deploy in minuts" />
-          <Title title="Power your enterprise with Payload." />
-          <ul className="text-2xl gap-3 ">
+          <IntroLable label="Connect" />
+          <Title title="Power your Enterprise with Codemevel." />
+          <ul className="text-2xl gap-3 list-disc list-inside">
             <li>Enterprise plugins like SSO</li>
             <li>Support SLA</li>
             <li>Shared Slack channel</li>

@@ -32,6 +32,5 @@ export const writeclient = createClient({
   apiVersion,
   dataset,
   projectId,
-  useCdn,
   token: writeToken,
 })

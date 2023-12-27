@@ -1,6 +1,5 @@
+import Posts from '@/components/blog/Posts'
 import { getAllPosts } from '@/hooks/api'
-
-import Posts from './Posts'
 
 export default async function AllBlogs() {
   const posts = await getAllPosts()

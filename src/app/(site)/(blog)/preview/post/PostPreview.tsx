@@ -3,10 +3,9 @@
 import { useParams } from 'next/navigation'
 import { useLiveQuery } from 'next-sanity/preview'
 
-import { postQuery } from '@/lib/query'
+import Post from '@/components/blog/Post'
+import { postQuery } from '@/queries/postquery'
 import { IPost } from '@/types'
-
-import Post from '../../blog/[slug]/Post'
 
 export function PostPreview({ post: initialData }: { post: IPost }) {
   const params = useParams()

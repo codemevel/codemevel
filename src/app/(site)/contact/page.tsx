@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import Contact from './Contact'
+import Contact from '../../../components/contact/Contact'
 
 const title: string =
   ' Contact CodeMevel - Building Trust with Exceptional Web Services'

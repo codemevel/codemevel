@@ -4,16 +4,17 @@ import '@/styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata, Viewport } from 'next'
 // eslint-disable-next-line camelcase
-import { Inter_Tight } from 'next/font/google'
+import { IBM_Plex_Sans } from 'next/font/google'
 import React from 'react'
 
 import { ThemeProvider } from '@/components/layout/ThemeProvider'
 
 export const switchThemeDuration: string = 'duration-1000'
-const font = Inter_Tight({
+const font = IBM_Plex_Sans({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
   style: ['normal'],
+  preload: true,
   display: 'swap',
 })
 
@@ -70,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${font.className} ${switchThemeDuration} dark:bg-black bg-white text-black dark:text-white`}
+        className={`${font.className} duration-300 transition-all decoration-2 slashed-zero  decoration-primary tracking-tight leading-5  subpixel-antialiased ${switchThemeDuration} dark:bg-black bg-white text-black dark:text-white`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}

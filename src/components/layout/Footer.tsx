@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import React from 'react'
 
+import InterLink from '../misc/InterLink'
 import Logo from './Logo'
 import Social from './Social'
 import { ThemeSwitcher } from './ThemeSwitcher'
@@ -60,7 +61,7 @@ const Footer = () => {
   return (
     <footer className=" hero-background ">
       <div className="bg-gradient-to-b   from-white   dark:from-black   to-transparent flex flex-col px-5 items-center justify-between">
-        <div className="flex back py-5 max-w-6xl mx-auto w-full  md:flex-row flex-col justify-between items-start">
+        <div className="flex back py-10 max-w-7xl mx-auto w-full  md:flex-row flex-col justify-between items-start">
           <div className=" flex flex-col">
             <Link href="/">
               <button
@@ -91,19 +92,12 @@ const Footer = () => {
             </nav>
           </div>
         </div>
-        <div className="flex max-w-6xl mx-auto w-full  md:flex-row flex-col-reverse justify-between py-5  border-t-[0.5px] border-black/30 dark:border-white/30">
+        <div className="flex max-w-7xl mx-auto w-full  md:flex-row flex-col-reverse justify-between py-10  border-t-[0.5px] border-black/30 dark:border-white/30">
           <div className="w-full max-w-2xl md:py-0 py-5 ">
             <p className="text-black font-semibold text-lg dark:text-white">
               &copy; {new Date().getFullYear()} -
-              <Link
-                href="/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline underline px-1 font-semibold underline-offset-2"
-              >
-                Codemevel
-              </Link>
-              ™ | All rights reserved.
+              <InterLink link="https://codemevel.com" text="Codemevel" />| All
+              rights reserved.
             </p>
           </div>
           <div className="max-w-2xl md:py-0 py-5 ">

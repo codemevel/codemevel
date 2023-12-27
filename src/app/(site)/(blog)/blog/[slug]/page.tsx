@@ -1,6 +1,5 @@
+import Post from '@/components/blog/Post'
 import { getPostById } from '@/hooks/api'
-
-import Post from './Post'
 
 export default async function SinglePost({
   params,

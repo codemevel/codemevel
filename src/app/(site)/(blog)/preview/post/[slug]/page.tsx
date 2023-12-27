@@ -2,10 +2,10 @@
 import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 
-import Post from '@/app/(site)/blog/[slug]/Post'
+import Post from '@/components/blog/Post'
 import { getClient } from '@/lib/client'
 import { readToken } from '@/lib/env'
-import { postQuery, postQueryDraft } from '@/lib/query'
+import { postQuery, postQueryDraft } from '@/queries/postquery'
 
 import { PostPreview } from '../PostPreview'
 import PreviewProvider from '../PreviewProvider'

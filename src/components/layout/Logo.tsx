@@ -1,8 +1,6 @@
-import React from 'react'
-
 function Logo() {
   return (
-    <div className="h-8 w-8 active:scale-[.99] cursor-pointer ">
+    <div className="h-8 w-8 active:scale-[.99]   ">
       <svg
         version="1.0"
         viewBox="0 0 2000.000000 2000.000000"

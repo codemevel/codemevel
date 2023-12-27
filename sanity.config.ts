@@ -9,7 +9,6 @@ import { documentListWidget } from 'sanity-plugin-dashboard-widget-document-list
 import { draftReviewPluginV3 } from 'sanity-plugin-draft-review-v3'
 import { media } from 'sanity-plugin-media'
 import { noteField } from 'sanity-plugin-note-field'
-import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
 
 import StudioLogo from '@/components/layout/StudioLogo'
 import ContactTool from '@/components/plugin/ContactTool'
@@ -83,7 +82,6 @@ export default defineConfig({
       ],
     }),
     table(),
-    vercelDeployTool(),
     media(),
     codeInput(),
     singletonPlugin([header.name, legal.name]),
