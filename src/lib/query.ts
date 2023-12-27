@@ -79,3 +79,36 @@ export const contactQuery = groq`*[_type == 'contact' ]{
     subject,
     message,
 }`
+export const headerQuery = groq`*[_type == "menu" ][0]{
+  menuItems[]{
+    title,
+    link,
+    subMenuItems,
+  }}
+`
+
+export const footerQuery = groq`*[_type == "menu" ][0]{
+    title,
+    description,
+    copyright,
+    email,
+    phone,
+    copyright,
+    footer[]{
+      title,
+      subfooterItems[]{
+      link,
+      title
+}
+}
+}`
+export const termsQuery = groq`*[_type == 'legal'][0]{
+  terms,
+}`
+export const privacyQuery = groq`*[_type == 'legal'][0]{
+  privacy,
+}`
+
+export const serviceQuery = groq`*[_type == 'legal'][0]{
+  ...,
+}`

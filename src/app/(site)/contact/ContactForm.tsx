@@ -2,7 +2,7 @@
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { createContact } from '@/hooks/api'
 
@@ -24,7 +24,7 @@ function ContactForm() {
     setPayload(initialPayload)
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     // Validate form fields

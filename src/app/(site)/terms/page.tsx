@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import React from 'react'
 
+import { getTerm } from '@/hooks/api'
+
 import Terms from './Terms'
 
 const title: string = ' Terms and Conditions | CodeMevel '
@@ -14,8 +16,8 @@ export const metadata: Metadata = {
   applicationName: 'Codemevel',
 }
 
-function Page() {
-  return <Terms />
+export default async function Term() {
+  const terms = await getTerm()
+  if (!terms) return null
+  return <Terms terms={terms} />
 }
-
-export default Page

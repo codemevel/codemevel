@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 
-import Services from '../../../components/home/Services'
+import { getService } from '@/hooks/api'
+
+// import Services from '../../../components/home/Services'
 
 const title: string =
   'Services CodeMevel - Building Trust with Exceptional Web Services'
@@ -14,13 +16,9 @@ export const metadata: Metadata = {
   applicationName: 'Codemevel',
 }
 
-const Page = async () => {
-  return (
-    <>
-      <div className="h-40" />
-      <Services />
-    </>
-  )
+export default async function Page() {
+  const services = await getService()
+  if (!services) return null
+  // return <Services services={services} />
+  return <>loading</>
 }
-
-export default Page

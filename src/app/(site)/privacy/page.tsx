@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+import { getPrivacy } from '@/hooks/api'
+
 import Privacy from './Privacy'
 
 const title: string =
@@ -14,6 +16,8 @@ export const metadata: Metadata = {
   applicationName: 'Codemevel',
 }
 
-const Page = async () => <Privacy />
-
-export default Page
+export default async function Page() {
+  const privacy = await getPrivacy()
+  if (!privacy) return null
+  return <Privacy privacy={privacy} />
+}
