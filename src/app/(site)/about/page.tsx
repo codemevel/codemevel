@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import About from '@/app/(site)/about/About'
+import { getAbout } from '@/hooks/api'
 
 const title: string =
   ' About CodeMevel - Building Trust with Exceptional Web Services'
@@ -14,8 +15,10 @@ export const metadata: Metadata = {
   applicationName: 'Codemevel',
 }
 
-function Page() {
-  return <About />
+async function Page() {
+  const about = await getAbout()
+  if (!about) return null
+  return <About about={about} />
 }
 
 export default Page

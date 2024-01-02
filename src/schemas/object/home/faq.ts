@@ -2,8 +2,8 @@ import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'faq',
-  title: 'FAQ',
-  type: 'document',
+  title: 'Faq',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
@@ -25,11 +25,6 @@ export default defineType({
           title: 'FAQuestions',
           type: 'object',
           fields: [
-            defineField({
-              name: 'index',
-              title: 'S.No',
-              type: 'number',
-            }),
             defineField({
               name: 'title',
               title: 'Title',

@@ -110,5 +110,17 @@ export const privacyQuery = groq`*[_type == 'legal'][0]{
 }`
 
 export const serviceQuery = groq`*[_type == 'legal'][0]{
-  ...,
+  services,
+}`
+export const homeQuery = groq`*[_type == 'home']{
+  aboutDocument,
+  heroDocument,
+  faqDocument,
+  ownerDocument,
+  marketingDocument,
+  processDocument,
+  earnDocument,
+}`
+export const aboutQuery = groq`*[_type == 'home'][0]{
+ aboutDocument,
 }`

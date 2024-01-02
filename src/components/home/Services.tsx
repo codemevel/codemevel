@@ -44,7 +44,6 @@ function Services({ services }: { services: IService }) {
   //   },
   // ]
   const { title, description, serviceDetails } = services
-  console.log(serviceDetails)
   return (
     <Layout>
       <>

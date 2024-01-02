@@ -1,8 +1,10 @@
 import { client, writeclient } from '@/lib/client'
 import {
+  aboutQuery,
   contactQuery,
   footerQuery,
   headerQuery,
+  homeQuery,
   postQuery,
   postsQuery,
   privacyQuery,
@@ -10,11 +12,14 @@ import {
   termsQuery,
 } from '@/lib/query'
 import {
+  IAbout,
   IContact,
   IFooter,
   IHeader,
+  IHero,
   IPost,
   IPrivacy,
+  IService,
   // IService,
   ITerm,
 } from '@/types/index'
@@ -111,11 +116,35 @@ export const getService = async () => {
   try {
     // const { services }: { services: IService } =
     //   await client.fetch(serviceQuery)
-    const services = await client.fetch(serviceQuery)
+    const { services }: { services: IService } =
+      await client.fetch(serviceQuery)
 
     if (services) {
-      console.log(services)
       return services
+    }
+    return null
+  } catch (error) {
+    return null
+  }
+}
+export const getHero = async () => {
+  try {
+    const hero = await client.fetch<IHero>(homeQuery)
+
+    if (hero) {
+      return hero
+    }
+    return null
+  } catch (error) {
+    return null
+  }
+}
+export const getAbout = async () => {
+  try {
+    const { about }: { about: IAbout } = await client.fetch(aboutQuery)
+
+    if (about) {
+      return about
     }
     return null
   } catch (error) {
