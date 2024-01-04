@@ -45,6 +45,7 @@ function Services({ services }: { services: IService }) {
   //   },
   // ]
   const { title, description, serviceDetails } = services
+<<<<<<< HEAD
   console.log(serviceDetails)
 function Services() {
   const servicesData = [
@@ -85,6 +86,8 @@ function Services() {
         'Our dedicated team is committed to providing ongoing technical support and maintenance to ensure that your digital platforms operate seamlessly without any glitches.',
     },
   ]
+=======
+>>>>>>> latest-change
   return (
     <Layout>
       <>

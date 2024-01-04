@@ -69,28 +69,88 @@ export interface IService {
   description: string
   serviceDetails: IServiceItems[]
 }
+export interface IFaqItems {
+  title: string
+  description: string
+}
 export interface IFaq {
   title: string
   description: string
-  faq: {
-    index: number
-    title: string
-    description: string
-  }
+  faqDetails: IFaqItems[]
 }
+export interface IHero {
+  title: string
+  description: string
+}
+export interface IAboutItems {
+  title: string
+  description: string
+}
+export interface IAboutDetails {
+  title: string
+  description: string
+  aboutDetails: IAboutItems[]
+}
+
 export interface IAbout {
   title: string
   description: string
-  mission: {
-    title: string
-    description: string
-  }
-  vision: {
-    title: string
-    description: string
-  }
-  values: {
-    title: string
-    description: string
-  }
+  aboutObject: IAboutDetails[]
+}
+export interface IBenefitItems {
+  title: string
+  description: string
+}
+
+export interface IBenefit {
+  title: string
+  description: string
+  aboutDetail: IBenefitItems[]
+}
+export interface IEarnItems {
+  title: string
+  description: string
+}
+
+export interface IEarn {
+  title: string
+  description: string
+  aboutDetail: IEarnItems[]
+}
+export interface IMarketingItems {
+  title: string
+  description: string
+}
+export interface IMarketing {
+  title: string
+  description: string
+  marketingDetails: IMarketingItems[]
+}
+export interface IOwnerItems {
+  title: string
+  description: string
+}
+export interface IOwner {
+  title: string
+  description: string
+  marketingDetails: IOwnerItems[]
+}
+export interface IProcessItems {
+  title: string
+  description: string
+}
+export interface IProcess {
+  title: string
+  description: string
+  marketingDetails: IProcessItems[]
+}
+export interface IHome {
+  heroDocument: IHero
+  aboutDocument: IAbout
+  marketingDocument: IMarketing
+  ownerDocument: IOwner
+  processDocument: IProcess
+  earnDocument: IEarn
+  faqDocument: IFaq
+  benefitDocument: IBenefit
 }

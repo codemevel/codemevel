@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import Services from '@/components/home/Services'
 import { getService } from '@/hooks/api'
 
 // import Services from '../../../components/home/Services'
@@ -19,6 +20,5 @@ export const metadata: Metadata = {
 export default async function Page() {
   const services = await getService()
   if (!services) return null
-  // return <Services services={services} />
-  return <>loading</>
+  return <Services services={services} />
 }
